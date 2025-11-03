@@ -5251,334 +5251,334 @@
     ],
     "hard": [
       {
-        "q": "Når spilte HamKam sin første sesong på øverste nivå?",
+        "q": "I hvilket år ble HamKam stiftet under det opprinnelige navnet Freidig Hamar?",
         "choices": [
-          1974,
-          1959,
-          1969,
-          1954
-        ],
-        "answerIndex": 2,
-        "explanation": "HamKam debuterte i toppdivisjonen i 1969."
-      },
-      {
-        "q": "Hvilket år debuterte HamKam i toppdivisjonen?",
-        "choices": [
-          1954,
-          1959,
-          1969,
-          1974
-        ],
-        "answerIndex": 2,
-        "explanation": "HamKam debuterte i toppdivisjonen i 1969."
-      },
-      {
-        "q": "I hvilket år tok HamKam steget inn i Eliteserien for aller første gang?",
-        "choices": [
-          1954,
-          1969,
-          1974,
-          1959
+          "1916",
+          "1918",
+          "1920",
+          "1922"
         ],
         "answerIndex": 1,
-        "explanation": "HamKam debuterte i toppdivisjonen i 1969."
+        "explanation": "HamKam ble startet som Freidig (Hamar) 10. august 1918."
       },
       {
-        "q": "Omtrent hvor mange tilskuere tar Briskeby stadion?",
+        "q": "Hvilken dato ble navnet endret fra Freidig til Briskebyen Fotballag for å kunne opptas i kretsen?",
         "choices": [
-          21421,
-          8080,
-          12250,
-          11249
+          "15. mai 1918",
+          "25. september 1919",
+          "1. januar 1921",
+          "30. november 1919"
         ],
         "answerIndex": 1,
-        "explanation": "Briskeby stadion rommer rundt 8080 tilskuere."
+        "explanation": "Navnebyttet til Briskebyen Fotballag ble vedtatt 25. september 1919."
       },
       {
-        "q": "Hva er kapasiteten på HamKam sin hjemmebane?",
+        "q": "Hva er tilskuerrekorden på Briskeby Stadion for HamKam-kamp, og mot hvilket lag ble den satt?",
         "choices": [
-          12250,
-          8080,
-          11249,
-          21421
+          "15 320 mot Rosenborg i 1976",
+          "16 410 mot Viking i 1970",
+          "14 950 mot Lillestrøm i 1981",
+          "13 880 mot Molde i 2004"
         ],
         "answerIndex": 1,
-        "explanation": "Briskeby stadion rommer rundt 8080 tilskuere."
+        "explanation": "Briskeby satte klubbrekord med 16 410 tilskuere mot Viking i bronseåret 1970."
       },
       {
-        "q": "Hvor stort publikum kan Briskeby stadion huse?",
+        "q": "Hva er HamKams beste plassering i norsk øverste divisjon, og hvilket år oppnådde de den?",
         "choices": [
-          12250,
-          21421,
-          11249,
-          8080
-        ],
-        "answerIndex": 3,
-        "explanation": "Briskeby stadion rommer rundt 8080 tilskuere."
-      },
-      {
-        "q": "Når ble Briskeby stadion først tatt i bruk?",
-        "choices": [
-          1916,
-          1941,
-          1956,
-          1936
-        ],
-        "answerIndex": 3,
-        "explanation": "Briskeby stadion åpnet i 1936."
-      },
-      {
-        "q": "Hvilket år åpnet HamKam sin hjemmebane?",
-        "choices": [
-          1916,
-          1941,
-          1936,
-          1956
-        ],
-        "answerIndex": 2,
-        "explanation": "Briskeby stadion åpnet i 1936."
-      },
-      {
-        "q": "I hvilket år ble Briskeby stadion innviet?",
-        "choices": [
-          1956,
-          1941,
-          1916,
-          1936
-        ],
-        "answerIndex": 3,
-        "explanation": "Briskeby stadion åpnet i 1936."
-      },
-      {
-        "q": "Når kom HamKam sitt første ligagull?",
-        "choices": [
-          "Tok sitt første ligagull i 1989",
-          "Ble seriemester første gang i 1953",
-          "Har vunnet åtte strake seriemesterskap",
-          "Klubben har aldri vunnet Eliteserien"
-        ],
-        "answerIndex": 3,
-        "explanation": "HamKam har fortsatt sitt første seriegull til gode."
-      },
-      {
-        "q": "I hvilket år ble HamKam seriemester for aller første gang?",
-        "choices": [
-          "Ble seriemester første gang i 1953",
-          "Klubben har aldri vunnet Eliteserien",
-          "Tok sitt første ligagull i 1989",
-          "Har vunnet åtte strake seriemesterskap"
+          "Sølv i 1974",
+          "Bronse i 1970",
+          "Fjerdeplass i 1972",
+          "Femteplass i 1969"
         ],
         "answerIndex": 1,
-        "explanation": "HamKam har fortsatt sitt første seriegull til gode."
+        "explanation": "HamKam tok bronsemedaljen i toppdivisjonen i 1970."
       },
       {
-        "q": "Hvilket år sikret HamKam sitt første seriemesterskap?",
+        "q": "HamKam har aldri nådd finalen i NM, men hvor mange ganger har de nådd semifinalen?",
         "choices": [
-          "Tok sitt første ligagull i 1989",
-          "Ble seriemester første gang i 1953",
-          "Klubben har aldri vunnet Eliteserien",
-          "Har vunnet åtte strake seriemesterskap"
+          "3 ganger",
+          "4 ganger",
+          "5 ganger",
+          "6 ganger"
         ],
         "answerIndex": 2,
-        "explanation": "HamKam har fortsatt sitt første seriegull til gode."
+        "explanation": "Klubben har fem NM-semifinaler på merittlisten."
       },
       {
-        "q": "Når tok HamKam sitt siste NM-gull?",
+        "q": "Hva heter HamKams supporterklubb?",
         "choices": [
-          "Vant NM i 2010",
-          "Tok sitt siste NM-gull i 1998",
-          "Har sju cupgull totalt",
-          "Har fortsatt ikke vunnet norgesmesterskapet"
+          "Fugla",
+          "Briskebybanden",
+          "Stolte Kamerater",
+          "Møsjengen"
         ],
-        "answerIndex": 3,
-        "explanation": "HamKam jakter fortsatt sitt første NM-trofé."
+        "answerIndex": 1,
+        "explanation": "Supporterne samler seg i Briskebybanden."
       },
       {
-        "q": "Hvilket år vant HamKam norgesmesterskapet sist?",
+        "q": "Hvilken kapasitet har Briskeby Stadion oppgitt for HamKams hjemmekamper?",
         "choices": [
-          "Har sju cupgull totalt",
-          "Vant NM i 2010",
-          "Har fortsatt ikke vunnet norgesmesterskapet",
-          "Tok sitt siste NM-gull i 1998"
+          "7 450",
+          "8 068",
+          "9 100",
+          "10 250"
+        ],
+        "answerIndex": 1,
+        "explanation": "Briskeby Stadion oppgis til omtrent 8 068 plasser etter ombyggingen."
+      },
+      {
+        "q": "I hvilket år vant HamKam 1. divisjon (nivå 2) og rykket opp til Eliteserien sist gang?",
+        "choices": [
+          "2014",
+          "2018",
+          "2021",
+          "2023"
         ],
         "answerIndex": 2,
-        "explanation": "HamKam jakter fortsatt sitt første NM-trofé."
+        "explanation": "HamKam tok OBOS-ligagullet og rykket opp til Eliteserien i 2021."
       },
       {
-        "q": "I hvilket år ble HamKam sist cupmester?",
+        "q": "Hvem er den mest brukte spilleren for HamKam ifølge klubbens historiske statistikk?",
         "choices": [
-          "Har fortsatt ikke vunnet norgesmesterskapet",
-          "Vant NM i 2010",
-          "Har sju cupgull totalt",
-          "Tok sitt siste NM-gull i 1998"
+          "Vegard Skogheim",
+          "Pål Jacobsen",
+          "Geir Frigård",
+          "Lars Bredo Simensen"
         ],
         "answerIndex": 0,
-        "explanation": "HamKam jakter fortsatt sitt første NM-trofé."
+        "explanation": "Vegard Skogheim står med flest offisielle HamKam-kamper."
       },
       {
-        "q": "Hva kalles det mest intense derbyet for HamKam?",
+        "q": "Hva heter HamKams toppscorer gjennom tidene ifølge klubbens egne tall?",
         "choices": [
-          "Gullrivalene mot Rosenborg",
-          "Nord-Norge-derbyet mot Tromsø IL",
-          "Mjøs-derbyet mot Raufoss",
-          "Nord-Norge-derbyet mot Bodø/Glimt"
-        ],
-        "answerIndex": 2,
-        "explanation": "Mjøs-derbyet mot Raufoss er oppgjøret som vekker ekstra følelser for HamKam."
-      },
-      {
-        "q": "Hvilket rivaloppgjør er mest kjent for HamKam?",
-        "choices": [
-          "Gullrivalene mot Rosenborg",
-          "Nord-Norge-derbyet mot Tromsø IL",
-          "Mjøs-derbyet mot Raufoss",
-          "Nord-Norge-derbyet mot Bodø/Glimt"
-        ],
-        "answerIndex": 2,
-        "explanation": "Mjøs-derbyet mot Raufoss er oppgjøret som vekker ekstra følelser for HamKam."
-      },
-      {
-        "q": "Hva heter det klassiske naboderbyet for HamKam?",
-        "choices": [
-          "Mjøs-derbyet mot Raufoss",
-          "Gullrivalene mot Rosenborg",
-          "Nord-Norge-derbyet mot Bodø/Glimt",
-          "Nord-Norge-derbyet mot Tromsø IL"
+          "Pål Jacobsen",
+          "Markus Pedersen",
+          "Ole Erik Midtskogen",
+          "Frode Johnsen"
         ],
         "answerIndex": 0,
-        "explanation": "Mjøs-derbyet mot Raufoss er oppgjøret som vekker ekstra følelser for HamKam."
+        "explanation": "Pål Jacobsen leder klubbens evige målliste."
       },
       {
-        "q": "Hvilket talent har HamKam utviklet?",
+        "q": "I hvilken by eller kommune er HamKam lokalisert?",
         "choices": [
-          "Erling Knudtzon",
-          "Veton Berisha",
-          "Osame Sahraoui",
-          "Ståle Solbakken"
+          "Hamar",
+          "Lillehammer",
+          "Gjøvik",
+          "Elverum"
+        ],
+        "answerIndex": 0,
+        "explanation": "HamKam har base i Hamar kommune."
+      },
+      {
+        "q": "Hvilket år gjennomførte klubben fusjonen som gav navnet Hamarkameratene etter sammenslåing med Hamar Arbeideridrettslag?",
+        "choices": [
+          "1939",
+          "1942",
+          "1946",
+          "1950"
+        ],
+        "answerIndex": 2,
+        "explanation": "Navnet Hamarkameratene kom etter fusjonen 12. februar 1946."
+      },
+      {
+        "q": "Hvilket år brukte HamKam kunstgress på Briskeby Stadion for første gang?",
+        "choices": [
+          "2005",
+          "2008",
+          "2011",
+          "2014"
+        ],
+        "answerIndex": 1,
+        "explanation": "Kunstgress ble lagt på Briskeby i forkant av sesongen 2008."
+      },
+      {
+        "q": "Hva er kallenavnet til HamKam som ofte brukes i media?",
+        "choices": [
+          "Kamma",
+          "Gutan",
+          "Fugla",
+          "De Blaa"
+        ],
+        "answerIndex": 0,
+        "explanation": "HamKam omtales hyppig som «Kamma»."
+      },
+      {
+        "q": "Hvilken stilling endte HamKam på i Eliteserien 2024?",
+        "choices": [
+          "10. plass",
+          "11. plass",
+          "12. plass",
+          "14. plass"
+        ],
+        "answerIndex": 2,
+        "explanation": "HamKam avsluttet Eliteserien 2024 på 12. plass."
+      },
+      {
+        "q": "I hvilket år ble Briskeby Stadion innviet som hjemmebane for Briskebyen/HamKam?",
+        "choices": [
+          "1934",
+          "1936",
+          "1938",
+          "1940"
+        ],
+        "answerIndex": 1,
+        "explanation": "Briskeby stadion sto ferdig og ble tatt i bruk i 1936."
+      },
+      {
+        "q": "I hvilken sesong vant HamKam 1. divisjon med trener Ståle Solbakken ved roret?",
+        "choices": [
+          "2001",
+          "2003",
+          "2005",
+          "2007"
+        ],
+        "answerIndex": 1,
+        "explanation": "Ståle Solbakken ledet HamKam til 1. divisjonstittelen i 2003."
+      },
+      {
+        "q": "Hvilket lag tok HamKam poeng fra på Briskeby i opprykksåret 2021 ifølge omtaler?",
+        "choices": [
+          "Bodø/Glimt 2",
+          "Raufoss",
+          "Aalesund",
+          "Sogndal"
+        ],
+        "answerIndex": 2,
+        "explanation": "HamKam spilte uavgjort hjemme mot Aalesund på vei mot opprykk i 2021."
+      },
+      {
+        "q": "Hvor mange ganger har HamKam rykket opp eller ned mellom divisjoner siden 1969 ifølge omtale?",
+        "choices": [
+          "10 ganger",
+          "12 ganger",
+          "14 ganger",
+          "16 ganger"
         ],
         "answerIndex": 3,
-        "explanation": "Ståle Solbakken fikk sitt gjennombrudd i HamKam før proffspill i Danmark."
+        "explanation": "Artikler oppgir 16 divisjonsendringer for HamKam siden toppseriedebuten i 1969."
       },
       {
-        "q": "Hvem er et kjent akademiprodukt fra HamKam?",
+        "q": "Hva er HamKams organisasjonsnummer ifølge klubbens Wikipedia-profil?",
         "choices": [
-          "Veton Berisha",
-          "Erling Knudtzon",
+          "970 899 394",
+          "971 528 552",
+          "972 341 118",
+          "974 002 811"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hamarkameratene er registrert med organisasjonsnummer 971 528 552."
+      },
+      {
+        "q": "Hvilket lag slo HamKam 7-2 i 1. divisjon i 2012?",
+        "choices": [
+          "Sandefjord",
+          "Hønefoss",
+          "Alta",
+          "Bryne"
+        ],
+        "answerIndex": 2,
+        "explanation": "HamKam vant 7-2 over Alta i 2012-sesongen."
+      },
+      {
+        "q": "Hvilket år ble Briskeby Stadion kjøpt av kommunen på grunn av økonomiske problemer?",
+        "choices": [
+          "1999",
+          "2001",
+          "2003",
+          "2005"
+        ],
+        "answerIndex": 1,
+        "explanation": "Hamar kommune overtok stadionanlegget i 2001 for å sikre klubbens drift."
+      },
+      {
+        "q": "Hvilken type underlag har Briskeby Stadion i dag?",
+        "choices": [
+          "Naturgress",
+          "Hybridgress",
+          "Kunstgress",
+          "Grus"
+        ],
+        "answerIndex": 2,
+        "explanation": "Briskeby har kunstgress etter ombyggingen."
+      },
+      {
+        "q": "Hvilken fotballserie ble HamKam promotert fra i 2017 (nivå 3) før opprykk til nivå 2?",
+        "choices": [
+          "Eliteserien",
+          "1. divisjon",
+          "2. divisjon (PostNord-ligaen)",
+          "3. divisjon"
+        ],
+        "answerIndex": 2,
+        "explanation": "HamKam vant avdelingen i 2. divisjon (PostNord-ligaen) i 2017."
+      },
+      {
+        "q": "Hvilket motto eller slagord forbindes med HamKam?",
+        "choices": [
+          "Stolthet, styrke, samhold",
+          "Alt for byen",
+          "Samhold og styrke",
+          "Sterkere sammen"
+        ],
+        "answerIndex": 0,
+        "explanation": "Klubben profilerer slagordet «Stolthet, styrke, samhold»."
+      },
+      {
+        "q": "Hvilken trener var ansvarlig da HamKam tok bronseplasseringen i 1970?",
+        "choices": [
+          "Roy Wright",
           "Ståle Solbakken",
-          "Osame Sahraoui"
-        ],
-        "answerIndex": 2,
-        "explanation": "Ståle Solbakken fikk sitt gjennombrudd i HamKam før proffspill i Danmark."
-      },
-      {
-        "q": "Hvilken spiller fikk sitt gjennombrudd gjennom talentutviklingen til HamKam?",
-        "choices": [
-          "Veton Berisha",
-          "Osame Sahraoui",
-          "Erling Knudtzon",
-          "Ståle Solbakken"
-        ],
-        "answerIndex": 3,
-        "explanation": "Ståle Solbakken fikk sitt gjennombrudd i HamKam før proffspill i Danmark."
-      },
-      {
-        "q": "Hva kjennetegner oppstarten til HamKam?",
-        "choices": [
-          "Ble startet av skolegutter i Bodø som ønsket et rent fotballtilbud i 1916.",
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917.",
-          "Ble til da flere lokale klubber slo seg sammen i sagbruksbyen i 1917.",
-          "Ble stiftet av arbeiderungdom i Hamar i 1918."
-        ],
-        "answerIndex": 3,
-        "explanation": "Ble stiftet av arbeiderungdom i Hamar i 1918."
-      },
-      {
-        "q": "Hvordan oppstod HamKam?",
-        "choices": [
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917.",
-          "Ble startet av skolegutter i Bodø som ønsket et rent fotballtilbud i 1916.",
-          "Ble til da flere lokale klubber slo seg sammen i sagbruksbyen i 1917.",
-          "Ble stiftet av arbeiderungdom i Hamar i 1918."
-        ],
-        "answerIndex": 3,
-        "explanation": "Ble stiftet av arbeiderungdom i Hamar i 1918."
-      },
-      {
-        "q": "Hva er historien bak etableringen av HamKam?",
-        "choices": [
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917.",
-          "Ble startet av skolegutter i Bodø som ønsket et rent fotballtilbud i 1916.",
-          "Ble til da flere lokale klubber slo seg sammen i sagbruksbyen i 1917.",
-          "Ble stiftet av arbeiderungdom i Hamar i 1918."
-        ],
-        "answerIndex": 3,
-        "explanation": "Ble stiftet av arbeiderungdom i Hamar i 1918."
-      },
-      {
-        "q": "Hva er HamKam sin største europeiske prestasjon?",
-        "choices": [
-          "Spilte Europa League-playoff mot Borussia Dortmund",
-          "Slo Chelsea sammenlagt i UEFA-cupen",
-          "Deltok i UEFA Intertoto Cup på midten av 2000-tallet",
-          "Spilte Champions League-kvartfinale i 1996/97"
-        ],
-        "answerIndex": 2,
-        "explanation": "Deltok i UEFA Intertoto Cup på midten av 2000-tallet i sesongen 2004."
-      },
-      {
-        "q": "Hvilket europaminne står sterkest for HamKam?",
-        "choices": [
-          "Spilte Europa League-playoff mot Borussia Dortmund",
-          "Slo Chelsea sammenlagt i UEFA-cupen",
-          "Spilte Champions League-kvartfinale i 1996/97",
-          "Deltok i UEFA Intertoto Cup på midten av 2000-tallet"
-        ],
-        "answerIndex": 3,
-        "explanation": "Deltok i UEFA Intertoto Cup på midten av 2000-tallet i sesongen 2004."
-      },
-      {
-        "q": "Hvilken europeisk bragd huskes best for HamKam?",
-        "choices": [
-          "Deltok i UEFA Intertoto Cup på midten av 2000-tallet",
-          "Spilte Champions League-kvartfinale i 1996/97",
-          "Spilte Europa League-playoff mot Borussia Dortmund",
-          "Slo Chelsea sammenlagt i UEFA-cupen"
+          "Kjetil Rekdal",
+          "Peter Kovacs"
         ],
         "answerIndex": 0,
-        "explanation": "Deltok i UEFA Intertoto Cup på midten av 2000-tallet i sesongen 2004."
+        "explanation": "Engelskmannen Roy Wright ledet laget til bronse i 1970."
       },
       {
-        "q": "Hva er en unik detalj ved HamKam?",
+        "q": "Hva er HamKams tradisjonelle hjemmedraktfarger ifølge sentrale kilder?",
         "choices": [
-          "Måkeskrik fra havna høres ofte under hjemmekampene på stadion.",
-          "Briskeby stadion har tribunene oppkalt etter lokale bydeler.",
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Odd arrangerte Norges første fotballcup allerede i 1902."
+          "Blått og hvitt",
+          "Grønt og hvitt",
+          "Rødt og hvitt",
+          "Gult og svart"
         ],
         "answerIndex": 1,
-        "explanation": "Briskeby stadion har tribunene oppkalt etter lokale bydeler."
+        "explanation": "HamKam spiller i grønne og hvite hjemmedrakter."
       },
       {
-        "q": "Hvilket særpreg er knyttet til HamKam?",
+        "q": "I hvilket år startet grunnarbeidet med Briskeby Stadion?",
         "choices": [
-          "Briskeby stadion har tribunene oppkalt etter lokale bydeler.",
-          "Odd arrangerte Norges første fotballcup allerede i 1902.",
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Måkeskrik fra havna høres ofte under hjemmekampene på stadion."
+          "1932",
+          "1934",
+          "1936",
+          "1938"
+        ],
+        "answerIndex": 1,
+        "explanation": "Anleggsarbeidet for Briskeby startet i 1934."
+      },
+      {
+        "q": "Hva het HamKams første manager etter fusjonen som dannet klubben?",
+        "choices": [
+          "Erik Hjorthen",
+          "Roy Wright",
+          "Svein Ivar Sigernes",
+          "Trond Amundsen"
         ],
         "answerIndex": 0,
-        "explanation": "Briskeby stadion har tribunene oppkalt etter lokale bydeler."
+        "explanation": "Etter fusjonen i 1946 var Erik Hjorthen første hovedtrener."
       },
       {
-        "q": "Hvilken spesialitet er typisk for HamKam?",
+        "q": "Hvilket år var HamKam sist i Eliteserien men rykket ned etter 14.-plass?",
         "choices": [
-          "Odd arrangerte Norges første fotballcup allerede i 1902.",
-          "Måkeskrik fra havna høres ofte under hjemmekampene på stadion.",
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Briskeby stadion har tribunene oppkalt etter lokale bydeler."
+          "2006",
+          "2008",
+          "2012",
+          "2014"
         ],
-        "answerIndex": 3,
-        "explanation": "Briskeby stadion har tribunene oppkalt etter lokale bydeler."
+        "answerIndex": 1,
+        "explanation": "HamKam endte sist (14.) og rykket ned fra Eliteserien i 2008."
       }
     ]
   },
