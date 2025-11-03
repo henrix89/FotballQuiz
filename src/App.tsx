@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/ui/tabs'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
 import { Button } from './components/ui/button'
-import { Input } from './components/ui/input'
 import { RadioGroup, RadioGroupItem } from './components/ui/radio-group'
 import { CheckCircle2, CircleHelp, Trophy, History, Sparkles, Shield } from 'lucide-react'
 
@@ -25,17 +24,78 @@ type QuizQuestion = StoredQuestion & {
 
 type QuestionBank = Record<string, Record<Difficulty, StoredQuestion[]>>
 
-const CLUBS = [
-  { id: 'liverpool', name: 'Liverpool FC', colors: 'from-red-600 to-red-800' },
-  { id: 'manutd', name: 'Manchester United', colors: 'from-rose-600 to-rose-800' },
-  { id: 'mancty', name: 'Manchester City', colors: 'from-sky-500 to-cyan-700' },
-  { id: 'arsenal', name: 'Arsenal', colors: 'from-red-500 to-amber-700' },
-  { id: 'chelsea', name: 'Chelsea', colors: 'from-blue-600 to-indigo-800' },
-  { id: 'tottenham', name: 'Tottenham Hotspur', colors: 'from-slate-500 to-slate-800' },
-  { id: 'barca', name: 'FC Barcelona', colors: 'from-fuchsia-600 to-indigo-700' },
-  { id: 'real', name: 'Real Madrid', colors: 'from-zinc-400 to-zinc-700' },
-  { id: 'juve', name: 'Juventus', colors: 'from-neutral-200 to-neutral-600' },
-  { id: 'milan', name: 'AC Milan', colors: 'from-red-700 to-black' },
+type League = {
+  id: string
+  name: string
+  description?: string
+}
+
+type Club = {
+  id: string
+  name: string
+  colors: string
+  leagueId: League['id']
+}
+
+const LEAGUES: League[] = [
+  {
+    id: 'eliteserien',
+    name: 'Norsk Eliteserie',
+    description: 'Topplagene fra Eliteserien 2024.',
+  },
+  {
+    id: 'premierleague',
+    name: 'Engelsk toppfotball',
+    description: 'Klubbene fra Premier League-sesongen 2023/24.',
+  },
+  {
+    id: 'champions',
+    name: 'Champions League-storklubber',
+    description: 'Europeiske giganter fra de største ligaene.',
+  },
+]
+
+const CLUBS: Club[] = [
+  { id: 'liverpool', name: 'Liverpool FC', colors: 'from-red-600 to-red-800', leagueId: 'premierleague' },
+  { id: 'manutd', name: 'Manchester United', colors: 'from-rose-600 to-rose-800', leagueId: 'premierleague' },
+  { id: 'mancty', name: 'Manchester City', colors: 'from-sky-500 to-cyan-700', leagueId: 'premierleague' },
+  { id: 'arsenal', name: 'Arsenal FC', colors: 'from-red-500 to-amber-600', leagueId: 'premierleague' },
+  { id: 'chelsea', name: 'Chelsea FC', colors: 'from-blue-600 to-indigo-800', leagueId: 'premierleague' },
+  { id: 'tottenham', name: 'Tottenham Hotspur', colors: 'from-slate-500 to-slate-800', leagueId: 'premierleague' },
+  { id: 'astonvilla', name: 'Aston Villa', colors: 'from-rose-700 to-amber-600', leagueId: 'premierleague' },
+  { id: 'bournemouth', name: 'AFC Bournemouth', colors: 'from-red-700 to-neutral-900', leagueId: 'premierleague' },
+  { id: 'brentford', name: 'Brentford FC', colors: 'from-rose-600 to-zinc-900', leagueId: 'premierleague' },
+  { id: 'brighton', name: 'Brighton & Hove Albion', colors: 'from-sky-600 to-blue-900', leagueId: 'premierleague' },
+  { id: 'burnley', name: 'Burnley FC', colors: 'from-rose-700 to-sky-400', leagueId: 'premierleague' },
+  { id: 'crystalpalace', name: 'Crystal Palace', colors: 'from-rose-600 to-blue-700', leagueId: 'premierleague' },
+  { id: 'everton', name: 'Everton FC', colors: 'from-blue-700 to-slate-900', leagueId: 'premierleague' },
+  { id: 'fulham', name: 'Fulham FC', colors: 'from-slate-100 to-slate-500 text-slate-900', leagueId: 'premierleague' },
+  { id: 'luton', name: 'Luton Town', colors: 'from-orange-500 to-slate-900', leagueId: 'premierleague' },
+  { id: 'newcastle', name: 'Newcastle United', colors: 'from-neutral-100 to-neutral-700 text-slate-900', leagueId: 'premierleague' },
+  { id: 'nottinghamforest', name: 'Nottingham Forest', colors: 'from-red-600 to-red-900', leagueId: 'premierleague' },
+  { id: 'sheffieldutd', name: 'Sheffield United', colors: 'from-red-600 to-slate-900', leagueId: 'premierleague' },
+  { id: 'westham', name: 'West Ham United', colors: 'from-cyan-600 to-rose-800', leagueId: 'premierleague' },
+  { id: 'wolves', name: 'Wolverhampton Wanderers', colors: 'from-amber-500 to-stone-900', leagueId: 'premierleague' },
+  { id: 'barca', name: 'FC Barcelona', colors: 'from-fuchsia-600 to-indigo-700', leagueId: 'champions' },
+  { id: 'real', name: 'Real Madrid', colors: 'from-zinc-200 to-zinc-500 text-slate-900', leagueId: 'champions' },
+  { id: 'juve', name: 'Juventus', colors: 'from-slate-100 to-slate-500 text-slate-900', leagueId: 'champions' },
+  { id: 'milan', name: 'AC Milan', colors: 'from-red-700 to-black', leagueId: 'champions' },
+  { id: 'bodoglimt', name: 'FK Bodø/Glimt', colors: 'from-yellow-300 to-amber-600 text-slate-900', leagueId: 'eliteserien' },
+  { id: 'brann', name: 'SK Brann', colors: 'from-red-600 to-red-900', leagueId: 'eliteserien' },
+  { id: 'fredrikstad', name: 'Fredrikstad FK', colors: 'from-red-600 to-slate-100 text-slate-900', leagueId: 'eliteserien' },
+  { id: 'hamkam', name: 'HamKam', colors: 'from-emerald-500 to-emerald-800', leagueId: 'eliteserien' },
+  { id: 'haugesund', name: 'FK Haugesund', colors: 'from-sky-400 to-sky-700', leagueId: 'eliteserien' },
+  { id: 'kfumoslo', name: 'KFUM Oslo', colors: 'from-red-600 to-blue-600', leagueId: 'eliteserien' },
+  { id: 'kristiansund', name: 'Kristiansund BK', colors: 'from-sky-700 to-slate-900', leagueId: 'eliteserien' },
+  { id: 'lillestrom', name: 'Lillestrøm SK', colors: 'from-yellow-300 to-slate-900 text-slate-900', leagueId: 'eliteserien' },
+  { id: 'molde', name: 'Molde FK', colors: 'from-sky-500 to-blue-800', leagueId: 'eliteserien' },
+  { id: 'odd', name: 'Odds BK', colors: 'from-slate-100 to-slate-500 text-slate-900', leagueId: 'eliteserien' },
+  { id: 'rosenborg', name: 'Rosenborg BK', colors: 'from-slate-100 to-slate-500 text-slate-900', leagueId: 'eliteserien' },
+  { id: 'sandefjord', name: 'Sandefjord Fotball', colors: 'from-blue-600 to-rose-600', leagueId: 'eliteserien' },
+  { id: 'sarpsborg08', name: 'Sarpsborg 08', colors: 'from-blue-500 to-blue-900', leagueId: 'eliteserien' },
+  { id: 'stromsgodset', name: 'Strømsgodset', colors: 'from-amber-500 to-blue-900', leagueId: 'eliteserien' },
+  { id: 'tromso', name: 'Tromsø IL', colors: 'from-red-600 to-slate-800', leagueId: 'eliteserien' },
+  { id: 'viking', name: 'Viking FK', colors: 'from-blue-900 to-amber-600', leagueId: 'eliteserien' },
 ]
 
 const CLUB_NAME_BY_ID = CLUBS.reduce<Record<string, string>>((acc, club) => {
@@ -97,7 +157,7 @@ const DIFFICULTY_OPTIONS: { value: Difficulty; label: string; description: strin
   },
 ]
 
-const DEFAULT_TARGET = 8
+const DEFAULT_TARGET = 10
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -110,8 +170,10 @@ export default function App() {
   const [questionData, setQuestionData] = useState<QuestionBank>({})
   const [loadingQuestions, setLoadingQuestions] = useState(true)
   const [questionError, setQuestionError] = useState<string | null>(null)
-  const [clubId, setClubId] = useState<string>(CLUBS[0].id)
-  const [customClub, setCustomClub] = useState<string>('')
+  const [leagueId, setLeagueId] = useState<string>(LEAGUES[0].id)
+  const [clubId, setClubId] = useState<string>(
+    CLUBS.find(club => club.leagueId === LEAGUES[0].id)?.id ?? CLUBS[0].id,
+  )
   const [quizMode, setQuizMode] = useState<QuizMode>('single')
   const [difficulty, setDifficulty] = useState<Difficulty>('easy')
   const [answers, setAnswers] = useState<number[]>([])
@@ -143,12 +205,18 @@ export default function App() {
     loadQuestionBank()
   }, [loadQuestionBank])
 
-  const pickedClub = useMemo(() => {
-    if (customClub.trim().length > 1) {
-      return { id: 'custom', name: customClub.trim(), colors: 'from-emerald-500 to-teal-700' }
+  const clubsInLeague = useMemo(() => CLUBS.filter(club => club.leagueId === leagueId), [leagueId])
+
+  useEffect(() => {
+    if (!clubsInLeague.some(club => club.id === clubId)) {
+      const fallback = clubsInLeague[0]?.id ?? CLUBS[0].id
+      setClubId(fallback)
     }
-    return CLUBS.find(c => c.id === clubId) ?? CLUBS[0]
-  }, [clubId, customClub])
+  }, [leagueId, clubsInLeague, clubId])
+
+  const pickedClub = useMemo(() => {
+    return clubsInLeague.find(c => c.id === clubId) ?? clubsInLeague[0] ?? CLUBS[0]
+  }, [clubId, clubsInLeague])
 
   useEffect(() => {
     setAnswers([])
@@ -161,7 +229,9 @@ export default function App() {
     if (!questionData || Object.keys(questionData).length === 0) return []
 
     if (quizMode === 'mixed') {
+      const allowedClubs = new Set(clubsInLeague.map(c => c.id))
       const collected = Object.entries(questionData).flatMap(([id, byDifficulty]) => {
+        if (!allowedClubs.has(id)) return []
         const questions = byDifficulty[difficulty] ?? []
         if (!questions.length) return []
         const clubName = CLUB_NAME_BY_ID[id] ?? id
@@ -178,7 +248,7 @@ export default function App() {
     const shuffled = shuffle(decorated)
     const limit = Math.min(shuffled.length, DEFAULT_TARGET)
     return shuffled.slice(0, limit)
-  }, [difficulty, pickedClub.id, pickedClub.name, quizMode, questionData, seed])
+  }, [clubsInLeague, difficulty, pickedClub.id, pickedClub.name, quizMode, questionData, seed])
 
   const current = quizQuestions[step]
   const total = quizQuestions.length
@@ -214,9 +284,7 @@ export default function App() {
   }
 
   const missingQuestionsMessage = quizMode === 'single'
-    ? pickedClub.id === 'custom'
-      ? 'Denne demoen har foreløpig ingen spørsmål for klubben du har skrevet inn. Prøv blandet modus eller velg en klubb fra listen.'
-      : 'Ingen spørsmål for denne vanskelighetsgraden ennå. Test en annen grad eller prøv blandet modus.'
+    ? `Ingen spørsmål for ${pickedClub.name} på denne vanskelighetsgraden ennå. Test en annen grad eller prøv blandet modus.`
     : 'Ingen klubber har spørsmål for denne vanskelighetsgraden i demoen. Bytt vanskelighetsgrad eller utvid spørsmålsbanken.'
 
   return (
@@ -232,38 +300,64 @@ export default function App() {
           </div>
         </header>
 
-        <Card className="mb-6 bg-slate-900/60 border-slate-700">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-slate-100">
-              <Sparkles className="h-5 w-5" /> Velg favoritklubb
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              {CLUBS.map(c => (
-                <button
-                  key={c.id}
-                  onClick={() => {
-                    setClubId(c.id)
-                    setCustomClub('')
-                  }}
-                  className={`rounded-2xl p-3 text-left bg-gradient-to-br ${c.colors} hover:brightness-110 transition shadow-sm ring-1 ring-white/10 ${pickedClub.id === c.id && !customClub ? 'outline outline-2 outline-white/70' : ''}`}
-                >
-                  <div className="text-sm font-semibold drop-shadow">{c.name}</div>
-                </button>
-              ))}
-            </div>
+        <div className="space-y-6 mb-6">
+          <Card className="bg-slate-900/60 border-slate-700">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-slate-100">
+                <Sparkles className="h-5 w-5" /> Velg serie
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {LEAGUES.map(league => (
+                  <button
+                    key={league.id}
+                    onClick={() => {
+                      if (leagueId !== league.id) {
+                        setLeagueId(league.id)
+                        const nextClub = CLUBS.find(club => club.leagueId === league.id)
+                        if (nextClub) {
+                          setClubId(nextClub.id)
+                        }
+                      }
+                    }}
+                    className={`rounded-2xl p-4 text-left bg-gradient-to-br from-slate-800 to-slate-900 hover:brightness-110 transition shadow-sm ring-1 ring-white/10 ${leagueId === league.id ? 'outline outline-2 outline-white/70' : ''}`}
+                  >
+                    <div className="text-base font-semibold text-slate-100">{league.name}</div>
+                    {league.description && (
+                      <div className="mt-2 text-xs text-slate-400 leading-snug">{league.description}</div>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-            <div className="flex items-center gap-2 pt-2">
-              <Input
-                placeholder="Eller skriv inn en egen klubb…"
-                value={customClub}
-                onChange={(e) => setCustomClub(e.target.value)}
-              />
-              <Button onClick={resetQuiz}>Bruk</Button>
-            </div>
-          </CardContent>
-        </Card>
+          <Card className="bg-slate-900/60 border-slate-700">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-slate-100">
+                <Sparkles className="h-5 w-5" /> Velg lag
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                {clubsInLeague.map(c => (
+                  <button
+                    key={c.id}
+                    onClick={() => {
+                      if (pickedClub.id !== c.id) {
+                        setClubId(c.id)
+                      }
+                    }}
+                    className={`rounded-2xl p-3 text-left text-white bg-gradient-to-br ${c.colors} hover:brightness-110 transition shadow-sm ring-1 ring-white/10 ${pickedClub.id === c.id ? 'outline outline-2 outline-white/70' : ''}`}
+                  >
+                    <div className="text-sm font-semibold drop-shadow">{c.name}</div>
+                  </button>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
         <Tabs defaultValue="history" className="w-full">
           <TabsList className="bg-slate-900/60 border border-slate-700 p-1">
             <TabsTrigger value="history" className="data-[state=active]:bg-slate-800">
