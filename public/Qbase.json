@@ -911,68 +911,908 @@
   "manutd": {
     "easy": [
       {
-        "q": "Hvilken manager er mest ikonisk for Uniteds moderne æra?",
+        "q": "Hva er kallenavnet til Manchester United?",
         "choices": [
-          "Matt Busby",
-          "Sir Alex Ferguson",
-          "Louis van Gaal",
-          "Ron Atkinson"
+          "The Red Devils",
+          "The Citizens",
+          "The Blues",
+          "The Reds"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva heter stadionet hvor Manchester United spiller sine hjemmekamper?",
+        "choices": [
+          "Anfield",
+          "Old Trafford",
+          "Etihad Stadium",
+          "Stamford Bridge"
         ],
         "answerIndex": 1
       },
       {
-        "q": "Hva kalles Old Trafford ofte?",
+        "q": "I hvilket land holder Manchester United til?",
+        "choices": [
+          "Skottland",
+          "England",
+          "Wales",
+          "Irland"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken farge har Manchester Uniteds hjemmedrakter?",
+        "choices": [
+          "Blå",
+          "Grønn",
+          "Rød",
+          "Gul"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år ble klubben grunnlagt (under navnet Newton Heath)?",
+        "choices": [
+          "1868",
+          "1878",
+          "1888",
+          "1898"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva står 'FC' for i klubbnavnet?",
+        "choices": [
+          "Football Company",
+          "Football Club",
+          "Fans Club",
+          "First Club"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva er kallenavnet til Old Trafford-stadion?",
         "choices": [
           "The Dream Factory",
           "The Theatre of Dreams",
-          "The Red Fortress",
-          "The United Arena"
+          "The Fortress",
+          "The Red Wall"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken by ligger Old Trafford i?",
+        "choices": [
+          "London",
+          "Manchester",
+          "Liverpool",
+          "Leeds"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken rival regnes som Manchester Uniteds største byrival?",
+        "choices": [
+          "Leeds United",
+          "Manchester City",
+          "Everton",
+          "Aston Villa"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem er Manchester Uniteds største rival fra Liverpool?",
+        "choices": [
+          "Everton",
+          "Tranmere Rovers",
+          "Liverpool FC",
+          "Blackburn Rovers"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken liga spiller Manchester United i?",
+        "choices": [
+          "La Liga",
+          "Serie A",
+          "Bundesliga",
+          "Premier League"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hva heter maskoten til Manchester United?",
+        "choices": [
+          "Benny the Bull",
+          "Fred the Red",
+          "Roary",
+          "Gunnersaurus"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem er klubbens mest legendariske manager?",
+        "choices": [
+          "Ron Atkinson",
+          "José Mourinho",
+          "Sir Alex Ferguson",
+          "David Moyes"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva kalles ungdomsgenerasjonen fra 1990-tallet med Beckham, Scholes og Giggs?",
+        "choices": [
+          "Fergie's Lads",
+          "Class of '92",
+          "Busby Babes",
+          "Treble Teens"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller hadde draktnummer 7 på 1990-tallet og ble et ikon?",
+        "choices": [
+          "Eric Cantona",
+          "Bryan Robson",
+          "George Best",
+          "Ruud van Nistelrooy"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket lag slo Manchester United i FA-cupfinalen 2016?",
+        "choices": [
+          "Crystal Palace",
+          "Wigan Athletic",
+          "Chelsea",
+          "Arsenal"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvor mange spillere er på banen fra ett lag i fotball?",
+        "choices": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva er klubbens offisielle farger?",
+        "choices": [
+          "Blå og hvit",
+          "Rød, hvit og svart",
+          "Grønn og gul",
+          "Sort og gull"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva heter klubbens offisielle hjemmebane?",
+        "choices": [
+          "Old Trafford",
+          "Elland Road",
+          "Highbury",
+          "Goodison Park"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket land er Cristiano Ronaldo fra?",
+        "choices": [
+          "Spania",
+          "Portugal",
+          "Brasil",
+          "Argentina"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller er kjent for frispark og #7-drakt på 2000-tallet?",
+        "choices": [
+          "David Beckham",
+          "Ryan Giggs",
+          "Wayne Rooney",
+          "Paul Scholes"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva heter klubbens hovedrival i byen Manchester?",
+        "choices": [
+          "Bolton Wanderers",
+          "Manchester City",
+          "Stockport County",
+          "Preston North End"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva er Manchester Uniteds kallenavn basert på deres emblem?",
+        "choices": [
+          "The Red Devils",
+          "The Foxes",
+          "The Magpies",
+          "The Eagles"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva heter trofeet som vinnes i Englands toppdivisjon?",
+        "choices": [
+          "Carabao Cup",
+          "Premier League-trofeet",
+          "FA Community Shield",
+          "Championship-pokalen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva heter turneringen der Manchester United vant i 1999, sammen med liga og cup?",
+        "choices": [
+          "Europa League",
+          "Champions League",
+          "League Cup",
+          "UEFA Super Cup"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva er navnet på Premier Leagues mestvinnende klubb?",
+        "choices": [
+          "Arsenal",
+          "Chelsea",
+          "Manchester United",
+          "Manchester City"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket lag slo United i Champions League-finalen 2009?",
+        "choices": [
+          "Real Madrid",
+          "AC Milan",
+          "FC Barcelona",
+          "Bayern München"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva står forkortelsen MUFC for?",
+        "choices": [
+          "Manchester United Football Club",
+          "Manchester Union Fan Club",
+          "Manchester United Federation Council",
+          "Manchester Urban Football Community"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva heter sangen fansen ofte synger: 'Glory, glory …'?",
+        "choices": [
+          "Glory, Glory Tottenham",
+          "Glory, Glory Chelsea",
+          "Glory, Glory Man United",
+          "Glory, Glory Arsenal"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva betyr 'Red Devils' på norsk?",
+        "choices": [
+          "De røde heltene",
+          "De røde djevlene",
+          "De røde ridderne",
+          "De røde kongene"
         ],
         "answerIndex": 1
       }
     ],
     "medium": [
       {
-        "q": "I hvilket år vant Manchester United the treble (PL, FA-cup og CL)?",
+        "q": "Hva het klubben før den byttet navn til Manchester United i 1902?",
         "choices": [
-          "1999",
-          "2008",
-          "1994",
-          "2013"
+          "Manchester Central",
+          "Newton Heath",
+          "Lancashire Athletic",
+          "United of Manchester"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva står 'LYR' for i det opprinnelige navnet Newton Heath LYR?",
+        "choices": [
+          "London Yorkshire Railway",
+          "Lancashire and Yorkshire Railway",
+          "Liverpool York Route",
+          "Leeds-York Railway"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år vant Manchester United sin første engelske ligatittel?",
+        "choices": [
+          "1903",
+          "1908",
+          "1912",
+          "1919"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "I hvilket år ble Old Trafford offisielt åpnet?",
+        "choices": [
+          "1908",
+          "1910",
+          "1912",
+          "1914"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva er kapasiteten på Old Trafford (omtrent)?",
+        "choices": [
+          "62 000",
+          "68 000",
+          "74 000",
+          "80 000"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år vant Manchester United 'The Treble'?",
+        "choices": [
+          "1996",
+          "1997",
+          "1998",
+          "1999"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvem scoret vinnermålet i Champions League-finalen 1999?",
+        "choices": [
+          "Ryan Giggs",
+          "Ole Gunnar Solskjær",
+          "Paul Scholes",
+          "David Beckham"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem scoret utligningen like før?",
+        "choices": [
+          "Teddy Sheringham",
+          "Nicky Butt",
+          "Dwight Yorke",
+          "Roy Keane"
         ],
         "answerIndex": 0
       },
       {
-        "q": "Hvem scoret seiersmålet i Champions League-finalen 1999?",
+        "q": "Hvilken spiller ble klubbens toppscorer gjennom tidene?",
         "choices": [
-          "David Beckham",
-          "Ryan Giggs",
-          "Ole Gunnar Solskjær",
-          "Teddy Sheringham"
+          "Wayne Rooney",
+          "Bobby Charlton",
+          "Denis Law",
+          "George Best"
         ],
-        "answerIndex": 2
-      }
-    ],
-    "hard": [
+        "answerIndex": 0
+      },
       {
-        "q": "Hvilket lag slo United i Europacupfinalen i 1968?",
+        "q": "Hvilken spiller har flest kamper for Manchester United?",
         "choices": [
-          "Real Madrid",
-          "Benfica",
-          "Bayern München",
-          "Celtic"
+          "Paul Scholes",
+          "Ryan Giggs",
+          "Gary Neville",
+          "Roy Keane"
         ],
         "answerIndex": 1
       },
       {
-        "q": "I hvilket år skjedde Munich-ulykken?",
+        "q": "Hva heter Manchester Uniteds treningsanlegg utenfor byen?",
         "choices": [
-          "1955",
+          "Melwood",
+          "Carrington",
+          "Bodymoor Heath",
+          "Colney"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag slo United i Europa League-finalen 2021?",
+        "choices": [
+          "Sevilla",
+          "Ajax",
+          "Villarreal",
+          "Inter Milan"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Manchester Uniteds kaptein under Champions League-triumfen i 2008?",
+        "choices": [
+          "Nemanja Vidić",
+          "Rio Ferdinand",
+          "Gary Neville",
+          "Ryan Giggs"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var klubbens manager før Sir Alex Ferguson?",
+        "choices": [
+          "Dave Sexton",
+          "Ron Atkinson",
+          "Tommy Docherty",
+          "Frank O'Farrell"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken skotsk klubb trente Ferguson før han kom til United?",
+        "choices": [
+          "Hearts",
+          "Dundee United",
+          "Aberdeen",
+          "Hibernian"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "I hvilket år vant United sin første Europacup (nå Champions League)?",
+        "choices": [
+          "1966",
+          "1967",
+          "1968",
+          "1969"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken klubb møtte de i den finalen?",
+        "choices": [
+          "Real Madrid",
+          "AC Milan",
+          "Benfica",
+          "Celtic"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket flyselskap var sponsor på Uniteds drakter fra 2006 til 2014?",
+        "choices": [
+          "Qatar Airways",
+          "Etihad Airways",
+          "AIG",
+          "Emirates"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken nordmann ble klubbens midlertidige manager i 2018?",
+        "choices": [
+          "Henning Berg",
+          "Ronny Johnsen",
+          "Ole Gunnar Solskjær",
+          "Erik Nevland"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva heter statuen utenfor Old Trafford som viser Best, Law og Charlton?",
+        "choices": [
+          "The Golden Trio",
+          "The United Trinity",
+          "Legends of Old Trafford",
+          "The Famous Three"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller fikk kallenavnet 'Captain Marvel'?",
+        "choices": [
+          "Bryan Robson",
+          "Steve Bruce",
+          "Roy Keane",
+          "Michael Carrick"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem var klubbens første utenlandske manager?",
+        "choices": [
+          "Louis van Gaal",
+          "Jose Mourinho",
+          "Ole Gunnar Solskjær",
+          "Ernest Mangnall"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva er navnet på Manchester Uniteds dame-lag?",
+        "choices": [
+          "Manchester United Ladies",
+          "Manchester United Women",
+          "Manchester United Lionesses",
+          "Manchester United Queens"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "I hvilket år rykket klubben sist ned fra toppdivisjonen?",
+        "choices": [
+          "1969",
+          "1972",
+          "1974",
+          "1976"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var United-keeper da de vant Champions League 1999?",
+        "choices": [
+          "Peter Schmeichel",
+          "Edwin van der Sar",
+          "Fabien Barthez",
+          "Anders Lindegaard"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken klubb kom Eric Cantona fra da han signerte for United?",
+        "choices": [
+          "AS Monaco",
+          "Leeds United",
+          "Marseille",
+          "Paris Saint-Germain"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva er det offisielle navnet på fansens tribune på Old Trafford (Sir … Stand)?",
+        "choices": [
+          "Sir Bobby Charlton Stand",
+          "Sir Matt Busby Stand",
+          "Sir Alex Ferguson Stand",
+          "Sir Denis Law Stand"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år ble Cristiano Ronaldo solgt til Real Madrid første gang?",
+        "choices": [
+          "2007",
+          "2008",
+          "2009",
+          "2010"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem tok over som manager etter Ferguson i 2013?",
+        "choices": [
+          "David Moyes",
+          "Louis van Gaal",
+          "Jose Mourinho",
+          "Ryan Giggs"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva er mottoet som står i klubbens logo?",
+        "choices": [
+          "Youth, Courage, Greatness",
+          "Pride of the North",
+          "Glory and Honour",
+          "Faithful and Strong"
+        ],
+        "answerIndex": 0
+      }
+    ],
+    "hard": [
+      {
+        "q": "Hvilket år skjedde flyulykken i München der åtte United-spillere omkom?",
+        "choices": [
+          "1956",
+          "1957",
           "1958",
-          "1963",
+          "1959"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva var flyets destinasjon da ulykken inntraff?",
+        "choices": [
+          "London",
+          "Manchester",
+          "Birmingham",
+          "Liverpool"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket hotell i München husket overlevende seg fra redningsarbeidet?",
+        "choices": [
+          "Hotel Bayerischer Hof",
+          "Hotel Vier Jahreszeiten",
+          "Hotel Munich Palace",
+          "Hotel Excelsior"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva het avisen som først brukte uttrykket 'Busby Babes'?",
+        "choices": [
+          "The Times",
+          "Manchester Evening News",
+          "The Guardian",
+          "Daily Mail"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller overlevde ulykken og scoret i FA-cupfinalen året etter?",
+        "choices": [
+          "Harry Gregg",
+          "Bill Foulkes",
+          "Bobby Charlton",
+          "Dennis Viollet"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange ligatitler vant Sir Matt Busby som manager?",
+        "choices": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva var klubbens gjennomsnittsalder på laget i 1957-sesongen?",
+        "choices": [
+          "19 år",
+          "21 år",
+          "22 år",
+          "24 år"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år ble Manchester United første engelske klubb til å vinne Europacupen?",
+        "choices": [
+          "1967",
+          "1968",
+          "1969",
           "1970"
         ],
         "answerIndex": 1
+      },
+      {
+        "q": "Mot hvilket lag spilte de i semifinalen den sesongen?",
+        "choices": [
+          "Real Madrid",
+          "Juventus",
+          "Inter Milan",
+          "Borussia Dortmund"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva var sluttresultatet i finalen mot Benfica i 1968?",
+        "choices": [
+          "3-1",
+          "4-1",
+          "4-2",
+          "5-1"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller scoret to mål i den finalen?",
+        "choices": [
+          "George Best",
+          "Brian Kidd",
+          "Bobby Charlton",
+          "Denis Law"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange seriegull vant United under Sir Alex Ferguson?",
+        "choices": [
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange FA-cup-titler vant de under Ferguson?",
+        "choices": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva var navnet på Uniteds ungdomsturnering som fostret 'Class of '92'?",
+        "choices": [
+          "FA Youth Cup",
+          "Premier Academy League",
+          "Manchester Youth Cup",
+          "Lancashire Junior Cup"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva var prisen Real Madrid betalte for Cristiano Ronaldo i 2009?",
+        "choices": [
+          "70 millioner pund",
+          "75 millioner pund",
+          "80 millioner pund",
+          "85 millioner pund"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem scoret det første Premier League-målet for Manchester United (1992)?",
+        "choices": [
+          "Eric Cantona",
+          "Mark Hughes",
+          "Brian McClair",
+          "Andrei Kanchelskis"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller ble klubbens første Ballon d'Or-vinner?",
+        "choices": [
+          "George Best",
+          "Bobby Charlton",
+          "Denis Law",
+          "Cristiano Ronaldo"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år vant United VM for klubblag?",
+        "choices": [
+          "2008",
+          "2009",
+          "2010",
+          "2011"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem scoret målet som sikret seieren i den finalen?",
+        "choices": [
+          "Wayne Rooney",
+          "Carlos Tévez",
+          "Cristiano Ronaldo",
+          "Dimitar Berbatov"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken spiller var yngst i Champions League-finalen 1999?",
+        "choices": [
+          "Gary Neville",
+          "Nicky Butt",
+          "Ryan Giggs",
+          "Wes Brown"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket år ble Old Trafford gjenoppbygd etter bombingen under 2. verdenskrig?",
+        "choices": [
+          "1947",
+          "1948",
+          "1949",
+          "1950"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva var den offisielle kapasiteten etter gjenåpningen?",
+        "choices": [
+          "45 000",
+          "50 000",
+          "55 000",
+          "60 000"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken klubb slo United 7-0 i FA-cupen i 1930-årene (rekordtap)?",
+        "choices": [
+          "Wolverhampton Wanderers",
+          "Aston Villa",
+          "Sheffield Wednesday",
+          "Portsmouth"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva er klubbens største seier i toppdivisjonen (mål-differanse)?",
+        "choices": [
+          "8-0",
+          "9-0",
+          "9-1",
+          "10-0"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem scoret det raskeste målet for United i Premier League-historien?",
+        "choices": [
+          "Ryan Giggs",
+          "Robin van Persie",
+          "Wayne Rooney",
+          "Cristiano Ronaldo"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem ble Uniteds første manager etter Ferguson som fikk sparken?",
+        "choices": [
+          "Louis van Gaal",
+          "David Moyes",
+          "Jose Mourinho",
+          "Ole Gunnar Solskjær"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken spiller ble hentet som verdens dyreste forsvarsspiller i 2019?",
+        "choices": [
+          "Virgil van Dijk",
+          "Kalidou Koulibaly",
+          "Harry Maguire",
+          "Ruben Dias"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva het United-spilleren som vant 'Golden Boy Award' i 2020?",
+        "choices": [
+          "Mason Greenwood",
+          "Marcus Rashford",
+          "Ingen – prisen gikk til Erling Haaland",
+          "Anthony Martial"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var klubbens første nordmann som spilte offisiell kamp?",
+        "choices": [
+          "Ronny Johnsen",
+          "Henning Berg",
+          "Ole Gunnar Solskjær",
+          "Magnus Wolff Eikrem"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket år ble Uniteds kvinnelag stiftet?",
+        "choices": [
+          "2016",
+          "2017",
+          "2018",
+          "2019"
+        ],
+        "answerIndex": 2
       }
     ]
   },
