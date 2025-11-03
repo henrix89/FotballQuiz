@@ -267,6 +267,10 @@ export default function App() {
   }, [loadQuestionBank])
 
   const clubsInLeague = useMemo(() => CLUBS.filter(club => club.leagueId === leagueId), [leagueId])
+  const selectedLeague = useMemo(
+    () => LEAGUES.find(league => league.id === leagueId) ?? LEAGUES[0],
+    [leagueId],
+  )
 
   useEffect(() => {
     if (!clubsInLeague.some(club => club.id === clubId)) {
@@ -373,67 +377,98 @@ export default function App() {
     : 'Ingen klubber har spørsmål for denne vanskelighetsgraden i demoen. Bytt vanskelighetsgrad eller utvid spørsmålsbanken.'
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-slate-950 text-slate-50">
+    <div className="relative min-h-screen w-full overflow-hidden bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl animate-blob" />
-        <div className="absolute -bottom-20 -left-10 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute top-1/3 -right-10 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/10 blur-3xl animate-blob animation-delay-4000" />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/95 to-slate-950" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/95 to-slate-950" />
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(circle_at_top,_rgba(15,23,42,0.75),_transparent_70%)]" />
+        <motion.div
+          className="absolute -left-32 top-16 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl"
+          animate={{ y: [0, -20, 0], scale: [1, 1.05, 1] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute -right-20 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-sky-500/15 blur-3xl"
+          animate={{ y: [0, 20, 0], scale: [1, 0.98, 1] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}
+        />
+        <motion.div
+          className="absolute bottom-[-8rem] left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-fuchsia-500/10 blur-3xl"
+          animate={{ y: [0, -15, 0], scale: [1, 1.08, 1] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
+        />
       </div>
-      <div className="relative z-10 mx-auto max-w-5xl px-4 py-8">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
         <motion.header
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-6 flex flex-wrap items-center justify-between gap-4"
+          className="mb-10 flex flex-wrap items-center justify-between gap-6"
         >
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest text-slate-300 shadow">
-              <Shield className="h-3.5 w-3.5" /> Sesong 2024 Demo
+          <div className="flex items-center gap-4">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 shadow-[0_15px_45px_rgba(16,185,129,0.25)]"
+            >
+              <Sparkles className="h-5 w-5" />
+            </motion.div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-200/80">Interaktiv demo</p>
+              <h1 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">FotballQuiz</h1>
+              <p className="text-sm text-slate-300/90">
+                Utforsk klubbhistorie, velg vanskelighetsgrad og utfordre vennene dine i en dynamisk fotballquiz.
+              </p>
             </div>
-            <h1 className="mt-3 flex items-center gap-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
-              FotballQuiz
-            </h1>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.5 }}
-            className="flex items-center gap-2"
-          >
+          <div className="flex flex-col items-end gap-3 sm:flex-row sm:items-center">
+            <div className="text-xs uppercase tracking-wide text-slate-400">{selectedLeague?.name ?? 'Ukjent liga'}</div>
             <Button variant="secondary" onClick={resetQuiz} className="backdrop-blur">
-              Reset quiz
+              Start på nytt
             </Button>
-          </motion.div>
+          </div>
         </motion.header>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-8 overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-xl backdrop-blur"
+          className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]"
         >
-          <div className="relative">
-            <div className={`absolute inset-0 opacity-70 ${clubTheme.gradient}`} />
-            <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/40 via-slate-950/10 to-transparent" />
-            <div className="relative grid gap-8 p-6 sm:p-8 md:grid-cols-[1.3fr_0.7fr]">
-              <div className={`space-y-4 ${clubTheme.text}`}>
-                <p className="text-xs uppercase tracking-wide text-white/70">Favorittklubb</p>
+          <motion.div
+            key={pickedClub.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/60 shadow-[0_30px_80px_rgba(15,23,42,0.55)] backdrop-blur"
+          >
+            <motion.div
+              key={`${pickedClub.id}-${clubTheme.gradient}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              className={`absolute inset-0 opacity-80 ${clubTheme.gradient}`}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/40 to-transparent" />
+            <div className="relative flex h-full flex-col justify-between gap-10 p-8 sm:p-12">
+              <div className="space-y-6 text-white">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white/80 backdrop-blur">
+                  <Shield className="h-3.5 w-3.5" /> Favorittklubb
+                </div>
                 <motion.h2
                   key={pickedClub.id}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45 }}
-                  className="text-3xl font-bold sm:text-4xl"
+                  className="text-4xl font-black tracking-tight sm:text-5xl"
                 >
                   {pickedClub.name}
                 </motion.h2>
                 <p className="max-w-xl text-sm text-white/80">
-                  Velg serie, klubb og vanskelighetsgrad for å teste hvor godt du kjenner fotballhistorien. Quizzen henter
-                  spørsmål fra en demo-bank og blander klubbene når du ønsker ekstra utfordring.
+                  {selectedLeague?.description ??
+                    'Velg liga og klubb for å starte. Når spørsmålsbanken er klar kan du hoppe direkte inn i quizen.'}
                 </p>
-                <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wide text-white/70">
+                <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/80">
                   {activeMode && (
                     <span className="rounded-full bg-black/30 px-3 py-1 backdrop-blur">Modus: {activeMode.label}</span>
                   )}
@@ -442,362 +477,397 @@ export default function App() {
                       Vanskelighetsgrad: {activeDifficulty.label}
                     </span>
                   )}
-                  <span className="rounded-full bg-black/30 px-3 py-1 backdrop-blur">Svar: {answeredCount}</span>
+                  <span className="rounded-full bg-black/30 px-3 py-1 backdrop-blur">Besvart: {answeredCount}</span>
                 </div>
               </div>
-              <div className="space-y-3">
-                {[
-                  {
-                    label: 'Fremdrift',
-                    value: `${progress}%`,
-                    icon: Activity,
-                    accent: 'bg-emerald-500/10 text-emerald-200',
-                  },
-                  {
-                    label: 'Spørsmål i runden',
-                    value: total || '—',
-                    icon: CircleHelp,
-                    accent: 'bg-amber-500/10 text-amber-100',
-                  },
-                  {
-                    label: 'Quizmodus',
-                    value: activeMode?.label ?? 'Velg',
-                    icon: Target,
-                    accent: 'bg-sky-500/10 text-sky-100',
-                  },
-                ].map(({ label, value, icon: Icon, accent }, index) => (
-                  <motion.div
-                    key={label}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * index, duration: 0.45 }}
-                    className={`flex items-center justify-between rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 shadow-inner backdrop-blur ${accent}`}
-                  >
-                    <div className="flex items-center gap-3 text-sm font-semibold">
-                      <span className="rounded-full bg-black/20 p-2">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <span>{label}</span>
+              <div className="space-y-6">
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                    <div className="text-xs uppercase tracking-wide text-white/70">Spørsmål besvart</div>
+                    <div className="mt-2 text-2xl font-bold text-white">
+                      {answeredCount} <span className="text-sm text-white/70">av {total || '–'}</span>
                     </div>
-                    <span className="text-base font-bold">{value}</span>
-                  </motion.div>
-                ))}
+                    <div className="mt-1 text-xs text-white/60">Poeng: {score}/{total || '–'}</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                    <div className="flex items-center justify-between text-xs uppercase tracking-wide text-white/70">
+                      <span>Fremdrift</span>
+                      <span>{progress}%</span>
+                    </div>
+                    <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
+                      <motion.div
+                        initial={false}
+                        animate={{ width: `${progress}%` }}
+                        transition={{ duration: 0.6, ease: 'easeOut' }}
+                        className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_18px_rgba(56,189,248,0.5)]"
+                      />
+                    </div>
+                    <p className="mt-2 text-xs text-white/60">
+                      {showResults
+                        ? 'Resultatet er klart – se detaljene under.'
+                        : 'Svar på spørsmålene for å se din personlige score.'}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <div className="mb-6 space-y-6">
-          <Card className="bg-slate-900/60 border-slate-700">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-slate-100">
-                <Sparkles className="h-5 w-5" /> Velg serie
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                {LEAGUES.map(league => (
-                  <button
-                    key={league.id}
-                    onClick={() => {
-                      if (leagueId !== league.id) {
-                        setLeagueId(league.id)
-                        const nextClub = CLUBS.find(club => club.leagueId === league.id)
-                        if (nextClub) {
-                          setClubId(nextClub.id)
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+              <CardHeader className="border-b border-white/5">
+                <CardTitle className="flex items-center gap-2 text-slate-100">
+                  <Activity className="h-5 w-5 text-emerald-300" />
+                  Live status
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 pt-4">
+                <div className="grid grid-cols-2 gap-3 text-sm text-slate-300">
+                  <div className="rounded-2xl border border-white/5 bg-white/5 p-3 text-center backdrop-blur">
+                    <div className="text-xs uppercase tracking-wide text-slate-400">Totalt</div>
+                    <div className="mt-1 text-lg font-semibold text-white">{total || '–'}</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/5 bg-white/5 p-3 text-center backdrop-blur">
+                    <div className="text-xs uppercase tracking-wide text-slate-400">Riktige</div>
+                    <div className="mt-1 text-lg font-semibold text-white">{score}</div>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/5 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur">
+                  Hold oversikt over poengsummen din mens du spiller. Resultatkortet under viser full rapport når du er ferdig.
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+              <CardHeader className="border-b border-white/5">
+                <CardTitle className="flex items-center gap-2 text-slate-100">
+                  <Target className="h-5 w-5 text-sky-300" />
+                  Quizinnstillinger
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4 pt-4">
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Quizmodus</p>
+                  <RadioGroup
+                    value={quizMode}
+                    onValueChange={val => setQuizMode(val as QuizMode)}
+                    className="grid gap-2"
+                  >
+                    {QUIZ_MODE_OPTIONS.map(option => (
+                      <motion.label
+                        key={option.value}
+                        htmlFor={`mode-${option.value}`}
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.99 }}
+                        className={`flex cursor-pointer items-start gap-3 rounded-2xl border border-white/5 bg-white/5 p-3 backdrop-blur transition ${
+                          quizMode === option.value
+                            ? 'border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_0_25px_rgba(16,185,129,0.35)]'
+                            : 'hover:bg-white/10'
+                        }`}
+                      >
+                        <RadioGroupItem value={option.value} id={`mode-${option.value}`} />
+                        <span>
+                          <div className="text-sm font-semibold text-slate-100">{option.label}</div>
+                          <div className="text-xs text-slate-400">{option.description}</div>
+                        </span>
+                      </motion.label>
+                    ))}
+                  </RadioGroup>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Vanskelighetsgrad</p>
+                  <RadioGroup
+                    value={difficulty}
+                    onValueChange={val => setDifficulty(val as Difficulty)}
+                    className="grid gap-2"
+                  >
+                    {DIFFICULTY_OPTIONS.map(option => (
+                      <motion.label
+                        key={option.value}
+                        htmlFor={`difficulty-${option.value}`}
+                        whileHover={{ scale: 1.01 }}
+                        whileTap={{ scale: 0.99 }}
+                        className={`flex cursor-pointer items-start gap-3 rounded-2xl border border-white/5 bg-white/5 p-3 backdrop-blur transition ${
+                          difficulty === option.value
+                            ? 'border-sky-300/70 bg-sky-400/10 text-white shadow-[0_0_25px_rgba(56,189,248,0.35)]'
+                            : 'hover:bg-white/10'
+                        }`}
+                      >
+                        <RadioGroupItem value={option.value} id={`difficulty-${option.value}`} />
+                        <span>
+                          <div className="text-sm font-semibold text-slate-100">{option.label}</div>
+                          <div className="text-xs text-slate-400">{option.description}</div>
+                        </span>
+                      </motion.label>
+                    ))}
+                  </RadioGroup>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur sm:col-span-2 lg:col-span-1">
+              <CardHeader className="border-b border-white/5">
+                <CardTitle className="flex items-center gap-2 text-slate-100">
+                  <Sparkles className="h-5 w-5 text-fuchsia-300" />
+                  Velg lag
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                  {clubsInLeague.map(c => (
+                    <motion.button
+                      key={c.id}
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => {
+                        if (pickedClub.id !== c.id) {
+                          setClubId(c.id)
                         }
-                      }
-                    }}
-                    className={`rounded-2xl p-4 text-left bg-gradient-to-br from-slate-800 to-slate-900 hover:brightness-110 transition shadow-sm ring-1 ring-white/10 ${leagueId === league.id ? 'outline outline-2 outline-white/70' : ''}`}
-                  >
-                    <div className="text-base font-semibold text-slate-100">{league.name}</div>
-                    {league.description && (
-                      <div className="mt-2 text-xs text-slate-400 leading-snug">{league.description}</div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+                      }}
+                      className={`rounded-2xl bg-gradient-to-br p-3 text-left text-white shadow-lg transition ${
+                        pickedClub.id === c.id ? 'outline outline-2 outline-white/80' : 'opacity-90 hover:opacity-100'
+                      } ${c.colors}`}
+                    >
+                      <div className="text-sm font-semibold drop-shadow">{c.name}</div>
+                    </motion.button>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </motion.section>
 
-          <Card className="border-slate-700 bg-slate-900/60 backdrop-blur">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-slate-100">
-                <Sparkles className="h-5 w-5" /> Velg lag
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                {clubsInLeague.map(c => (
-                  <button
-                    key={c.id}
-                    onClick={() => {
-                      if (pickedClub.id !== c.id) {
-                        setClubId(c.id)
-                      }
-                    }}
-                    className={`rounded-2xl p-3 text-left text-white bg-gradient-to-br ${c.colors} hover:brightness-110 transition shadow-sm ring-1 ring-white/10 ${pickedClub.id === c.id ? 'outline outline-2 outline-white/70' : ''}`}
-                  >
-                    <div className="text-sm font-semibold drop-shadow">{c.name}</div>
-                  </button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <Tabs defaultValue="history" className="w-full">
-          <TabsList className="border border-slate-700 bg-slate-900/60 p-1 backdrop-blur">
-            <TabsTrigger value="history" className="data-[state=active]:bg-slate-800">
-              <History className="h-4 w-4 mr-2" /> Historie
-            </TabsTrigger>
-            <TabsTrigger value="quiz" className="data-[state=active]:bg-slate-800">
-              <CircleHelp className="h-4 w-4 mr-2" /> Quiz
-            </TabsTrigger>
-          </TabsList>
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+          className="mt-12"
+        >
+          <Tabs defaultValue="history" className="w-full">
+            <TabsList className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-950/70 p-1 shadow-[0_15px_45px_rgba(15,23,42,0.45)] backdrop-blur">
+              <TabsTrigger
+                value="history"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
+              >
+                <History className="mr-2 h-4 w-4" /> Historie
+              </TabsTrigger>
+              <TabsTrigger
+                value="quiz"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
+              >
+                <CircleHelp className="mr-2 h-4 w-4" /> Quiz
+              </TabsTrigger>
+            </TabsList>
 
-          <TabsContent value="history" className="mt-4">
-            <Card className="border-slate-700 bg-slate-900/60 backdrop-blur">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <span className="text-xl font-bold">{pickedClub.name}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className={`rounded-xl bg-gradient-to-br ${pickedClub.colors} p-4 text-white/95 shadow-lg`}> 
-                  <p className="leading-relaxed">
-                    {CLUB_HISTORIES[(pickedClub as any).id] ||
-                      'Denne klubben har ikke fått en detaljert beskrivelse enda i demoen. Velg en annen klubb eller skriv din egen – i blandet modus kan du fortsatt få spørsmål i quizen.'}
+            <TabsContent value="history" className="mt-6">
+              <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+                <CardHeader className="border-b border-white/5">
+                  <CardTitle className="flex items-center gap-2 text-xl font-semibold text-slate-100">
+                    {pickedClub.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 pt-4">
+                  <div className={`rounded-2xl bg-gradient-to-br p-5 text-white shadow-lg ${pickedClub.colors}`}>
+                    <p className="leading-relaxed">
+                      {CLUB_HISTORIES[(pickedClub as any).id] ||
+                        'Denne klubben har ikke fått en detaljert beskrivelse i demoen ennå. Velg en annen klubb eller fyll på med egne fakta senere.'}
+                    </p>
+                  </div>
+                  <p className="text-xs text-slate-400">
+                    Demo-innhold. Legg til ekte kilder, statistikk og visuelt materiale i en senere iterasjon.
                   </p>
-                </div>
-                <div className="text-xs text-slate-400 mt-3">
-                  Demo-innhold. Legg til ekte kilder + bilder/meritter i neste steg.
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
+                </CardContent>
+              </Card>
+            </TabsContent>
 
-          <TabsContent value="quiz" className="mt-4">
-            <Card className="border-slate-700 bg-slate-900/60 backdrop-blur">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CircleHelp className="h-5 w-5" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Quizmodus</p>
-                    <RadioGroup
-                      value={quizMode}
-                      onValueChange={(val) => setQuizMode(val as QuizMode)}
-                      className="grid grid-cols-1 sm:grid-cols-2 gap-2"
-                    >
-                      {QUIZ_MODE_OPTIONS.map(option => (
-                        <label
-                          key={option.value}
-                          htmlFor={`mode-${option.value}`}
-                          className={`flex items-start gap-3 rounded-xl border p-3 cursor-pointer transition bg-slate-800/60 border-slate-700 hover:bg-slate-800 ${quizMode === option.value ? 'ring-2 ring-slate-200' : ''}`}
-                        >
-                          <RadioGroupItem value={option.value} id={`mode-${option.value}`} />
-                          <span>
-                            <div className="text-sm font-semibold text-slate-100">{option.label}</div>
-                            <div className="text-xs text-slate-400">{option.description}</div>
-                          </span>
-                        </label>
-                      ))}
-                    </RadioGroup>
-                  </div>
-                  <div className="space-y-2">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Vanskelighetsgrad</p>
-                    <RadioGroup
-                      value={difficulty}
-                      onValueChange={(val) => setDifficulty(val as Difficulty)}
-                      className="grid grid-cols-1 gap-2"
-                    >
-                      {DIFFICULTY_OPTIONS.map(option => (
-                        <label
-                          key={option.value}
-                          htmlFor={`difficulty-${option.value}`}
-                          className={`flex items-start gap-3 rounded-xl border p-3 cursor-pointer transition bg-slate-800/60 border-slate-700 hover:bg-slate-800 ${difficulty === option.value ? 'ring-2 ring-slate-200' : ''}`}
-                        >
-                          <RadioGroupItem value={option.value} id={`difficulty-${option.value}`} />
-                          <span>
-                            <div className="text-sm font-semibold text-slate-100">{option.label}</div>
-                            <div className="text-xs text-slate-400">{option.description}</div>
-                          </span>
-                        </label>
-                      ))}
-                    </RadioGroup>
-                  </div>
-                </div>
-
-                {loadingQuestions ? (
-                  <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6 text-center text-sm text-slate-300">
-                    <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
-                    <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
-                  </div>
-                ) : questionError ? (
-                  <div className="rounded-xl border border-rose-800/40 bg-rose-950/40 p-6 text-center text-sm text-rose-200">
-                    <p className="font-semibold">Kunne ikke laste spørsmål.</p>
-                    <p className="mt-2 opacity-90">{questionError}</p>
-                    <div className="mt-4 flex justify-center">
-                      <Button variant="secondary" onClick={loadQuestionBank}>Prøv igjen</Button>
+            <TabsContent value="quiz" className="mt-6">
+              <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+                <CardHeader className="border-b border-white/5">
+                  <CardTitle className="flex items-center gap-2 text-slate-100">
+                    <CircleHelp className="h-5 w-5 text-emerald-300" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
+                  </CardTitle>
+                  <p className="text-sm text-slate-400">
+                    Spørsmålene hentes fra demo-banken <code>Qbase.json</code>. Velg modus og vanskelighetsgrad i kortet over før du starter.
+                  </p>
+                </CardHeader>
+                <CardContent className="space-y-6 pt-6">
+                  {loadingQuestions ? (
+                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
+                      <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
+                      <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
                     </div>
-                  </div>
-                ) : !hasQuestions ? (
-                  <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6 text-center text-sm text-slate-300">
-                    <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
-                    <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
-                  </div>
-                ) : (
-                  <div className="space-y-6">
-                    <div className="space-y-3">
-                      <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-slate-300">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-semibold text-slate-100">Spørsmål {Math.min(step + 1, total)} av {total}</span>
-                          {activeDifficulty && (
-                            <span className="rounded-full bg-slate-800/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-200">
-                              {activeDifficulty.label}
-                            </span>
-                          )}
-                          {quizMode === 'mixed' && current?.clubName && (
-                            <span className="rounded-full bg-slate-800/60 px-3 py-1 text-xs font-medium uppercase tracking-wide text-slate-200">
-                              {current.clubName}
-                            </span>
-                          )}
-                        </div>
-                        <span className="text-xs uppercase tracking-wide text-slate-400">Treffsikkerhet: {score}/{total}</span>
-                      </div>
-                      <div className="h-2 w-full overflow-hidden rounded-full border border-white/5 bg-slate-800/60">
-                        <motion.div
-                          initial={false}
-                          animate={{ width: `${progress}%` }}
-                          transition={{ duration: 0.5, ease: 'easeOut' }}
-                          className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500"
-                        />
+                  ) : questionError ? (
+                    <div className="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 text-center text-sm text-rose-100 backdrop-blur">
+                      <p className="font-semibold">Kunne ikke laste spørsmål.</p>
+                      <p className="mt-2 opacity-90">{questionError}</p>
+                      <div className="mt-4 flex justify-center">
+                        <Button variant="secondary" onClick={loadQuestionBank}>
+                          Prøv igjen
+                        </Button>
                       </div>
                     </div>
-
-                    <AnimatePresence mode="wait">
-                      {!showResults ? (
-                        <motion.div
-                          key={current?.q ?? step}
-                          initial={{ opacity: 0, y: 16 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -12 }}
-                          transition={{ duration: 0.35, ease: 'easeOut' }}
-                          className="space-y-5"
-                        >
-                          <div className="text-lg font-semibold leading-relaxed text-slate-100">{current?.q}</div>
-
-                          <RadioGroup
-                            value={answers[step]?.toString() ?? ''}
-                            onValueChange={val => pickAnswer(parseInt(val))}
-                            className="grid gap-2"
-                          >
-                            {current?.choices.map((choice, idx) => (
-                              <motion.label
-                                key={idx}
-                                htmlFor={`answer-${step}-${idx}`}
-                                whileHover={{ scale: 1.01 }}
-                                whileTap={{ scale: 0.99 }}
-                                className={`flex items-center gap-3 rounded-2xl border border-slate-700/70 bg-slate-800/60 p-3 transition shadow-inner ${
-                                  answers[step] === idx ? 'ring-2 ring-emerald-300/80 bg-emerald-400/10' : 'hover:bg-slate-800'
-                                }`}
-                                onClick={() => pickAnswer(idx)}
-                              >
-                                <RadioGroupItem value={idx.toString()} id={`answer-${step}-${idx}`} />
-                                <span>{choice}</span>
-                              </motion.label>
-                            ))}
-                          </RadioGroup>
-
-                          <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-                            <Button onClick={nextStep} disabled={typeof answers[step] !== 'number'} className="min-w-36">
-                              {step < total - 1 ? 'Neste' : 'Se resultater'}
-                            </Button>
-                            <Button variant="ghost" onClick={resetQuiz} className="text-slate-300 hover:text-white">
-                              Bytt spørsmål
-                            </Button>
+                  ) : !hasQuestions ? (
+                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
+                      <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
+                      <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-6">
+                      <div className="space-y-3">
+                        <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-300">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                              <Activity className="h-3.5 w-3.5" /> Spørsmål {Math.min(step + 1, total)} av {total}
+                            </span>
+                            {activeDifficulty && (
+                              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                                {activeDifficulty.label}
+                              </span>
+                            )}
+                            {quizMode === 'mixed' && current?.clubName && (
+                              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                                {current.clubName}
+                              </span>
+                            )}
                           </div>
-
-                          {typeof answers[step] === 'number' && current && (
-                            <motion.div
-                              initial={{ opacity: 0, y: -6 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              className="text-sm text-slate-300"
-                            >
-                              {answers[step] === current.answerIndex ? (
-                                <div className="flex items-center gap-2 text-emerald-300">
-                                  <CheckCircle2 className="h-4 w-4" /> Riktig!
-                                </div>
-                              ) : (
-                                <div className="text-slate-300">Svar låst. Du kan gå videre.</div>
-                              )}
-                              {answers[step] !== undefined && current.explanation && (
-                                <div className="mt-2 text-slate-400">Forklaring: {current.explanation}</div>
-                              )}
-                            </motion.div>
-                          )}
-                        </motion.div>
-                      ) : (
-                        <motion.div
-                          key="results"
-                          initial={{ opacity: 0, scale: 0.95 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.95 }}
-                          transition={{ duration: 0.35 }}
-                        >
-                          <Results
-                            score={score}
-                            total={total}
-                            difficultyLabel={activeDifficulty?.label}
-                            modeLabel={activeMode?.label}
-                            onRetry={resetQuiz}
+                          <span className="text-xs uppercase tracking-widest text-slate-400">
+                            Treffsikkerhet: {score}/{total}
+                          </span>
+                        </div>
+                        <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                          <motion.div
+                            initial={false}
+                            animate={{ width: `${progress}%` }}
+                            transition={{ duration: 0.5, ease: 'easeOut' }}
+                            className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_16px_rgba(56,189,248,0.5)]"
                           />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
+                        </div>
+                      </div>
 
-        <footer className="mt-8 text-xs text-slate-400">
-          MVP-demo. Spørsmålene hentes fra lokal <code>Qbase.json</code> i påvente av eventuell migrering til ekstern database.
+                      <AnimatePresence mode="wait">
+                        {!showResults ? (
+                          <motion.div
+                            key={current?.q ?? step}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -16 }}
+                            transition={{ duration: 0.35, ease: 'easeOut' }}
+                            className="space-y-6"
+                          >
+                            <div className="text-lg font-semibold leading-relaxed text-slate-100">{current?.q}</div>
+
+                            <RadioGroup
+                              value={answers[step]?.toString() ?? ''}
+                              onValueChange={val => pickAnswer(parseInt(val))}
+                              className="grid gap-3"
+                            >
+                              {current?.choices.map((choice, idx) => (
+                                <motion.label
+                                  key={idx}
+                                  htmlFor={`answer-${step}-${idx}`}
+                                  whileHover={{ scale: 1.01, y: -1 }}
+                                  whileTap={{ scale: 0.99 }}
+                                  className={`group relative flex cursor-pointer items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition-all duration-300 backdrop-blur ${
+                                    answers[step] === idx
+                                      ? 'border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_10px_35px_rgba(16,185,129,0.35)]'
+                                      : 'hover:bg-white/10'
+                                  }`}
+                                  onClick={() => pickAnswer(idx)}
+                                >
+                                  <RadioGroupItem value={idx.toString()} id={`answer-${step}-${idx}`} />
+                                  <span>{choice}</span>
+                                </motion.label>
+                              ))}
+                            </RadioGroup>
+
+                            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                              <Button onClick={nextStep} disabled={typeof answers[step] !== 'number'} className="min-w-36">
+                                {step < total - 1 ? 'Neste' : 'Se resultater'}
+                              </Button>
+                              <Button variant="ghost" onClick={resetQuiz} className="text-slate-300 hover:text-white">
+                                Bytt spørsmål
+                              </Button>
+                            </div>
+
+                            {typeof answers[step] === 'number' && current && (
+                              <motion.div
+                                initial={{ opacity: 0, y: -6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur"
+                              >
+                                {answers[step] === current.answerIndex ? (
+                                  <div className="flex items-center gap-2 text-emerald-300">
+                                    <CheckCircle2 className="h-4 w-4" /> Riktig!
+                                  </div>
+                                ) : (
+                                  <div className="text-slate-200">Svar låst. Du kan gå videre.</div>
+                                )}
+                                {answers[step] !== undefined && current.explanation && (
+                                  <div className="mt-2 text-slate-400">Forklaring: {current.explanation}</div>
+                                )}
+                              </motion.div>
+                            )}
+                          </motion.div>
+                        ) : (
+                          <motion.div
+                            key="results"
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{ duration: 0.35 }}
+                          >
+                            <Results
+                              score={score}
+                              total={total}
+                              difficultyLabel={activeDifficulty?.label}
+                              modeLabel={activeMode?.label}
+                              onRetry={resetQuiz}
+                            />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
+        </motion.section>
+
+        <footer className="mt-12 text-xs text-slate-500">
+          MVP-demo. Spørsmålene hentes fra lokal <code>Qbase.json</code> mens neste iterasjon planlegges.
         </footer>
       </div>
     </div>
   )
 }
+
 function Results({ score, total, difficultyLabel, modeLabel, onRetry }: { score: number; total: number; difficultyLabel?: string; modeLabel?: string; onRetry: () => void }) {
   const pct = Math.round((score / Math.max(total, 1)) * 100)
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-col items-center gap-3 text-center"
+      className="relative overflow-hidden rounded-3xl border border-emerald-400/40 bg-gradient-to-br from-emerald-500/10 via-slate-950/80 to-sky-500/10 p-8 text-center shadow-[0_25px_60px_rgba(16,185,129,0.35)] backdrop-blur"
     >
       <motion.div
-        initial={{ scale: 0.9, rotate: -6 }}
+        initial={{ scale: 0.9, rotate: -8 }}
         animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 12 }}
-        className="rounded-full bg-emerald-400/10 p-4 text-emerald-200"
+        transition={{ type: 'spring', stiffness: 180, damping: 16 }}
+        className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-200 shadow-[0_10px_30px_rgba(16,185,129,0.35)]"
       >
-        <Trophy className="h-12 w-12" />
+        <Trophy className="h-10 w-10" />
       </motion.div>
-      <div className="text-2xl font-extrabold text-slate-100">
+      <div className="text-3xl font-extrabold text-white">
         {score} / {total} riktig
       </div>
-      <div className="text-sm text-slate-300">Treffsikkerhet: {pct}%</div>
-      <div className="flex flex-col gap-1 text-sm text-slate-400">
+      <div className="mt-1 text-sm text-emerald-200">Treffsikkerhet: {pct}%</div>
+      <div className="mt-4 flex flex-col gap-1 text-sm text-slate-300">
         {modeLabel && <span>Modus: {modeLabel}</span>}
         {difficultyLabel && <span>Vanskelighetsgrad: {difficultyLabel}</span>}
       </div>
-      <div className="flex gap-2 pt-2">
-        <Button onClick={onRetry}>Prøv igjen</Button>
+      <div className="mt-6 flex justify-center">
+        <Button onClick={onRetry}>Spill igjen</Button>
       </div>
     </motion.div>
   )
