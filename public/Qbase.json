@@ -411,6 +411,76 @@
       }
     ]
   },
+  "astonvilla": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "bournemouth": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "brentford": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "brighton": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "burnley": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "crystalpalace": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "everton": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "fulham": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "luton": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "newcastle": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "nottinghamforest": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "sheffieldutd": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "westham": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "wolves": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
   "barca": {
     "easy": [
       {
@@ -682,5 +752,85 @@
         "answerIndex": 1
       }
     ]
+  },
+  "bodoglimt": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "brann": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "fredrikstad": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "hamkam": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "haugesund": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "kfumoslo": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "kristiansund": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "lillestrom": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "molde": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "odd": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "rosenborg": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "sandefjord": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "sarpsborg08": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "stromsgodset": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "tromso": {
+    "easy": [],
+    "medium": [],
+    "hard": []
+  },
+  "viking": {
+    "easy": [],
+    "medium": [],
+    "hard": []
   }
 }
