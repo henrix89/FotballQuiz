@@ -804,9 +804,514 @@
     "hard": []
   },
   "rosenborg": {
-    "easy": [],
-    "medium": [],
-    "hard": []
+    "easy": [
+      {
+        "q": "I hvilken by holder Rosenborg til?",
+        "choices": [
+          "Oslo",
+          "Bergen",
+          "Trondheim",
+          "Stavanger"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg kommer fra Trondheim i Trøndelag."
+      },
+      {
+        "q": "Hva heter Rosenborgs hjemmebane?",
+        "choices": [
+          "Aspmyra Stadion",
+          "Lerkendal Stadion",
+          "Ullevaal Stadion",
+          "Color Line Stadion"
+        ],
+        "answerIndex": 1,
+        "explanation": "Lerkendal Stadion har vært Rosenborgs hjemmearena siden 1940-tallet."
+      },
+      {
+        "q": "Hvilke farger kjennetegner Rosenborgs hjemmedrakter?",
+        "choices": [
+          "Blå og hvit",
+          "Rød og gul",
+          "Svart og hvit",
+          "Grønn og hvit"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva er Rosenborgs tradisjonelle kallenavn?",
+        "choices": [
+          "Blånissene",
+          "Troillongan",
+          "Oddrane",
+          "Enga"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken liga spiller Rosenborgs herrelag i?",
+        "choices": [
+          "Allsvenskan",
+          "Eliteserien",
+          "Superligaen",
+          "Veikkausliiga"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket land kommer Rosenborg fra?",
+        "choices": [
+          "Danmark",
+          "Sverige",
+          "Norge",
+          "Island"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken forkortelse brukes oftest om Rosenborg?",
+        "choices": [
+          "RIF",
+          "RBK",
+          "RFF",
+          "RBC"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem regnes som Rosenborgs største rival i Eliteserien?",
+        "choices": [
+          "Brann",
+          "Molde",
+          "Vålerenga",
+          "Bodø/Glimt"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken idrett er Rosenborg mest kjent for?",
+        "choices": [
+          "Håndball",
+          "Ishockey",
+          "Fotball",
+          "Friidrett"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hva heter Rosenborgs supporterklubb?",
+        "choices": [
+          "Bataljonen",
+          "Kjernen",
+          "Vikinghordene",
+          "Plankehaugen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva heter Rosenborgs kvinnelag i Toppserien?",
+        "choices": [
+          "Trondheims-Ørn",
+          "Rosenborg BK Kvinner",
+          "RBK Damer",
+          "RBK Elite"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var treneren som ledet Rosenborg gjennom storhetstiden på 1990-tallet?",
+        "choices": [
+          "Åge Hareide",
+          "Nils Arne Eggen",
+          "Egil Olsen",
+          "Jan Åge Fjørtoft"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken Rosenborg-profil er kjent som 'Mini'?",
+        "choices": [
+          "Jahn Ivar Jakobsen",
+          "Ørjan Berg",
+          "Steffen Iversen",
+          "Roar Strand"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket utstyrsmerke har i en årrekke levert Rosenborgs drakter?",
+        "choices": [
+          "Puma",
+          "Adidas",
+          "Umbro",
+          "Kappa"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva kalles klubbhuset ved Lerkendal der klubbens administrasjon holder til?",
+        "choices": [
+          "Brakka",
+          "Gresshallen",
+          "Trøndertribunen",
+          "RBK-huset"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket underlag spilles Rosenborgs hjemmekamper på Lerkendal?",
+        "choices": [
+          "Kunstgress",
+          "Naturgress",
+          "Hybriddekke",
+          "Grus"
+        ],
+        "answerIndex": 1
+      }
+    ],
+    "medium": [
+      {
+        "q": "I hvilket år ble Rosenborg Ballklub stiftet?",
+        "choices": [
+          "1907",
+          "1917",
+          "1927",
+          "1937"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvor mange seriemesterskap på rad tok Rosenborg fra 1992 til 2004?",
+        "choices": [
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem scoret det avgjørende 2-1-målet mot AC Milan på San Siro i 1996?",
+        "choices": [
+          "Harald Martin Brattbakk",
+          "Vegard Heggem",
+          "Steffen Iversen",
+          "Jahn Ivar Jakobsen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken klubb kjøpte John Carew fra Rosenborg i 2000?",
+        "choices": [
+          "Valencia",
+          "Porto",
+          "Olympique Lyon",
+          "AS Roma"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken midtbanespiller med draktnummer 6 var kaptein i storhetstiden?",
+        "choices": [
+          "Bent Skammelsrud",
+          "Roar Strand",
+          "Ørjan Berg",
+          "Vidar Riseth"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "I hvilket år vant Rosenborg sitt første norgesmesterskap (cupgull)?",
+        "choices": [
+          "1959",
+          "1960",
+          "1962",
+          "1964"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken sesong nådde Rosenborg kvartfinalen i Champions League?",
+        "choices": [
+          "1995/96",
+          "1996/97",
+          "1998/99",
+          "1999/00"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag stoppet Rosenborgs gullrekke i Eliteserien i 2005?",
+        "choices": [
+          "Vålerenga",
+          "Brann",
+          "Molde",
+          "Stabæk"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem ble toppscorer for Rosenborg i Eliteserien 2017?",
+        "choices": [
+          "Nicklas Bendtner",
+          "Pål André Helland",
+          "Alexander Søderlund",
+          "Samuel Adegbenro"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hva heter trenings- og akademisenteret Rosenborg åpnet sammen med hovedsponsor i 2019?",
+        "choices": [
+          "SalMar Akademiet",
+          "Abrahallen",
+          "Lerkendal Lab",
+          "Trønderhallen"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem ble hovedtrener for Rosenborg høsten 2020?",
+        "choices": [
+          "Kåre Ingebrigtsen",
+          "Åge Hareide",
+          "Rini Coolen",
+          "Trond Henriksen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken keeper voktet målet for Rosenborg gjennom mesteparten av perioden 2015–2022?",
+        "choices": [
+          "Daniel Ørlund",
+          "André Hansen",
+          "Árni Gautur Arason",
+          "Even Barli"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år skiftet Trondheims-Ørn navn til Rosenborg BK Kvinner?",
+        "choices": [
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken klubb ble Alexander Søderlund solgt til i januar 2016?",
+        "choices": [
+          "FC København",
+          "AS Saint-Étienne",
+          "AZ Alkmaar",
+          "FC Midtjylland"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken tidligere midtstopper ble sportslig leder i Rosenborg etter spillerkarrieren?",
+        "choices": [
+          "Vidar Riseth",
+          "Erik Hoftun",
+          "Bjørn Tore Kvarme",
+          "Torjus Hansen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken grunnformasjon er tett knyttet til Rosenborgs spillestil under Nils Arne Eggen?",
+        "choices": [
+          "4-4-2",
+          "3-5-2",
+          "4-3-3",
+          "5-3-2"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket lag slo Rosenborg ut i Champions League-playoffen i 2010?",
+        "choices": [
+          "FC København",
+          "Dinamo Zagreb",
+          "APOEL",
+          "Celtic"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem var Rosenborgs hovedtrener da klubben tok The Double i 2016?",
+        "choices": [
+          "Kåre Ingebrigtsen",
+          "Per Joar Hansen",
+          "Jan Jönsson",
+          "Åge Hareide"
+        ],
+        "answerIndex": 0
+      }
+    ],
+    "hard": [
+      {
+        "q": "Hvilket år vant Rosenborg sitt aller første seriemesterskap?",
+        "choices": [
+          "1957",
+          "1962",
+          "1967",
+          "1972"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange seriegull har Rosenborg totalt per 2023?",
+        "choices": [
+          "22",
+          "24",
+          "26",
+          "28"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange norgesmesterskap i fotball har Rosenborg vunnet per 2023?",
+        "choices": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange ganger har Rosenborg deltatt i Champions League-gruppespill?",
+        "choices": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Rosenborgs første motstander i Champions League-gruppespillet i 1995?",
+        "choices": [
+          "Blackburn Rovers",
+          "Legia Warszawa",
+          "Spartak Moskva",
+          "Juventus"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket lag slo Rosenborg ut i Champions League-kvartfinalen 1996/97?",
+        "choices": [
+          "Real Madrid",
+          "Juventus",
+          "Borussia Dortmund",
+          "Ajax"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år ble Lerkendal stadion åpnet?",
+        "choices": [
+          "1937",
+          "1947",
+          "1957",
+          "1967"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem har flest obligatoriske kamper for Rosenborg?",
+        "choices": [
+          "Roar Strand",
+          "Bent Skammelsrud",
+          "Steffen Iversen",
+          "Christer Basma"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem er Rosenborgs mestscorende spiller gjennom tidene i Eliteserien?",
+        "choices": [
+          "Frode Johnsen",
+          "Harald Martin Brattbakk",
+          "Steffen Iversen",
+          "Sigurd Rushfeldt"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år tok Rosenborg sitt første 'The Double' med både serie- og cupgull?",
+        "choices": [
+          "1967",
+          "1971",
+          "1988",
+          "1992"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag slo Rosenborg i Champions League-playoffen i 2004 for å ta seg til gruppespillet?",
+        "choices": [
+          "Dinamo Zagreb",
+          "Maccabi Haifa",
+          "Celtic",
+          "Crvena zvezda"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva ble resultatet da Rosenborg møtte Real Madrid på Santiago Bernabéu i 1997/98?",
+        "choices": [
+          "0-0",
+          "1-2",
+          "1-4",
+          "2-5"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange sesonger på rad spilte Rosenborg gruppespill i Champions League fra 1995?",
+        "choices": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år tok Rosenborg sin foreløpig siste serietittel?",
+        "choices": [
+          "2016",
+          "2017",
+          "2018",
+          "2019"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket lag slo Rosenborg for å sikre plass i Europa League-gruppespillet 2017/18?",
+        "choices": [
+          "Ajax",
+          "Dinamo Zagreb",
+          "Red Bull Salzburg",
+          "Partizan"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem scoret Rosenborgs første mål i Champions League-gruppespill i 1995?",
+        "choices": [
+          "Steffen Iversen",
+          "Jahn Ivar Jakobsen",
+          "Roar Strand",
+          "Bent Skammelsrud"
+        ],
+        "answerIndex": 0
+      }
+    ]
   },
   "sandefjord": {
     "easy": [],
