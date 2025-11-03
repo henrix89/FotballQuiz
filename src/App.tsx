@@ -158,6 +158,57 @@ const DIFFICULTY_OPTIONS: { value: Difficulty; label: string; description: strin
 ]
 
 const DEFAULT_TARGET = 10
+
+function cloneQuestion(q: StoredQuestion): StoredQuestion {
+  return {
+    ...q,
+    choices: [...q.choices],
+  }
+}
+
+function normalizeQuestionBank(bank: QuestionBank): QuestionBank {
+  const normalizedEntries = Object.entries(bank).map(([clubId, byDifficulty]) => {
+    const normalized: Record<Difficulty, StoredQuestion[]> = {
+      easy: byDifficulty?.easy?.map(cloneQuestion) ?? [],
+      medium: byDifficulty?.medium?.map(cloneQuestion) ?? [],
+      hard: byDifficulty?.hard?.map(cloneQuestion) ?? [],
+    }
+
+    const ensureCoverage = (target: Difficulty, fallbacks: Difficulty[]) => {
+      if (normalized[target].length > 0) return
+      for (const fb of fallbacks) {
+        if (fb === target) continue
+        if (normalized[fb].length > 0) {
+          normalized[target] = normalized[fb].map(cloneQuestion)
+          return
+        }
+      }
+    }
+
+    ensureCoverage('easy', ['medium', 'hard'])
+    ensureCoverage('medium', ['easy', 'hard'])
+    ensureCoverage('hard', ['medium', 'easy'])
+
+    return [clubId, normalized] as const
+  })
+
+  const clubIds = new Set(Object.keys(bank))
+  CLUBS.forEach(club => {
+    if (!clubIds.has(club.id)) {
+      normalizedEntries.push([
+        club.id,
+        {
+          easy: [],
+          medium: [],
+          hard: [],
+        },
+      ])
+    }
+  })
+
+  return Object.fromEntries(normalizedEntries)
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -192,7 +243,8 @@ export default function App() {
       }
 
       const payload = (await response.json()) as QuestionBank
-      setQuestionData(payload)
+      const normalized = normalizeQuestionBank(payload)
+      setQuestionData(normalized)
     } catch (error) {
       setQuestionData({})
       setQuestionError(error instanceof Error ? error.message : 'Ukjent feil ved lasting av spørsmål.')
