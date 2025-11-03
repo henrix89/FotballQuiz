@@ -11573,998 +11573,976 @@
   "rosenborg": {
     "easy": [
       {
+        "q": "Hvilket år ble Rosenborg BK stiftet?",
+        "choices": [
+          "1914",
+          "1917",
+          "1920",
+          "1932"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rosenborg BK ble grunnlagt i 1917 i Trondheim."
+      },
+      {
         "q": "I hvilken by holder Rosenborg BK til?",
         "choices": [
-          "Lillestrøm",
-          "Kristiansund",
+          "Bergen",
           "Trondheim",
-          "Fredrikstad"
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK kommer fra Trondheim i Trøndelag."
-      },
-      {
-        "q": "Hvor i landet ligger hjemmebasen til Rosenborg BK?",
-        "choices": [
-          "Lillestrøm",
-          "Trondheim",
-          "Kristiansund",
-          "Fredrikstad"
-        ],
-        "answerIndex": 1,
-        "explanation": "Rosenborg BK kommer fra Trondheim i Trøndelag."
-      },
-      {
-        "q": "Hvilken by er Rosenborg BK tett knyttet til?",
-        "choices": [
-          "Fredrikstad",
-          "Trondheim",
-          "Kristiansund",
-          "Lillestrøm"
-        ],
-        "answerIndex": 1,
-        "explanation": "Rosenborg BK kommer fra Trondheim i Trøndelag."
-      },
-      {
-        "q": "Hva heter hjemmebanen til Rosenborg BK?",
-        "choices": [
-          "Kristiansund stadion",
-          "Lerkendal stadion",
-          "Haugesund Sparebank Arena",
-          "Skagerak Arena"
-        ],
-        "answerIndex": 1,
-        "explanation": "Rosenborg BK spiller hjemmekampene sine på Lerkendal stadion."
-      },
-      {
-        "q": "På hvilken arena spiller Rosenborg BK sine hjemmekamper?",
-        "choices": [
-          "Lerkendal stadion",
-          "Haugesund Sparebank Arena",
-          "Kristiansund stadion",
-          "Skagerak Arena"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK spiller hjemmekampene sine på Lerkendal stadion."
-      },
-      {
-        "q": "Hvilket stadion forbinder du med Rosenborg BK?",
-        "choices": [
-          "Lerkendal stadion",
-          "Skagerak Arena",
-          "Kristiansund stadion",
-          "Haugesund Sparebank Arena"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK spiller hjemmekampene sine på Lerkendal stadion."
-      },
-      {
-        "q": "Hvilke farger kjennetegner draktene til Rosenborg BK?",
-        "choices": [
-          "blått og hvitt",
-          "mørkeblått og hvitt",
-          "hvitt og svart",
-          "rødt, hvitt og blått"
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK er lett å kjenne igjen i hvitt og svart drakter."
-      },
-      {
-        "q": "Hvilket fargemønster spiller Rosenborg BK vanligvis i?",
-        "choices": [
-          "hvitt og svart",
-          "rødt, hvitt og blått",
-          "mørkeblått og hvitt",
-          "blått og hvitt"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK er lett å kjenne igjen i hvitt og svart drakter."
-      },
-      {
-        "q": "Hvilke klubbfarger forbindes med Rosenborg BK?",
-        "choices": [
-          "hvitt og svart",
-          "rødt, hvitt og blått",
-          "blått og hvitt",
-          "mørkeblått og hvitt"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK er lett å kjenne igjen i hvitt og svart drakter."
-      },
-      {
-        "q": "Hva er kallenavnet til Rosenborg BK?",
-        "choices": [
-          "FKH",
-          "Kamma",
-          "Odd",
-          "RBK"
-        ],
-        "answerIndex": 3,
-        "explanation": "RBK er kallenavnet som brukes om Rosenborg BK."
-      },
-      {
-        "q": "Hvilket tilnavn brukes ofte om Rosenborg BK?",
-        "choices": [
-          "Odd",
-          "RBK",
-          "Kamma",
-          "FKH"
-        ],
-        "answerIndex": 1,
-        "explanation": "RBK er kallenavnet som brukes om Rosenborg BK."
-      },
-      {
-        "q": "Hvilket populært navn har supporterne gitt Rosenborg BK?",
-        "choices": [
-          "Odd",
-          "FKH",
-          "RBK",
-          "Kamma"
-        ],
-        "answerIndex": 2,
-        "explanation": "RBK er kallenavnet som brukes om Rosenborg BK."
-      },
-      {
-        "q": "Hva heter supportergruppen til Rosenborg BK?",
-        "choices": [
-          "Den 12. mann",
-          "Kjernen",
-          "Oddrane",
-          "Kanari-Fansen"
-        ],
-        "answerIndex": 1,
-        "explanation": "Kjernen er supporterklubben til Rosenborg BK."
-      },
-      {
-        "q": "Hvilken supporterklubb står på tribunen for Rosenborg BK?",
-        "choices": [
-          "Kanari-Fansen",
-          "Oddrane",
-          "Kjernen",
-          "Den 12. mann"
-        ],
-        "answerIndex": 2,
-        "explanation": "Kjernen er supporterklubben til Rosenborg BK."
-      },
-      {
-        "q": "Hva kalles fansen som støtter Rosenborg BK?",
-        "choices": [
-          "Oddrane",
-          "Kjernen",
-          "Kanari-Fansen",
-          "Den 12. mann"
-        ],
-        "answerIndex": 1,
-        "explanation": "Kjernen er supporterklubben til Rosenborg BK."
-      },
-      {
-        "q": "Hvilken landsdel tilhører Rosenborg BK?",
-        "choices": [
-          "Sørlandet",
-          "Midt-Norge",
-          "Østlandet",
-          "Vestlandet"
-        ],
-        "answerIndex": 1,
-        "explanation": "Rosenborg BK representerer Midt-Norge."
-      },
-      {
-        "q": "Hvilken region i Norge regnes Rosenborg BK som en del av?",
-        "choices": [
-          "Østlandet",
-          "Midt-Norge",
-          "Sørlandet",
-          "Vestlandet"
-        ],
-        "answerIndex": 1,
-        "explanation": "Rosenborg BK representerer Midt-Norge."
-      },
-      {
-        "q": "I hvilken del av landet spiller Rosenborg BK?",
-        "choices": [
-          "Midt-Norge",
-          "Sørlandet",
-          "Østlandet",
-          "Vestlandet"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK representerer Midt-Norge."
-      },
-      {
-        "q": "I hvilket fylke ligger Trondheim?",
-        "choices": [
-          "Vestland",
-          "Trøndelag",
-          "Vestfold",
-          "Oslo"
-        ],
-        "answerIndex": 1,
-        "explanation": "Trondheim ligger i Trøndelag."
-      },
-      {
-        "q": "Hvilket fylke er Rosenborg BK hjemmehørende i?",
-        "choices": [
           "Oslo",
-          "Trøndelag",
-          "Vestland",
-          "Vestfold"
+          "Stavanger"
         ],
         "answerIndex": 1,
-        "explanation": "Trondheim ligger i Trøndelag."
+        "explanation": "Rosenborg BK har base i Trondheim i Trøndelag."
       },
       {
-        "q": "Hvor i Norge finner du Trondheim?",
+        "q": "Hva heter Rosenborgs hjemmebane?",
         "choices": [
-          "Vestland",
-          "Oslo",
-          "Vestfold",
-          "Trøndelag"
-        ],
-        "answerIndex": 3,
-        "explanation": "Trondheim ligger i Trøndelag."
-      },
-      {
-        "q": "Hvilket underlag er det på Lerkendal stadion?",
-        "choices": [
-          "Naturgress",
-          "Grus",
-          "Kunstgress",
-          "Hybridgress"
-        ],
-        "answerIndex": 0,
-        "explanation": "Lerkendal stadion har naturgress som spilleflate."
-      },
-      {
-        "q": "Hva slags dekke spilles hjemmekampene til Rosenborg BK på?",
-        "choices": [
-          "Grus",
-          "Kunstgress",
-          "Naturgress",
-          "Hybridgress"
+          "Aker stadion",
+          "Aspmyra stadion",
+          "Lerkendal stadion",
+          "Ullevaal stadion"
         ],
         "answerIndex": 2,
-        "explanation": "Lerkendal stadion har naturgress som spilleflate."
+        "explanation": "Klubben spiller hjemmekampene sine på Lerkendal stadion."
       },
       {
-        "q": "Hvilket banedekke møter motstanderne på Lerkendal stadion?",
+        "q": "Hva er klubbens kallenavn?",
         "choices": [
-          "Kunstgress",
-          "Hybridgress",
-          "Naturgress",
-          "Grus"
+          "Kanarifuglene",
+          "De blaa",
+          "RBK",
+          "Løvene"
         ],
         "answerIndex": 2,
-        "explanation": "Lerkendal stadion har naturgress som spilleflate."
+        "explanation": "Rosenborg omtales ofte som RBK, forkortelsen av klubbnavnet."
       },
       {
-        "q": "Hvilken klubb regnes som den største rivalen til Rosenborg BK?",
+        "q": "Hvor mange seriemesterskap har Rosenborg BK vunnet (pr. siste tilgjengelige tall)?",
         "choices": [
-          "Kristiansund BK",
-          "Strømsgodset IF",
-          "Sarpsborg 08",
-          "Molde FK"
+          "18",
+          "21",
+          "26",
+          "30"
         ],
-        "answerIndex": 3,
-        "explanation": "Oppgjørene mot Molde FK er blant de mest intense for Rosenborg BK."
+        "answerIndex": 2,
+        "explanation": "Rosenborg står bokført med 26 seriemesterskap."
       },
       {
-        "q": "Hvilket lag møter Rosenborg BK i sitt mest opphetede derby?",
+        "q": "Hvor mange NM-cup (Norgesmesterskap) har klubben vunnet?",
         "choices": [
-          "Molde FK",
-          "Kristiansund BK",
-          "Strømsgodset IF",
-          "Sarpsborg 08"
+          "8",
+          "10",
+          "12",
+          "14"
         ],
-        "answerIndex": 0,
-        "explanation": "Oppgjørene mot Molde FK er blant de mest intense for Rosenborg BK."
+        "answerIndex": 2,
+        "explanation": "Klubben har vunnet den norske cupen 12 ganger."
       },
       {
-        "q": "Hvem er erkerivalen til Rosenborg BK?",
+        "q": "Hva er klubbfargene til Rosenborg?",
         "choices": [
-          "Sarpsborg 08",
-          "Molde FK",
-          "Kristiansund BK",
-          "Strømsgodset IF"
+          "Blå og hvit",
+          "Rød og hvit",
+          "Svart og hvit",
+          "Gul og svart"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg spiller tradisjonelt i hvite trøyer med svarte detaljer."
+      },
+      {
+        "q": "Når tok Rosenborg BK i bruk Lerkendal Stadion som sin hjemmebane?",
+        "choices": [
+          "1947",
+          "1957",
+          "1967",
+          "1977"
         ],
         "answerIndex": 1,
-        "explanation": "Oppgjørene mot Molde FK er blant de mest intense for Rosenborg BK."
+        "explanation": "Rosenborg flyttet hjemmekampene sine til Lerkendal stadion i 1957."
       },
       {
-        "q": "Hvilket land kommer Rosenborg BK fra?",
+        "q": "Hvilket år vant Rosenborg BK sitt første seriemesterskap?",
         "choices": [
+          "1955",
+          "1961",
+          "1967",
+          "1973"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg tok sitt første ligagull i 1967."
+      },
+      {
+        "q": "Hva slags klubbtype er Rosenborg BK?",
+        "choices": [
+          "Amatørklubb",
+          "Studentklubb",
+          "Profesjonell fotballklubb",
+          "Oldboys-lag"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg BK er en profesjonell fotballklubb."
+      },
+      {
+        "q": "I hvilket land spiller Rosenborg BK?",
+        "choices": [
+          "Danmark",
           "Norge",
-          "Finland",
-          "Danmark",
-          "Sverige"
+          "Sverige",
+          "Island"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rosenborg representerer Norge i Eliteserien."
+      },
+      {
+        "q": "Hvilken liga spiller Rosenborg i?",
+        "choices": [
+          "Allsvenskan",
+          "Eliteserien",
+          "Veikkausliiga",
+          "Premier League"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rosenborg BK spiller i den norske Eliteserien."
+      },
+      {
+        "q": "Hva er «BK» forkortelsen for i Rosenborg BK?",
+        "choices": [
+          "Ballklub",
+          "Breddeklubb",
+          "Båndyklubb",
+          "Bokseklubb"
         ],
         "answerIndex": 0,
-        "explanation": "Rosenborg BK er en norsk klubb i Eliteserien."
+        "explanation": "BK står for Ballklub i klubbnavnet."
       },
       {
-        "q": "I hvilket land spiller Rosenborg BK sine hjemmekamper?",
+        "q": "Hvilket år vant Rosenborg sin første norske cup?",
         "choices": [
-          "Sverige",
-          "Finland",
-          "Danmark",
-          "Norge"
+          "1950",
+          "1960",
+          "1970",
+          "1980"
         ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK er en norsk klubb i Eliteserien."
+        "answerIndex": 1,
+        "explanation": "Rosenborg løftet kongepokalen for første gang i 1960."
       },
       {
-        "q": "Hvor i Skandinavia finner du Rosenborg BK?",
+        "q": "Hva er omtrent kapasiteten på Lerkendal Stadion?",
         "choices": [
-          "Sverige",
-          "Danmark",
-          "Finland",
-          "Norge"
+          "10 000",
+          "16 500",
+          "21 000",
+          "27 500"
         ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK er en norsk klubb i Eliteserien."
+        "answerIndex": 2,
+        "explanation": "Lerkendal stadion tar om lag 21 000 tilskuere."
+      },
+      {
+        "q": "Hva het Rosenborg før navneendring (kort navn)?",
+        "choices": [
+          "Odd",
+          "Viking",
+          "Start",
+          "Fløya"
+        ],
+        "answerIndex": 0,
+        "explanation": "Klubben ble opprinnelig stiftet som Odd."
+      },
+      {
+        "q": "Hvilken bydel eller område i Trondheim er Rosenborg navnet hentet fra?",
+        "choices": [
+          "Byåsen",
+          "Rosenborg",
+          "Buran",
+          "Solsiden"
+        ],
+        "answerIndex": 1,
+        "explanation": "Navnet kommer fra Rosenborg-området i Trondheim."
+      },
+      {
+        "q": "Hvilket tiår startet Rosenborg sin periode med stor dominans?",
+        "choices": [
+          "1970-tallet",
+          "1980-tallet",
+          "1990-tallet",
+          "2000-tallet"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborgs gullalder skjøt fart på 1990-tallet."
+      },
+      {
+        "q": "Hvilken europeisk turnering har Rosenborg deltatt i mange ganger?",
+        "choices": [
+          "UEFA Champions League",
+          "UEFA Europa Conference League",
+          "UEFA Super Cup",
+          "Cupvinnercupen"
+        ],
+        "answerIndex": 0,
+        "explanation": "Rosenborg har en lang historie i UEFA Champions League."
+      },
+      {
+        "q": "Hvilken farge har shorts hjemme for Rosenborg?",
+        "choices": [
+          "Hvit",
+          "Svart",
+          "Gul",
+          "Grønn"
+        ],
+        "answerIndex": 1,
+        "explanation": "Rosenborg spiller hjemme i svarte shorts."
+      },
+      {
+        "q": "I hvilken måned i 1917 ble Rosenborg grunnlagt?",
+        "choices": [
+          "Januar",
+          "Mai",
+          "August",
+          "Desember"
+        ],
+        "answerIndex": 1,
+        "explanation": "Klubben ble stiftet 19. mai 1917."
+      },
+      {
+        "q": "I hvilket land ligger Trondheim?",
+        "choices": [
+          "Finland",
+          "Norge",
+          "Sverige",
+          "Island"
+        ],
+        "answerIndex": 1,
+        "explanation": "Trondheim er en norsk by."
+      },
+      {
+        "q": "Oppfyller Rosenborg kravene til å være en profesjonell klubb?",
+        "choices": [
+          "Ja, klubben er profesjonell",
+          "Nei, klubben er amatør",
+          "Klubben spiller kun vennskapskamper",
+          "Klubben er bare for juniorer"
+        ],
+        "answerIndex": 0,
+        "explanation": "Rosenborg driver som en profesjonell toppklubb."
+      },
+      {
+        "q": "Hvilket nivå beskriver antallet seriemesterskap Rosenborg har oppnådd?",
+        "choices": [
+          "Under 10",
+          "Rundt 15",
+          "Over 25",
+          "Over 40"
+        ],
+        "answerIndex": 2,
+        "explanation": "Med 26 ligatitler er klubben godt over 25 mesterskap."
+      },
+      {
+        "q": "Har Rosenborg vunnet både liga og cup i samme sesong?",
+        "choices": [
+          "Ja, flere ganger",
+          "Nei, aldri",
+          "Bare i cup",
+          "Bare i liga"
+        ],
+        "answerIndex": 0,
+        "explanation": "Rosenborg har tatt både serie- og cupgull i samme år flere ganger."
+      },
+      {
+        "q": "Er Rosenborg kjent for å delta i Champions League?",
+        "choices": [
+          "Ja, klubben har jevnlige gruppespill",
+          "Nei, aldri deltatt",
+          "Kun kvalifisering i 1950-årene",
+          "Bare i treningskamper"
+        ],
+        "answerIndex": 0,
+        "explanation": "Rosenborg er kjent for mange opptredener i Champions League."
+      },
+      {
+        "q": "Har Rosenborg farger som inkluderer svart og hvitt?",
+        "choices": [
+          "Ja, svart og hvitt dominerer",
+          "Nei, bare rødt",
+          "Nei, bare blått",
+          "Nei, bare gult"
+        ],
+        "answerIndex": 0,
+        "explanation": "Svart og hvitt er klubbens kjennetegn."
+      },
+      {
+        "q": "Har Rosenborg noensinne blitt nedrykket fra øverste nivå?",
+        "choices": [
+          "Ja, i 1977",
+          "Nei, aldri",
+          "Ja, senest i 2008",
+          "Ja, senest i 2014"
+        ],
+        "answerIndex": 0,
+        "explanation": "Klubben rykket ned etter 1977-sesongen, men kom raskt tilbake."
+      },
+      {
+        "q": "Hvilket år markerer begynnelsen på RBKs gullalder?",
+        "choices": [
+          "1985",
+          "1992",
+          "1999",
+          "2005"
+        ],
+        "answerIndex": 1,
+        "explanation": "Fra 1992 startet rekken med 13 strake ligagull."
+      },
+      {
+        "q": "Hva kjennetegner tribunene på Lerkendal stadion?",
+        "choices": [
+          "Åpne ståtribuner uten tak",
+          "En enkelt langside uten seter",
+          "Fire takdekte tribuner med to etasjer på langsidene",
+          "Kun midlertidige ståplasser"
+        ],
+        "answerIndex": 2,
+        "explanation": "Lerkendal har fire moderne tribuner, der langsidene har to nivåer og tak."
       }
     ],
     "medium": [
       {
-        "q": "Når ble Rosenborg BK stiftet?",
+        "q": "Under hvilket navn ble Rosenborg opprinnelig stiftet?",
         "choices": [
-          1927,
-          1897,
-          1907,
-          1917
+          "Odd",
+          "Viking",
+          "Lyn",
+          "Frigg"
         ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK ble etablert i 1917."
+        "answerIndex": 0,
+        "explanation": "Klubben ble først stiftet som Odd i 1917."
       },
       {
-        "q": "Hvilket år så Rosenborg BK dagens lys?",
+        "q": "I hvilket år byttet klubben navn til Rosenborg Ballklub?",
         "choices": [
-          1927,
-          1907,
-          1897,
-          1917
-        ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK ble etablert i 1917."
-      },
-      {
-        "q": "I hvilket år ble Rosenborg BK grunnlagt?",
-        "choices": [
-          1907,
-          1917,
-          1897,
-          1927
+          "1923",
+          "1927",
+          "1931",
+          "1935"
         ],
         "answerIndex": 1,
-        "explanation": "Rosenborg BK ble etablert i 1917."
+        "explanation": "Navnet Rosenborg Ballklub ble tatt i bruk i 1927."
       },
       {
-        "q": "Hvor mange ligatitler har Rosenborg BK vunnet?",
+        "q": "Hvilket år rykket Rosenborg opp til høyeste nivå og vant seriemesterskapet i samme sesong?",
         "choices": [
-          4,
-          0,
-          13,
-          26
+          "1959",
+          "1963",
+          "1967",
+          "1971"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg rykket opp og vant ligaen i 1967."
+      },
+      {
+        "q": "Rosenborg vant 13 serietitler på rad – mellom hvilke år?",
+        "choices": [
+          "1980–1992",
+          "1988–2000",
+          "1992–2004",
+          "1996–2008"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rekken med 13 strake ligatitler varte fra 1992 til 2004."
+      },
+      {
+        "q": "Hvilket år vant Rosenborg den europeiske Intertoto Cup-tittelen?",
+        "choices": [
+          "2005",
+          "2006",
+          "2007",
+          "2008"
         ],
         "answerIndex": 3,
-        "explanation": "Rosenborg BK har vunnet ligaen 26 ganger."
+        "explanation": "Rosenborg var blant vinnerne av UEFA Intertoto Cup i 2008."
       },
       {
-        "q": "Hvor mange ganger har Rosenborg BK blitt seriemester?",
+        "q": "Hva er det fulle navnet på stadion hvor Rosenborg spiller sine hjemmekamper?",
         "choices": [
-          4,
-          13,
-          0,
-          26
+          "Briskeby stadion",
+          "Åråsen stadion",
+          "Lerkendal stadion",
+          "Color Line stadion"
         ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK har vunnet ligaen 26 ganger."
+        "answerIndex": 2,
+        "explanation": "Rosenborg spiller på Lerkendal stadion."
       },
       {
-        "q": "Hvor mange seriegull står Rosenborg BK bokført med?",
+        "q": "Hvor mange seter har Lerkendal stadion omtrent?",
         "choices": [
-          0,
-          13,
-          4,
-          26
+          "17 000",
+          "19 500",
+          "21 000",
+          "25 000"
         ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK har vunnet ligaen 26 ganger."
+        "answerIndex": 2,
+        "explanation": "Stadionkapasiteten ligger rundt 21 000 seter."
       },
       {
-        "q": "Hvor mange NM-titler har Rosenborg BK?",
+        "q": "Hvilket år vant Rosenborg sin første Norgesmesterskapsfinale?",
         "choices": [
-          12,
-          2,
-          11,
-          8
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK har 12 NM-titler."
-      },
-      {
-        "q": "Hvor ofte har Rosenborg BK vunnet norgesmesterskapet?",
-        "choices": [
-          12,
-          11,
-          2,
-          8
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK har 12 NM-titler."
-      },
-      {
-        "q": "Hvor mange ganger har Rosenborg BK hevet kongepokalen?",
-        "choices": [
-          8,
-          11,
-          2,
-          12
-        ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK har 12 NM-titler."
-      },
-      {
-        "q": "Hva er den beste ligaplasseringen til Rosenborg BK?",
-        "choices": [
-          "1. plass",
-          "5. plass",
-          "6. plass",
-          "2. plass"
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK sin bestenotering er 1. plass."
-      },
-      {
-        "q": "Hvilken plassering er klubbens bestenotering i Eliteserien?",
-        "choices": [
-          "2. plass",
-          "1. plass",
-          "6. plass",
-          "5. plass"
+          "1956",
+          "1960",
+          "1964",
+          "1968"
         ],
         "answerIndex": 1,
-        "explanation": "Rosenborg BK sin bestenotering er 1. plass."
+        "explanation": "Første NM-tittel kom i 1960."
       },
       {
-        "q": "Hva er topp-plasseringen Rosenborg BK har oppnådd i ligaen?",
+        "q": "I hvilken sesong kom Rosenborg til kvartfinale i UEFA Champions League?",
         "choices": [
-          "1. plass",
-          "2. plass",
-          "6. plass",
-          "5. plass"
+          "1995/96",
+          "1996/97",
+          "1998/99",
+          "2000/01"
         ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK sin bestenotering er 1. plass."
+        "answerIndex": 1,
+        "explanation": "Rosenborg nådde kvartfinalen i Champions League 1996/97."
       },
       {
-        "q": "Hvilke år ga Rosenborg BK sin beste ligaplassering?",
+        "q": "Hvilken trener er mest kjent for å ha ledet Rosenborg i gullperioden?",
         "choices": [
-          "1970 og 2013",
-          "1961/62, 1963 og 2007",
-          "2017",
-          "blant annet 1992–2004 med 13 strake gull"
-        ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK nådde sin beste plassering i blant annet 1992–2004 med 13 strake gull."
-      },
-      {
-        "q": "Når oppnådde Rosenborg BK sin topp-plassering i ligaen?",
-        "choices": [
-          "2017",
-          "1970 og 2013",
-          "1961/62, 1963 og 2007",
-          "blant annet 1992–2004 med 13 strake gull"
-        ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK nådde sin beste plassering i blant annet 1992–2004 med 13 strake gull."
-      },
-      {
-        "q": "Hvilket tidsrom markerer Rosenborg BK sin beste ligaperiode?",
-        "choices": [
-          "2017",
-          "1961/62, 1963 og 2007",
-          "blant annet 1992–2004 med 13 strake gull",
-          "1970 og 2013"
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK nådde sin beste plassering i blant annet 1992–2004 med 13 strake gull."
-      },
-      {
-        "q": "Hvilken klubbprofil forbindes tett med Rosenborg BK?",
-        "choices": [
-          "Erik Mjelde",
-          "Vegard Skogheim",
-          "Harald Brattbakk",
-          "Øyvind Storflor"
-        ],
-        "answerIndex": 2,
-        "explanation": "Harald Brattbakk ble klubbens mestscorende spiller med 166 mål."
-      },
-      {
-        "q": "Hvem regnes som en stor spillerlegende i Rosenborg BK?",
-        "choices": [
-          "Harald Brattbakk",
-          "Erik Mjelde",
-          "Øyvind Storflor",
-          "Vegard Skogheim"
-        ],
-        "answerIndex": 0,
-        "explanation": "Harald Brattbakk ble klubbens mestscorende spiller med 166 mål."
-      },
-      {
-        "q": "Hvilken spiller ble et symbol for Rosenborg BK?",
-        "choices": [
-          "Harald Brattbakk",
-          "Øyvind Storflor",
-          "Erik Mjelde",
-          "Vegard Skogheim"
-        ],
-        "answerIndex": 0,
-        "explanation": "Harald Brattbakk ble klubbens mestscorende spiller med 166 mål."
-      },
-      {
-        "q": "Hvem er trenerprofilen som er sterkest knyttet til Rosenborg BK?",
-        "choices": [
-          "Arne Erlandsen",
+          "Egil Olsen",
           "Nils Arne Eggen",
-          "Erling Moe",
-          "Martí Cifuentes"
+          "Åge Hareide",
+          "Per-Mathias Høgmo"
         ],
         "answerIndex": 1,
-        "explanation": "Nils Arne Eggen sto bak gullrekken på 1990-tallet og Champions League-suksess."
+        "explanation": "Nils Arne Eggen var sjefen gjennom gullrekken på 1990-tallet."
       },
       {
-        "q": "Hvilken trener ledet Rosenborg BK i en storhetstid?",
+        "q": "Hva er kallenavnet \"Troillongan\" knyttet til?",
         "choices": [
-          "Arne Erlandsen",
-          "Nils Arne Eggen",
-          "Erling Moe",
-          "Martí Cifuentes"
+          "Supportergruppen",
+          "Lagets spillestil",
+          "Juniorlaget",
+          "Mascoten"
         ],
         "answerIndex": 1,
-        "explanation": "Nils Arne Eggen sto bak gullrekken på 1990-tallet og Champions League-suksess."
+        "explanation": "\"Troillongan\" brukes om klubbens karakteristiske angrepsspill og lagånd."
       },
       {
-        "q": "Hvilken trenerfigur er ikonisk for Rosenborg BK?",
+        "q": "Hvilket år tok Rosenborg sitt første ligagull etter 1980-årene?",
         "choices": [
-          "Arne Erlandsen",
-          "Erling Moe",
-          "Nils Arne Eggen",
-          "Martí Cifuentes"
+          "1988",
+          "1990",
+          "1992",
+          "1994"
         ],
         "answerIndex": 2,
-        "explanation": "Nils Arne Eggen sto bak gullrekken på 1990-tallet og Champions League-suksess."
+        "explanation": "Etter 1980-årene begynte gullrekken igjen med seriegull i 1992."
       },
       {
-        "q": "Hvilket høydepunkt står igjen i historieboka til Rosenborg BK?",
+        "q": "Hva heter Rosenborgs moderne akademi for unge spillere?",
         "choices": [
-          "Bronsemedaljen i 2020 som ga klubben europakvalifisering.",
-          "Cupgullet i 2006 på Ullevaal etter seier over Sandefjord.",
-          "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill.",
-          "Playoff-seieren over Bryne i 2023 som sikret Eliteserie-billetten."
-        ],
-        "answerIndex": 2,
-        "explanation": "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill."
-      },
-      {
-        "q": "Hva huskes som en stor milepæl for Rosenborg BK?",
-        "choices": [
-          "Cupgullet i 2006 på Ullevaal etter seier over Sandefjord.",
-          "Bronsemedaljen i 2020 som ga klubben europakvalifisering.",
-          "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill.",
-          "Playoff-seieren over Bryne i 2023 som sikret Eliteserie-billetten."
-        ],
-        "answerIndex": 2,
-        "explanation": "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill."
-      },
-      {
-        "q": "Hvilken historisk bragd trekkes fram når man snakker om Rosenborg BK?",
-        "choices": [
-          "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill.",
-          "Cupgullet i 2006 på Ullevaal etter seier over Sandefjord.",
-          "Bronsemedaljen i 2020 som ga klubben europakvalifisering.",
-          "Playoff-seieren over Bryne i 2023 som sikret Eliteserie-billetten."
+          "SalMar Akademiet",
+          "Telenor Akademiet",
+          "Sparebank1 Akademiet",
+          "Eliteserien Akademiet"
         ],
         "answerIndex": 0,
-        "explanation": "Seieren over AC Milan i 1996 som sendte laget til Champions League-sluttspill."
+        "explanation": "Rosenborgs talentutvikling organiseres gjennom SalMar Akademiet."
       },
       {
-        "q": "Hva preget Rosenborg BK sin 2023-sesong?",
+        "q": "Når spilte Rosenborg sin første europeiske kamp?",
         "choices": [
-          "Vant norgesmesterskapet i 2022 og spilte Europa League-gruppespill i 2023/24.",
-          "Sikret sitt tredje Eliteserie-gull i 2023 med klubbens høyeste poengsum til nå.",
-          "Vant cupen i 2018 og kjemper nå for å bygge nytt lag.",
-          "Tok bronse i 2023 med et ungt nordnorsk lag."
+          "1961",
+          "1963",
+          "1965",
+          "1967"
         ],
         "answerIndex": 2,
-        "explanation": "Vant cupen i 2018 og kjemper nå for å bygge nytt lag."
+        "explanation": "Klubbens europadebut kom i 1965."
       },
       {
-        "q": "Hvilken nylig prestasjon viser formen til Rosenborg BK?",
+        "q": "Hvilket år ble Lerkendal stadion modernisert på begynnelsen av 2000-tallet?",
         "choices": [
-          "Vant norgesmesterskapet i 2022 og spilte Europa League-gruppespill i 2023/24.",
-          "Tok bronse i 2023 med et ungt nordnorsk lag.",
-          "Vant cupen i 2018 og kjemper nå for å bygge nytt lag.",
-          "Sikret sitt tredje Eliteserie-gull i 2023 med klubbens høyeste poengsum til nå."
+          "2000",
+          "2001",
+          "2002",
+          "2003"
         ],
         "answerIndex": 2,
-        "explanation": "Vant cupen i 2018 og kjemper nå for å bygge nytt lag."
+        "explanation": "Den store moderniseringen av Lerkendal sto ferdig i 2002."
       },
       {
-        "q": "Hva var det ferske høydepunktet for Rosenborg BK?",
+        "q": "Når var Rosenborg sist utenfor øverste nivå før gullperioden?",
         "choices": [
-          "Vant cupen i 2018 og kjemper nå for å bygge nytt lag.",
-          "Sikret sitt tredje Eliteserie-gull i 2023 med klubbens høyeste poengsum til nå.",
-          "Vant norgesmesterskapet i 2022 og spilte Europa League-gruppespill i 2023/24.",
-          "Tok bronse i 2023 med et ungt nordnorsk lag."
-        ],
-        "answerIndex": 0,
-        "explanation": "Vant cupen i 2018 og kjemper nå for å bygge nytt lag."
-      },
-      {
-        "q": "Hva kjennetegner identiteten til Rosenborg BK?",
-        "choices": [
-          "Klubben henter hvalfangsttradisjoner med hval i emblemet.",
-          "Klubben forbindes med plankebyen, hvite drakter og store tradisjoner som norsk topplag.",
-          "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer.",
-          "Klubben omtales som \"Rosenes bys stolthet\" og spiller på fjordkanten."
-        ],
-        "answerIndex": 2,
-        "explanation": "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer."
-      },
-      {
-        "q": "Hvilket trekk beskriver kulturen til Rosenborg BK?",
-        "choices": [
-          "Klubben forbindes med plankebyen, hvite drakter og store tradisjoner som norsk topplag.",
-          "Klubben henter hvalfangsttradisjoner med hval i emblemet.",
-          "Klubben omtales som \"Rosenes bys stolthet\" og spiller på fjordkanten.",
-          "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer."
-        ],
-        "answerIndex": 3,
-        "explanation": "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer."
-      },
-      {
-        "q": "Hva sier man ofte om klubbprofilen til Rosenborg BK?",
-        "choices": [
-          "Klubben henter hvalfangsttradisjoner med hval i emblemet.",
-          "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer.",
-          "Klubben omtales som \"Rosenes bys stolthet\" og spiller på fjordkanten.",
-          "Klubben forbindes med plankebyen, hvite drakter og store tradisjoner som norsk topplag."
+          "1967",
+          "1978",
+          "1984",
+          "1990"
         ],
         "answerIndex": 1,
-        "explanation": "Klubben står for trønderfotball i 4-3-3 med hvite drakter og svarte detaljer."
+        "explanation": "Klubben spilte i 2. divisjon i 1978 før de etablerte seg i toppen igjen."
+      },
+      {
+        "q": "Hva er det offisielle fulle navnet på klubben?",
+        "choices": [
+          "Rosenborg Ballklub",
+          "Rosenborg Fotballforening",
+          "Rosenborg Sportsklubb",
+          "Rosenborg Elite"
+        ],
+        "answerIndex": 0,
+        "explanation": "Klubben heter offisielt Rosenborg Ballklub."
+      },
+      {
+        "q": "Hvilket område i Trondheim ga klubben sitt navn?",
+        "choices": [
+          "Buran",
+          "Rosenborg",
+          "Nidaros",
+          "Tempe"
+        ],
+        "answerIndex": 1,
+        "explanation": "Navnet er hentet fra Rosenborg-området i byen."
+      },
+      {
+        "q": "Har Rosenborg deltatt i gruppespillet i Champions League?",
+        "choices": [
+          "Ja, ved flere anledninger",
+          "Nei, aldri",
+          "Kun i kvalifisering",
+          "Bare i treningskamper"
+        ],
+        "answerIndex": 0,
+        "explanation": "Rosenborg er kjent for mange Champions League-gruppespill."
+      },
+      {
+        "q": "Hvilket år fikk Rosenborg sitt første ligagull etter navneendringen til Rosenborg Ballklub?",
+        "choices": [
+          "1955",
+          "1960",
+          "1967",
+          "1974"
+        ],
+        "answerIndex": 2,
+        "explanation": "Første ligagull som Rosenborg Ballklub kom i 1967."
+      },
+      {
+        "q": "Hvilken klubb er en av Rosenborgs største rivaler?",
+        "choices": [
+          "Molde FK",
+          "Tromsø IL",
+          "HamKam",
+          "Ranheim"
+        ],
+        "answerIndex": 0,
+        "explanation": "Oppgjørene mot Molde FK er de mest intense rivaloppgjørene."
+      },
+      {
+        "q": "Hva heter idrettsparken som Lerkendal stadion er en del av?",
+        "choices": [
+          "Valhall Arena",
+          "Bislett Allé",
+          "Lerkendal idrettspark",
+          "Kristiansund stadion"
+        ],
+        "answerIndex": 2,
+        "explanation": "Stadion ligger i Lerkendal idrettspark."
+      },
+      {
+        "q": "Hva er klubbens merkevare- og logofarger?",
+        "choices": [
+          "Rød og hvit",
+          "Blå og hvit",
+          "Svart og hvit",
+          "Grønn og gul"
+        ],
+        "answerIndex": 2,
+        "explanation": "Logoen og draktene er dominert av svart og hvitt."
+      },
+      {
+        "q": "Når startet Rosenborg sin langvarige dominans i norsk fotball?",
+        "choices": [
+          "1988",
+          "1990",
+          "1992",
+          "1994"
+        ],
+        "answerIndex": 2,
+        "explanation": "Dominansen skjøt fart fra seriegullet i 1992."
+      },
+      {
+        "q": "Hvilket år spilte Rosenborg sin første cupfinale?",
+        "choices": [
+          "1954",
+          "1960",
+          "1964",
+          "1968"
+        ],
+        "answerIndex": 1,
+        "explanation": "Klubbens første cupfinale kom i 1960 – og endte med pokal."
+      },
+      {
+        "q": "Hvilket år markerer opprykket til øverste nivå og de to første gullsesongene for Rosenborg?",
+        "choices": [
+          "1965",
+          "1966",
+          "1967",
+          "1968"
+        ],
+        "answerIndex": 2,
+        "explanation": "Opprykk og seriegull kom i 1967, som også innledet de tidlige suksessårene."
+      },
+      {
+        "q": "Hvorfor tok klubben navnet Odd i starten?",
+        "choices": [
+          "Inspirert av Odds Ballklubb i Skien",
+          "Oppkalt etter en lokal sponsor",
+          "Navn etter Rosenborg slott",
+          "Tatt fra engelske ordet for sjanse"
+        ],
+        "answerIndex": 0,
+        "explanation": "Navnet ble lånt fra den etablerte klubben Odds BK i Skien."
+      },
+      {
+        "q": "Hvilken europeisk kamp gjorde Rosenborg særlig kjent i 1990-årene?",
+        "choices": [
+          "Seier mot Real Madrid i 1995",
+          "Seier mot AC Milan på San Siro i 1996",
+          "Uavgjort mot Barcelona i 1998",
+          "Seier mot Bayern München i 2000"
+        ],
+        "answerIndex": 1,
+        "explanation": "Triumfen mot AC Milan på San Siro i 1996 ga stor internasjonal oppmerksomhet."
+      },
+      {
+        "q": "Hvordan har akademiet bidratt til Rosenborgs suksess?",
+        "choices": [
+          "Ved å utvikle lokale spillere til A-laget",
+          "Ved å importere ferdigutdannede stjerner",
+          "Ved å fokusere på futsal",
+          "Ved å drive med håndball"
+        ],
+        "answerIndex": 0,
+        "explanation": "Klubben har hentet mange nøkkelspillere fra eget akademi."
       }
     ],
     "hard": [
       {
-        "q": "Når spilte Rosenborg BK sin første sesong på øverste nivå?",
+        "q": "Hvilket år ble klubben stiftet under navnet Odd?",
         "choices": [
-          1967,
-          1962,
-          1947,
-          1952
+          "1915",
+          "1916",
+          "1917",
+          "1918"
         ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK debuterte i toppdivisjonen i 1967."
+        "answerIndex": 2,
+        "explanation": "Klubben ble stiftet som Odd i 1917."
       },
       {
-        "q": "Hvilket år debuterte Rosenborg BK i toppdivisjonen?",
+        "q": "Når tok klubben formelt navnet Rosenborg Ballklub?",
         "choices": [
-          1952,
-          1967,
-          1947,
-          1962
+          "1925",
+          "1927",
+          "1929",
+          "1931"
         ],
         "answerIndex": 1,
-        "explanation": "Rosenborg BK debuterte i toppdivisjonen i 1967."
+        "explanation": "Navneskiftet til Rosenborg Ballklub skjedde i 1927."
       },
       {
-        "q": "I hvilket år tok Rosenborg BK steget inn i Eliteserien for aller første gang?",
+        "q": "Hvilket lag slo Rosenborg for å vinne sin første Norgesmesterskapsfinale i 1960?",
         "choices": [
-          1967,
-          1962,
-          1947,
-          1952
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK debuterte i toppdivisjonen i 1967."
-      },
-      {
-        "q": "Omtrent hvor mange tilskuere tar Lerkendal stadion?",
-        "choices": [
-          6801,
-          17686,
-          6582,
-          21421
-        ],
-        "answerIndex": 3,
-        "explanation": "Lerkendal stadion rommer rundt 21421 tilskuere."
-      },
-      {
-        "q": "Hva er kapasiteten på Rosenborg BK sin hjemmebane?",
-        "choices": [
-          17686,
-          6582,
-          6801,
-          21421
-        ],
-        "answerIndex": 3,
-        "explanation": "Lerkendal stadion rommer rundt 21421 tilskuere."
-      },
-      {
-        "q": "Hvor stort publikum kan Lerkendal stadion huse?",
-        "choices": [
-          17686,
-          6801,
-          6582,
-          21421
-        ],
-        "answerIndex": 3,
-        "explanation": "Lerkendal stadion rommer rundt 21421 tilskuere."
-      },
-      {
-        "q": "Når ble Lerkendal stadion først tatt i bruk?",
-        "choices": [
-          1957,
-          1927,
-          1947,
-          1952
-        ],
-        "answerIndex": 2,
-        "explanation": "Lerkendal stadion åpnet i 1947."
-      },
-      {
-        "q": "Hvilket år åpnet Rosenborg BK sin hjemmebane?",
-        "choices": [
-          1947,
-          1957,
-          1952,
-          1927
-        ],
-        "answerIndex": 0,
-        "explanation": "Lerkendal stadion åpnet i 1947."
-      },
-      {
-        "q": "I hvilket år ble Lerkendal stadion innviet?",
-        "choices": [
-          1952,
-          1927,
-          1947,
-          1957
-        ],
-        "answerIndex": 2,
-        "explanation": "Lerkendal stadion åpnet i 1947."
-      },
-      {
-        "q": "Når kom Rosenborg BK sitt første ligagull?",
-        "choices": [
-          1967,
-          1977,
-          1947,
-          1982
-        ],
-        "answerIndex": 0,
-        "explanation": "Rosenborg BK vant sitt første seriegull i 1967."
-      },
-      {
-        "q": "I hvilket år ble Rosenborg BK seriemester for aller første gang?",
-        "choices": [
-          1947,
-          1982,
-          1967,
-          1977
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK vant sitt første seriegull i 1967."
-      },
-      {
-        "q": "Hvilket år sikret Rosenborg BK sitt første seriemesterskap?",
-        "choices": [
-          1982,
-          1977,
-          1967,
-          1947
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK vant sitt første seriegull i 1967."
-      },
-      {
-        "q": "Når tok Rosenborg BK sitt siste NM-gull?",
-        "choices": [
-          1998,
-          2018,
-          2013,
-          2028
+          "Odd",
+          "Skeid",
+          "Lillestrøm",
+          "Brann"
         ],
         "answerIndex": 1,
-        "explanation": "Rosenborg BK tok sitt siste NM-gull i 2018."
+        "explanation": "Rosenborg slo Skeid 3–2 i cupfinalen 1960."
       },
       {
-        "q": "Hvilket år vant Rosenborg BK norgesmesterskapet sist?",
+        "q": "Hvilken nøyaktig periode utgjorde rekken på 13 strake seriegull?",
         "choices": [
-          2013,
-          2028,
-          1998,
-          2018
-        ],
-        "answerIndex": 3,
-        "explanation": "Rosenborg BK tok sitt siste NM-gull i 2018."
-      },
-      {
-        "q": "I hvilket år ble Rosenborg BK sist cupmester?",
-        "choices": [
-          1998,
-          2013,
-          2018,
-          2028
-        ],
-        "answerIndex": 2,
-        "explanation": "Rosenborg BK tok sitt siste NM-gull i 2018."
-      },
-      {
-        "q": "Hva kalles det mest intense derbyet for Rosenborg BK?",
-        "choices": [
-          "Vestfold-oppgjøret mot Odd regnes som lokalt derby.",
-          "Hatoppgjøret mot Vålerenga",
-          "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\".",
-          "Elveby-derbyet mot Mjøndalen"
-        ],
-        "answerIndex": 2,
-        "explanation": "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\". er oppgjøret som vekker ekstra følelser for Rosenborg BK."
-      },
-      {
-        "q": "Hvilket rivaloppgjør er mest kjent for Rosenborg BK?",
-        "choices": [
-          "Elveby-derbyet mot Mjøndalen",
-          "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\".",
-          "Vestfold-oppgjøret mot Odd regnes som lokalt derby.",
-          "Hatoppgjøret mot Vålerenga"
+          "1991–2003",
+          "1992–2004",
+          "1993–2005",
+          "1994–2006"
         ],
         "answerIndex": 1,
-        "explanation": "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\". er oppgjøret som vekker ekstra følelser for Rosenborg BK."
+        "explanation": "Ligatitlene kom hvert år fra 1992 til og med 2004."
       },
       {
-        "q": "Hva heter det klassiske naboderbyet for Rosenborg BK?",
+        "q": "Hvem var hovedtrener i størstedelen av gullrekken på 1990- og 2000-tallet?",
         "choices": [
-          "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\".",
-          "Elveby-derbyet mot Mjøndalen",
-          "Hatoppgjøret mot Vålerenga",
-          "Vestfold-oppgjøret mot Odd regnes som lokalt derby."
+          "Nils Arne Eggen",
+          "Knut Tørum",
+          "Jan Jönsson",
+          "Bent Skammelsrud"
         ],
         "answerIndex": 0,
-        "explanation": "Gullrivalene mot Molde, ofte kalt \"Slaget om Norge\". er oppgjøret som vekker ekstra følelser for Rosenborg BK."
+        "explanation": "Nils Arne Eggen ledet laget gjennom mesteparten av gullrekken."
       },
       {
-        "q": "Hvilket talent har Rosenborg BK utviklet?",
+        "q": "I hvilken Champions League-sesong tok Rosenborg seg til kvartfinale?",
         "choices": [
-          "Per Ciljan Skjelbred",
-          "Tarik Elyounoussi",
-          "Eirik Hestad",
-          "Veton Berisha"
-        ],
-        "answerIndex": 0,
-        "explanation": "Per Ciljan Skjelbred kom fra klubbens akademi og ble landslagskaptein."
-      },
-      {
-        "q": "Hvem er et kjent akademiprodukt fra Rosenborg BK?",
-        "choices": [
-          "Per Ciljan Skjelbred",
-          "Tarik Elyounoussi",
-          "Veton Berisha",
-          "Eirik Hestad"
-        ],
-        "answerIndex": 0,
-        "explanation": "Per Ciljan Skjelbred kom fra klubbens akademi og ble landslagskaptein."
-      },
-      {
-        "q": "Hvilken spiller fikk sitt gjennombrudd gjennom talentutviklingen til Rosenborg BK?",
-        "choices": [
-          "Veton Berisha",
-          "Per Ciljan Skjelbred",
-          "Tarik Elyounoussi",
-          "Eirik Hestad"
+          "1995/96",
+          "1996/97",
+          "1997/98",
+          "1998/99"
         ],
         "answerIndex": 1,
-        "explanation": "Per Ciljan Skjelbred kom fra klubbens akademi og ble landslagskaptein."
+        "explanation": "Kvartfinalebragden kom i 1996/97-sesongen."
       },
       {
-        "q": "Hva kjennetegner oppstarten til Rosenborg BK?",
+        "q": "Hva heter idrettsanlegget som omgir Lerkendal stadion?",
         "choices": [
-          "Ble til etter et samarbeid mellom Sandefjord BK og IL Runar i 1998.",
-          "Ble dannet som en samarbeidsklubb mellom Clausenengen FK og Kristiansund FK.",
-          "Startet som fotballgruppa til Sportsklubben Olymp i 1911 før navnet Molde FK kom.",
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917."
+          "Estenstad idrettspark",
+          "Ranheim Arena",
+          "Lerkendal idrettspark",
+          "Nardo sportspark"
         ],
-        "answerIndex": 3,
-        "explanation": "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917."
+        "answerIndex": 2,
+        "explanation": "Stadion ligger i Lerkendal idrettspark."
       },
       {
-        "q": "Hvordan oppstod Rosenborg BK?",
+        "q": "Hva var den eksakte kapasiteten på Lerkendal stadion etter siste store modernisering (ca. 21 421)?",
         "choices": [
-          "Ble til etter et samarbeid mellom Sandefjord BK og IL Runar i 1998.",
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917.",
-          "Ble dannet som en samarbeidsklubb mellom Clausenengen FK og Kristiansund FK.",
-          "Startet som fotballgruppa til Sportsklubben Olymp i 1911 før navnet Molde FK kom."
+          "20 223",
+          "21 421",
+          "22 105",
+          "23 450"
         ],
         "answerIndex": 1,
-        "explanation": "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917."
+        "explanation": "Den moderniserte versjonen av Lerkendal har kapasitet på omtrent 21 421."
       },
       {
-        "q": "Hva er historien bak etableringen av Rosenborg BK?",
+        "q": "Når forlot Rosenborg øverste nivå sist før dominansperioden?",
         "choices": [
-          "Ble til etter et samarbeid mellom Sandefjord BK og IL Runar i 1998.",
-          "Startet som fotballgruppa til Sportsklubben Olymp i 1911 før navnet Molde FK kom.",
-          "Ble dannet som en samarbeidsklubb mellom Clausenengen FK og Kristiansund FK.",
-          "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917."
+          "1972",
+          "1974",
+          "1977",
+          "1979"
         ],
-        "answerIndex": 3,
-        "explanation": "Ble stiftet som Arbeidernes Idrettslag Rosenborg i 1917."
+        "answerIndex": 2,
+        "explanation": "Etter 1977-sesongen spilte klubben i 2. divisjon."
       },
       {
-        "q": "Hva er Rosenborg BK sin største europeiske prestasjon?",
+        "q": "Hvor mange unge menn sto bak stiftelsen av klubben i 1917?",
         "choices": [
-          "Spilte Champions League-kvartfinale i 1996/97",
-          "Europa League-gruppespill med 3–1-seier over Genk",
-          "Spilte Cupvinnercup mot Ajax og slo nederlenderne i 1960/61",
-          "Deltok i Intertoto Cup etter åttendeplassen i 2007"
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tolv ungdommer fra Rosenborg-området startet klubben."
+      },
+      {
+        "q": "Hvem har flest kamper for Rosenborg, og hvor mange?",
+        "choices": [
+          "Roar Strand – 416 kamper",
+          "Roar Strand – 553 kamper",
+          "Bent Skammelsrud – 452 kamper",
+          "Christer Basma – 468 kamper"
+        ],
+        "answerIndex": 1,
+        "explanation": "Roar Strand står med 553 obligatoriske kamper for Rosenborg."
+      },
+      {
+        "q": "Hvem er klubbens toppscorer gjennom tidene, og hvor mange mål har han?",
+        "choices": [
+          "Gøran Sørloth – 122 mål",
+          "Sigurd Rushfeldt – 150 mål",
+          "Harald Brattbakk – 166 mål",
+          "John Carew – 118 mål"
+        ],
+        "answerIndex": 2,
+        "explanation": "Harald Brattbakk er klubbens toppscorer med 166 mål."
+      },
+      {
+        "q": "Hvilken bane brukte Rosenborg før de flyttet til Lerkendal?",
+        "choices": [
+          "Leangen idrettsplass",
+          "Byåsen Arena",
+          "Bislett stadion",
+          "Fredrikstad stadion"
         ],
         "answerIndex": 0,
-        "explanation": "Spilte Champions League-kvartfinale i 1996/97 i sesongen 1996/97."
+        "explanation": "Før Lerkendal spilte Rosenborg blant annet på Leangen idrettsplass."
       },
       {
-        "q": "Hvilket europaminne står sterkest for Rosenborg BK?",
+        "q": "Hvilken sesong spilte Rosenborg i 2. divisjon etter 1967-debuten i toppserien?",
         "choices": [
-          "Spilte Cupvinnercup mot Ajax og slo nederlenderne i 1960/61",
-          "Deltok i Intertoto Cup etter åttendeplassen i 2007",
-          "Europa League-gruppespill med 3–1-seier over Genk",
-          "Spilte Champions League-kvartfinale i 1996/97"
-        ],
-        "answerIndex": 3,
-        "explanation": "Spilte Champions League-kvartfinale i 1996/97 i sesongen 1996/97."
-      },
-      {
-        "q": "Hvilken europeisk bragd huskes best for Rosenborg BK?",
-        "choices": [
-          "Spilte Cupvinnercup mot Ajax og slo nederlenderne i 1960/61",
-          "Deltok i Intertoto Cup etter åttendeplassen i 2007",
-          "Spilte Champions League-kvartfinale i 1996/97",
-          "Europa League-gruppespill med 3–1-seier over Genk"
+          "1972",
+          "1974",
+          "1978",
+          "1980"
         ],
         "answerIndex": 2,
-        "explanation": "Spilte Champions League-kvartfinale i 1996/97 i sesongen 1996/97."
+        "explanation": "Klubben hadde et avbrekk i 2. divisjon i 1978."
       },
       {
-        "q": "Hva er en unik detalj ved Rosenborg BK?",
+        "q": "Hva er klubbens offisielle nettside?",
         "choices": [
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Har kanarifugl som maskot og gule tårn rundt Åråsen stadion.",
-          "Har egen supportersving på Lerkendal kalt Øvre Øst.",
-          "Aker stadion ligger ved fjorden med utsikt til Romsdalsalpene."
+          "rbk.no",
+          "rosenborg.com",
+          "troillongan.no",
+          "lerkendal.no"
+        ],
+        "answerIndex": 0,
+        "explanation": "Den offisielle nettsiden er rbk.no."
+      },
+      {
+        "q": "I hvilken sesong vant Rosenborg Intertoto Cup?",
+        "choices": [
+          "2006",
+          "2007",
+          "2008",
+          "2009"
         ],
         "answerIndex": 2,
-        "explanation": "Har egen supportersving på Lerkendal kalt Øvre Øst."
+        "explanation": "Rosenborg var Intertoto-vinner i 2008."
       },
       {
-        "q": "Hvilket særpreg er knyttet til Rosenborg BK?",
+        "q": "Når ble Rosenborg første gang godkjent for spill i NFF-seriene?",
         "choices": [
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Har egen supportersving på Lerkendal kalt Øvre Øst.",
-          "Aker stadion ligger ved fjorden med utsikt til Romsdalsalpene.",
-          "Har kanarifugl som maskot og gule tårn rundt Åråsen stadion."
+          "1923",
+          "1926",
+          "1928",
+          "1930"
+        ],
+        "answerIndex": 2,
+        "explanation": "Etter å ha sluttet seg til NFF ble klubben tatt inn i seriesystemet i 1928."
+      },
+      {
+        "q": "I hvilken sesong hadde Rosenborg kun én sesong utenfor øverste nivå før retur?",
+        "choices": [
+          "1976",
+          "1977",
+          "1978",
+          "1979"
+        ],
+        "answerIndex": 2,
+        "explanation": "Rosenborg var nede i 1978 og rykket rett opp igjen."
+      },
+      {
+        "q": "Hva er klubbens fulle navn inkludert \"Ballklub\"?",
+        "choices": [
+          "Rosenborg Ballklub",
+          "Rosenborg Ballklubb",
+          "Rosenborg Ballklúbb",
+          "Rosenborg Ballklubb IL"
+        ],
+        "answerIndex": 0,
+        "explanation": "Det korrekte navnet er Rosenborg Ballklub."
+      },
+      {
+        "q": "Når ble tribuneanlegget på Lerkendal modernisert med betongkonstruksjoner?",
+        "choices": [
+          "1962",
+          "1968",
+          "1971",
+          "1975"
         ],
         "answerIndex": 1,
-        "explanation": "Har egen supportersving på Lerkendal kalt Øvre Øst."
+        "explanation": "På slutten av 1960-tallet fikk Lerkendal nye betongtribuner, blant annet i 1968."
       },
       {
-        "q": "Hvilken spesialitet er typisk for Rosenborg BK?",
+        "q": "Når spilte Rosenborg sin første europeiske turneringskamp?",
         "choices": [
-          "Logoen viser kors og trekant i tråd med KFUM-bevegelsens symboler.",
-          "Aker stadion ligger ved fjorden med utsikt til Romsdalsalpene.",
-          "Har egen supportersving på Lerkendal kalt Øvre Øst.",
-          "Har kanarifugl som maskot og gule tårn rundt Åråsen stadion."
+          "1963",
+          "1965",
+          "1967",
+          "1969"
+        ],
+        "answerIndex": 1,
+        "explanation": "Debuten i europeisk turnering kom i 1965."
+      },
+      {
+        "q": "Når sto hovedmoderniseringen av Lerkendal ferdig tidlig på 2000-tallet?",
+        "choices": [
+          "2001",
+          "2002",
+          "2003",
+          "2004"
+        ],
+        "answerIndex": 1,
+        "explanation": "Moderniseringen ble fullført i 2002."
+      },
+      {
+        "q": "Hvilke farger brukte Rosenborg før dagens svart-hvite drakter ble standard?",
+        "choices": [
+          "Blå og hvit",
+          "Rød og hvit",
+          "Grønn og hvit",
+          "Gul og svart"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tidlig i klubbens historie spilte laget i rød-hvite drakter."
+      },
+      {
+        "q": "Hvilken Champions League-sesong endte den lange gruppespillrekken?",
+        "choices": [
+          "2001/02",
+          "2002/03",
+          "2003/04",
+          "2004/05"
+        ],
+        "answerIndex": 3,
+        "explanation": "Etter gruppespillet i 2004/05 stoppet rekken av årlige deltakelser."
+      },
+      {
+        "q": "Hva er tilskuerrekorden på Lerkendal stadion og hvilken motstander ble slått?",
+        "choices": [
+          "22 492 mot Vålerenga",
+          "23 214 mot Molde",
+          "28 569 mot Lyn",
+          "21 421 mot Brann"
         ],
         "answerIndex": 2,
-        "explanation": "Har egen supportersving på Lerkendal kalt Øvre Øst."
+        "explanation": "Tilskuerrekorden er 28 569 mot Lyn i 1985."
+      },
+      {
+        "q": "Når ble Rosenborgs kvinnelag integrert i klubben?",
+        "choices": [
+          "1997",
+          "2001",
+          "2010",
+          "2020"
+        ],
+        "answerIndex": 3,
+        "explanation": "Rosenborg Kvinner ble innlemmet med navnet Rosenborg BK Kvinner i 2020."
+      },
+      {
+        "q": "Når begynte klubben for alvor å profesjonalisere driften inn mot gullperioden?",
+        "choices": [
+          "1984",
+          "1986",
+          "1988",
+          "1990"
+        ],
+        "answerIndex": 2,
+        "explanation": "Slutten av 1980-tallet, spesielt rundt 1988, markerte overgangen til mer profesjonell drift."
+      },
+      {
+        "q": "Hvilket år fikk Rosenborg en hovedsponsoravtale som la grunnlag for gullalderen?",
+        "choices": [
+          "1987",
+          "1988",
+          "1989",
+          "1990"
+        ],
+        "answerIndex": 1,
+        "explanation": "På slutten av 1980-tallet, med avtalen i 1988, kom viktige sponsorinntekter."
+      },
+      {
+        "q": "Når tok Rosenborg i bruk Lerkendal stadion som hjemmebane for første gang?",
+        "choices": [
+          "1947",
+          "1952",
+          "1957",
+          "1962"
+        ],
+        "answerIndex": 2,
+        "explanation": "Lerkendal stadion ble Rosenborgs hjemmebane i 1957."
       }
     ]
   },
