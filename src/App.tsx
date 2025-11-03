@@ -377,7 +377,7 @@ export default function App() {
     : 'Ingen klubber har spørsmål for denne vanskelighetsgraden i demoen. Bytt vanskelighetsgrad eller utvid spørsmålsbanken.'
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-slate-950 text-slate-100">
+    <div className="relative flex min-h-dvh w-full flex-col overflow-hidden bg-slate-950 text-slate-100">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/95 to-slate-950" />
         <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(circle_at_top,_rgba(15,23,42,0.75),_transparent_70%)]" />
@@ -397,12 +397,12 @@ export default function App() {
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
         />
       </div>
-      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <motion.header
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-10 flex flex-wrap items-center justify-between gap-6"
+          className="mb-8 flex flex-wrap items-center justify-between gap-6 sm:mb-10"
         >
           <div className="flex items-center gap-4">
             <motion.div
@@ -433,14 +433,14 @@ export default function App() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]"
+          className="grid flex-1 content-start gap-6 lg:min-h-0 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch"
         >
           <motion.div
             key={pickedClub.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/60 shadow-[0_30px_80px_rgba(15,23,42,0.55)] backdrop-blur"
+            className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/60 shadow-[0_30px_80px_rgba(15,23,42,0.55)] backdrop-blur"
           >
             <motion.div
               key={`${pickedClub.id}-${clubTheme.gradient}`}
@@ -450,7 +450,7 @@ export default function App() {
               className={`absolute inset-0 opacity-80 ${clubTheme.gradient}`}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/40 to-transparent" />
-            <div className="relative flex h-full flex-col justify-between gap-10 p-8 sm:p-12">
+            <div className="relative flex h-full min-h-0 flex-col justify-between gap-10 p-8 sm:p-12">
               <div className="space-y-6 text-white">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white/80 backdrop-blur">
                   <Shield className="h-3.5 w-3.5" /> Favorittklubb
@@ -513,8 +513,8 @@ export default function App() {
             </div>
           </motion.div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+          <div className="grid h-full min-h-0 content-start gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Activity className="h-5 w-5 text-emerald-300" />
@@ -538,7 +538,7 @@ export default function App() {
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Target className="h-5 w-5 text-sky-300" />
@@ -605,7 +605,7 @@ export default function App() {
               </CardContent>
             </Card>
 
-            <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur sm:col-span-2 lg:col-span-1">
+            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur sm:col-span-2 lg:col-span-1">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Sparkles className="h-5 w-5 text-fuchsia-300" />
@@ -641,9 +641,9 @@ export default function App() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          className="mt-12"
+          className="mt-8 flex flex-col gap-6 sm:mt-10 lg:mt-12 lg:flex-1 lg:min-h-0"
         >
-          <Tabs defaultValue="history" className="w-full">
+          <Tabs defaultValue="history" className="flex w-full flex-col gap-6 lg:flex-1 lg:min-h-0">
             <TabsList className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-950/70 p-1 shadow-[0_15px_45px_rgba(15,23,42,0.45)] backdrop-blur">
               <TabsTrigger
                 value="history"
@@ -659,8 +659,8 @@ export default function App() {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="history" className="mt-6">
-              <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+            <TabsContent value="history" className="lg:flex-1 lg:min-h-0">
+              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
                 <CardHeader className="border-b border-white/5">
                   <CardTitle className="flex items-center gap-2 text-xl font-semibold text-slate-100">
                     {pickedClub.name}
@@ -680,8 +680,8 @@ export default function App() {
               </Card>
             </TabsContent>
 
-            <TabsContent value="quiz" className="mt-6">
-              <Card className="overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+            <TabsContent value="quiz" className="lg:flex-1 lg:min-h-0">
+              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
                 <CardHeader className="border-b border-white/5">
                   <CardTitle className="flex items-center gap-2 text-slate-100">
                     <CircleHelp className="h-5 w-5 text-emerald-300" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
@@ -690,7 +690,7 @@ export default function App() {
                     Spørsmålene hentes fra demo-banken <code>Qbase.json</code>. Velg modus og vanskelighetsgrad i kortet over før du starter.
                   </p>
                 </CardHeader>
-                <CardContent className="space-y-6 pt-6">
+                <CardContent className="flex min-h-0 flex-1 flex-col space-y-6 pt-6">
                   {loadingQuestions ? (
                     <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
                       <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
@@ -834,7 +834,7 @@ export default function App() {
           </Tabs>
         </motion.section>
 
-        <footer className="mt-12 text-xs text-slate-500">
+        <footer className="mt-8 text-xs text-slate-500 sm:mt-10 lg:mt-12">
           MVP-demo. Spørsmålene hentes fra lokal <code>Qbase.json</code> mens neste iterasjon planlegges.
         </footer>
       </div>
