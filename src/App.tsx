@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/ui/tabs'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
@@ -22,6 +22,8 @@ type QuizQuestion = StoredQuestion & {
   clubName: string
   difficulty: Difficulty
 }
+
+type QuestionBank = Record<string, Record<Difficulty, StoredQuestion[]>>
 
 const CLUBS = [
   { id: 'liverpool', name: 'Liverpool FC', colors: 'from-red-600 to-red-800' },
@@ -62,393 +64,6 @@ const CLUB_HISTORIES: Record<string, string> = {
     'Juventus dominerte italiensk fotball i flere perioder og er kjent for sin defensive disiplin, sterke vinnerkultur og ikoniske svarte‑og‑hvite striper.',
   milan:
     'AC Milan har en rik europeisk merittliste, storhetstider under Sacchi og Capello, og har preget italiensk fotball med sterk defensiv struktur og offensive ikoner.',
-}
-
-const QUESTION_BANK: Record<string, Record<Difficulty, StoredQuestion[]>> = {
-  liverpool: {
-    easy: [
-      {
-        q: 'Hva heter Liverpools hjemmebane?',
-        choices: ['Goodison Park', 'Anfield', 'Stamford Bridge', 'Highbury'],
-        answerIndex: 1,
-        explanation: 'Anfield har vært Liverpools hjemmebane siden 1892.',
-      },
-      {
-        q: 'Hvilken sang forbindes mest med Liverpool?',
-        choices: ['Blue Moon', 'Glory Glory Man United', "You'll Never Walk Alone", "I'm Forever Blowing Bubbles"],
-        answerIndex: 2,
-        explanation: "”You'll Never Walk Alone” synges før kamp og er klubbens uoffisielle hymne.",
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvem ledet Liverpool til Champions League-triumf i 2019?',
-        choices: ['Rafael Benítez', 'Kenny Dalglish', 'Jürgen Klopp', 'Roy Hodgson'],
-        answerIndex: 2,
-        explanation: 'Jürgen Klopp vant Champions League 2018/19 med Liverpool.',
-      },
-      {
-        q: 'Hvilken legendarisk manager forbindes med Boot Room-tradisjonen?',
-        choices: ['Bob Paisley', 'Bill Shankly', 'Joe Fagan', 'Gerard Houllier'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvor mange europacup/Champions League-titler hadde Liverpool før 2020-sesongen?',
-        choices: ['4', '5', '6', '7'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvilket lag slo Liverpool i finalen i Istanbul i 2005?',
-        choices: ['AC Milan', 'Juventus', 'Real Madrid', 'Bayern München'],
-        answerIndex: 0,
-        explanation: 'Liverpool slo AC Milan etter straffekonkurranse i 2005.',
-      },
-    ],
-  },
-  manutd: {
-    easy: [
-      {
-        q: 'Hvilken manager er mest ikonisk for Uniteds moderne æra?',
-        choices: ['Matt Busby', 'Sir Alex Ferguson', 'Louis van Gaal', 'Ron Atkinson'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hva kalles Old Trafford ofte?',
-        choices: ['The Dream Factory', 'The Theatre of Dreams', 'The Red Fortress', 'The United Arena'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'I hvilket år vant Manchester United the treble (PL, FA-cup og CL)?',
-        choices: ['1999', '2008', '1994', '2013'],
-        answerIndex: 0,
-      },
-      {
-        q: 'Hvem scoret seiersmålet i Champions League-finalen 1999?',
-        choices: ['David Beckham', 'Ryan Giggs', 'Ole Gunnar Solskjær', 'Teddy Sheringham'],
-        answerIndex: 2,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvilket lag slo United i Europacupfinalen i 1968?',
-        choices: ['Real Madrid', 'Benfica', 'Bayern München', 'Celtic'],
-        answerIndex: 1,
-      },
-      {
-        q: 'I hvilket år skjedde Munich-ulykken?',
-        choices: ['1955', '1958', '1963', '1970'],
-        answerIndex: 1,
-      },
-    ],
-  },
-  mancty: {
-    easy: [
-      {
-        q: 'Hva er hovedfargen på Manchester Citys hjemmedrakt?',
-        choices: ['Rød', 'Lyseblå', 'Hvit', 'Grønn'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hva heter Manchester Citys stadion?',
-        choices: ['Stamford Bridge', 'Etihad Stadium', 'Old Trafford', "St James' Park"],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvem var manager da City satte poengrekord i Premier League 2017/18?',
-        choices: ['Manuel Pellegrini', 'Pep Guardiola', 'Roberto Mancini', 'Sven-Göran Eriksson'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvilken sesong vant City sin første Premier League-tittel i moderne tid?',
-        choices: ['2010/11', '2011/12', '2012/13', '2013/14'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvem scoret det avgjørende målet mot QPR i 2012 som sikret tittelen?',
-        choices: ['Carlos Tévez', 'Edin Džeko', 'Yaya Touré', 'Sergio Agüero'],
-        answerIndex: 3,
-      },
-      {
-        q: 'Når ble Manchester City (som Manchester City FC) stiftet?',
-        choices: ['1880', '1887', '1894', '1902'],
-        answerIndex: 2,
-      },
-    ],
-  },
-  arsenal: {
-    easy: [
-      {
-        q: 'Hva er Arsenals kallenavn?',
-        choices: ['The Blues', 'The Foxes', 'The Gunners', 'The Citizens'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hva heter Arsenals stadion siden 2006?',
-        choices: ['Highbury', 'Emirates Stadium', 'White Hart Lane', 'Craven Cottage'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvilken sesong gikk Arsenal ubeseiret i ligaen?',
-        choices: ['2001/02', '2003/04', '2005/06', '2015/16'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvem var Arsenals manager fra 1996 til 2018?',
-        choices: ['Arsène Wenger', 'Unai Emery', 'George Graham', 'Mikel Arteta'],
-        answerIndex: 0,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvem scoret det avgjørende målet for Arsenal på Anfield i 1989?',
-        choices: ['Alan Smith', 'David Rocastle', 'Michael Thomas', 'Nigel Winterburn'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvor mange ligatitler hadde Arsenal før 2020-sesongen?',
-        choices: ['10', '13', '15', '18'],
-        answerIndex: 1,
-      },
-    ],
-  },
-  chelsea: {
-    easy: [
-      {
-        q: 'Hva heter Chelseas hjemmebane?',
-        choices: ['Stamford Bridge', 'Loftus Road', 'Selhurst Park', 'Emirates Stadium'],
-        answerIndex: 0,
-      },
-      {
-        q: 'Hvilken farge dominerer Chelseas hjemmedrakt?',
-        choices: ['Rød', 'Blå', 'Hvit', 'Gul'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvilket år vant Chelsea sin første Champions League?',
-        choices: ['2008', '2010', '2012', '2015'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvem kjøpte Chelsea i 2003 og startet klubbens moderne suksess?',
-        choices: ['Sheikh Mansour', 'Roman Abramovitsj', 'Todd Boehly', 'Ken Bates'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvem scoret den avgjørende straffen i Champions League-finalen 2012?',
-        choices: ['Didier Drogba', 'Frank Lampard', 'Juan Mata', 'Fernando Torres'],
-        answerIndex: 0,
-      },
-      {
-        q: 'Hvem var manager da Chelsea vant Premier League 2004/05?',
-        choices: ['Claudio Ranieri', 'José Mourinho', 'Carlo Ancelotti', 'Guus Hiddink'],
-        answerIndex: 1,
-      },
-    ],
-  },
-  tottenham: {
-    easy: [
-      {
-        q: 'Hva heter Tottenhams stadion som åpnet i 2019?',
-        choices: ['White Hart Lane', 'Tottenham Hotspur Stadium', 'Emirates Stadium', 'London Stadium'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hva er Tottenhams tradisjonelle kallenavn?',
-        choices: ['The Blues', 'The Reds', 'Spurs (Lilywhites)', 'The Toffees'],
-        answerIndex: 2,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvem var manager da Spurs nådde Champions League-finalen i 2019?',
-        choices: ['José Mourinho', 'André Villas-Boas', 'Mauricio Pochettino', 'Harry Redknapp'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Når vant Tottenham sist FA-cupen?',
-        choices: ['1981', '1991', '2001', '2011'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'I hvilken sesong tok Tottenham The Double (liga og FA-cup)?',
-        choices: ['1950/51', '1960/61', '1970/71', '1980/81'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvilken legendarisk målscorer bar draktnummer 10 på 1960-tallet?',
-        choices: ['Gary Lineker', 'Jimmy Greaves', 'Martin Chivers', 'Glenn Hoddle'],
-        answerIndex: 1,
-      },
-    ],
-  },
-  barca: {
-    easy: [
-      {
-        q: 'Hva heter FC Barcelonas stadion?',
-        choices: ['Santiago Bernabéu', 'Camp Nou', 'Mestalla', 'Montjuïc'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hva kalles Barcelonas tradisjonelle farger?',
-        choices: ['Rød og hvit', 'Blå og hvit', 'Blaugrana', 'Sort og gull'],
-        answerIndex: 2,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hva er klubbens motto?',
-        choices: ['Sempre Barca', 'Visca Catalunya', 'Més que un club', 'Som i alletiders'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvem ledet Barcelona i perioden 2008–2012 med enorm suksess?',
-        choices: ['Louis van Gaal', 'Pep Guardiola', 'Frank Rijkaard', 'Tito Vilanova'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvor mange Ballon d’Or-trofeer hadde Lionel Messi ved inngangen til 2022-sesongen?',
-        choices: ['5', '6', '7', '8'],
-        answerIndex: 2,
-      },
-      {
-        q: 'I hvilket år ble FC Barcelona grunnlagt?',
-        choices: ['1899', '1905', '1911', '1923'],
-        answerIndex: 0,
-      },
-    ],
-  },
-  real: {
-    easy: [
-      {
-        q: 'Hva er hovedfargen på Real Madrids hjemmedrakt?',
-        choices: ['Hvit', 'Blå', 'Rød', 'Svart'],
-        answerIndex: 0,
-      },
-      {
-        q: 'Hva heter Real Madrids hjemmebane?',
-        choices: ['Wanda Metropolitano', 'Santiago Bernabéu', 'Camp Nou', 'Mestalla'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvilket kallenavn brukes om Real Madrids ungdomsakademi?',
-        choices: ['La Masia', 'La Fábrica', 'La Cantera', 'La Academia'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvem var trener da Real Madrid vant La Décima i 2014?',
-        choices: ['José Mourinho', 'Vicente del Bosque', 'Carlo Ancelotti', 'Zinedine Zidane'],
-        answerIndex: 2,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvor mange europacup/Champions League-titler hadde Real Madrid før 2022-sesongen?',
-        choices: ['10', '11', '13', '14'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvilket lag slo Real Madrid i sin første europacupfinale i 1956?',
-        choices: ['Stade de Reims', 'AC Milan', 'Eintracht Frankfurt', 'Partizan Beograd'],
-        answerIndex: 0,
-      },
-    ],
-  },
-  juve: {
-    easy: [
-      {
-        q: 'Hvilke farger er på Juventus sine hjemmedrakter?',
-        choices: ['Blå og svart', 'Svart og hvit', 'Rød og gul', 'Grønn og hvit'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hva heter Juventus sin stadion som åpnet i 2011?',
-        choices: ['Stadio Olimpico', 'Allianz Stadium', 'San Siro', 'Renzo Barbera'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hva er Juventus sitt kallenavn?',
-        choices: ['I Nerazzurri', 'La Vecchia Signora', 'I Rossoneri', 'Los Blancos'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvem var trener da Juventus tok tre strake Scudettoer fra 2011/12 til 2013/14?',
-        choices: ['Massimiliano Allegri', 'Antonio Conte', 'Fabio Capello', 'Marcello Lippi'],
-        answerIndex: 1,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvor mange Serie A-titler ble fratatt Juventus i Calciopoli-skandalen?',
-        choices: ['1', '2', '3', '4'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvilket år fant Heysel-tragedien sted under Juventus sin europacupfinale?',
-        choices: ['1983', '1985', '1987', '1989'],
-        answerIndex: 1,
-      },
-    ],
-  },
-  milan: {
-    easy: [
-      {
-        q: 'Hva heter stadionen som AC Milan deler med Inter?',
-        choices: ['Stadio Olimpico', 'Allianz Stadium', 'San Siro', 'Stadio Artemio Franchi'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvilke farger forbindes med AC Milans hjemmedrakter?',
-        choices: ['Blå og rød', 'Rød og svart', 'Svart og hvit', 'Gul og grønn'],
-        answerIndex: 1,
-      },
-    ],
-    medium: [
-      {
-        q: 'Hvem ledet AC Milan til europeisk dominans på slutten av 1980-tallet?',
-        choices: ['Fabio Capello', 'Arrigo Sacchi', 'Carlo Ancelotti', 'Nereo Rocco'],
-        answerIndex: 1,
-      },
-      {
-        q: 'Hvilket trofé vant Milan i 2007 etter finalen mot Liverpool?',
-        choices: ['UEFA-cupen', 'Serie A', 'Champions League', 'Coppa Italia'],
-        answerIndex: 2,
-      },
-    ],
-    hard: [
-      {
-        q: 'Hvor mange europacup/Champions League-titler hadde Milan før 2020-sesongen?',
-        choices: ['5', '6', '7', '8'],
-        answerIndex: 2,
-      },
-      {
-        q: 'Hvilken forsvarskjempe er kjent som “Il Capitano” og spilte over 900 kamper for Milan?',
-        choices: ['Franco Baresi', 'Paolo Maldini', 'Alessandro Nesta', 'Thiago Silva'],
-        answerIndex: 1,
-      },
-    ],
-  },
 }
 
 const QUIZ_MODE_OPTIONS: { value: QuizMode; label: string; description: string }[] = [
@@ -492,6 +107,9 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 export default function App() {
+  const [questionData, setQuestionData] = useState<QuestionBank>({})
+  const [loadingQuestions, setLoadingQuestions] = useState(true)
+  const [questionError, setQuestionError] = useState<string | null>(null)
   const [clubId, setClubId] = useState<string>(CLUBS[0].id)
   const [customClub, setCustomClub] = useState<string>('')
   const [quizMode, setQuizMode] = useState<QuizMode>('single')
@@ -500,6 +118,30 @@ export default function App() {
   const [step, setStep] = useState<number>(0)
   const [showResults, setShowResults] = useState(false)
   const [seed, setSeed] = useState(0)
+
+  const loadQuestionBank = useCallback(async () => {
+    try {
+      setLoadingQuestions(true)
+      setQuestionError(null)
+
+      const response = await fetch('/Qbase.json')
+      if (!response.ok) {
+        throw new Error(`Kunne ikke laste spørsmål (status ${response.status})`)
+      }
+
+      const payload = (await response.json()) as QuestionBank
+      setQuestionData(payload)
+    } catch (error) {
+      setQuestionData({})
+      setQuestionError(error instanceof Error ? error.message : 'Ukjent feil ved lasting av spørsmål.')
+    } finally {
+      setLoadingQuestions(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    loadQuestionBank()
+  }, [loadQuestionBank])
 
   const pickedClub = useMemo(() => {
     if (customClub.trim().length > 1) {
@@ -513,11 +155,13 @@ export default function App() {
     setStep(0)
     setShowResults(false)
     setSeed(s => s + 1)
-  }, [quizMode, difficulty, pickedClub.id])
+  }, [quizMode, difficulty, pickedClub.id, questionData])
 
-  const questionBank = useMemo<QuizQuestion[]>(() => {
+  const quizQuestions = useMemo<QuizQuestion[]>(() => {
+    if (!questionData || Object.keys(questionData).length === 0) return []
+
     if (quizMode === 'mixed') {
-      const collected = Object.entries(QUESTION_BANK).flatMap(([id, byDifficulty]) => {
+      const collected = Object.entries(questionData).flatMap(([id, byDifficulty]) => {
         const questions = byDifficulty[difficulty] ?? []
         if (!questions.length) return []
         const clubName = CLUB_NAME_BY_ID[id] ?? id
@@ -528,18 +172,18 @@ export default function App() {
       return shuffled.slice(0, limit)
     }
 
-    const base = QUESTION_BANK[pickedClub.id]?.[difficulty] ?? []
+    const base = questionData[pickedClub.id]?.[difficulty] ?? []
     const clubName = pickedClub.name
     const decorated = base.map(q => ({ ...q, clubId: pickedClub.id, clubName, difficulty }))
     const shuffled = shuffle(decorated)
     const limit = Math.min(shuffled.length, DEFAULT_TARGET)
     return shuffled.slice(0, limit)
-  }, [difficulty, pickedClub.id, pickedClub.name, quizMode, seed])
+  }, [difficulty, pickedClub.id, pickedClub.name, quizMode, questionData, seed])
 
-  const current = questionBank[step]
-  const total = questionBank.length
+  const current = quizQuestions[step]
+  const total = quizQuestions.length
   const score = answers.reduce((acc, answer, index) => {
-    const q = questionBank[index]
+    const q = quizQuestions[index]
     if (q && answer === q.answerIndex) {
       return acc + 1
     }
@@ -706,7 +350,20 @@ export default function App() {
                   </div>
                 </div>
 
-                {!hasQuestions ? (
+                {loadingQuestions ? (
+                  <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6 text-center text-sm text-slate-300">
+                    <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
+                    <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
+                  </div>
+                ) : questionError ? (
+                  <div className="rounded-xl border border-rose-800/40 bg-rose-950/40 p-6 text-center text-sm text-rose-200">
+                    <p className="font-semibold">Kunne ikke laste spørsmål.</p>
+                    <p className="mt-2 opacity-90">{questionError}</p>
+                    <div className="mt-4 flex justify-center">
+                      <Button variant="secondary" onClick={loadQuestionBank}>Prøv igjen</Button>
+                    </div>
+                  </div>
+                ) : !hasQuestions ? (
                   <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6 text-center text-sm text-slate-300">
                     <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
                     <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
@@ -784,7 +441,7 @@ export default function App() {
         </Tabs>
 
         <footer className="mt-8 text-xs text-slate-400">
-          MVP-demo. Bygget med React + Vite + Tailwind. Ingen ekstern API i denne versjonen.
+          MVP-demo. Spørsmålene hentes fra lokal <code>Qbase.json</code> i påvente av eventuell migrering til ekstern database.
         </footer>
       </div>
     </div>
