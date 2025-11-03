@@ -2,72 +2,909 @@
   "liverpool": {
     "easy": [
       {
-        "q": "Hva heter Liverpools hjemmebane?",
+        "q": "Hvilket kallenavn er mest brukt om Liverpool FC?",
         "choices": [
-          "Goodison Park",
-          "Anfield",
-          "Stamford Bridge",
-          "Highbury"
+          "The Blues",
+          "The Reds",
+          "The Eagles",
+          "The Saints"
         ],
         "answerIndex": 1,
-        "explanation": "Anfield har vært Liverpools hjemmebane siden 1892."
+        "explanation": "Klubben omtales over hele verden som The Reds på grunn av draktene."
       },
       {
-        "q": "Hvilken sang forbindes mest med Liverpool?",
+        "q": "I hvilken liga spiller Liverpool sesongen 2023/24?",
         "choices": [
-          "Blue Moon",
-          "Glory Glory Man United",
-          "You'll Never Walk Alone",
-          "I'm Forever Blowing Bubbles"
-        ],
-        "answerIndex": 2,
-        "explanation": "”You'll Never Walk Alone” synges før kamp og er klubbens uoffisielle hymne."
-      }
-    ],
-    "medium": [
-      {
-        "q": "Hvem ledet Liverpool til Champions League-triumf i 2019?",
-        "choices": [
-          "Rafael Benítez",
-          "Kenny Dalglish",
-          "Jürgen Klopp",
-          "Roy Hodgson"
-        ],
-        "answerIndex": 2,
-        "explanation": "Jürgen Klopp vant Champions League 2018/19 med Liverpool."
-      },
-      {
-        "q": "Hvilken legendarisk manager forbindes med Boot Room-tradisjonen?",
-        "choices": [
-          "Bob Paisley",
-          "Bill Shankly",
-          "Joe Fagan",
-          "Gerard Houllier"
+          "Championship",
+          "Premier League",
+          "La Liga",
+          "Serie A"
         ],
         "answerIndex": 1
-      }
-    ],
-    "hard": [
+      },
       {
-        "q": "Hvor mange europacup/Champions League-titler hadde Liverpool før 2020-sesongen?",
+        "q": "Hvem er Liverpools tradisjonelle rival i Merseyside-derbyet?",
         "choices": [
-          "4",
-          "5",
-          "6",
-          "7"
+          "Manchester United",
+          "Leeds United",
+          "Everton",
+          "Chelsea"
         ],
         "answerIndex": 2
       },
       {
-        "q": "Hvilket lag slo Liverpool i finalen i Istanbul i 2005?",
+        "q": "Hva heter Liverpools hjemmebane?",
         "choices": [
-          "AC Milan",
-          "Juventus",
-          "Real Madrid",
-          "Bayern München"
+          "Goodison Park",
+          "Anfield",
+          "Old Trafford",
+          "Etihad Stadium"
         ],
-        "answerIndex": 0,
-        "explanation": "Liverpool slo AC Milan etter straffekonkurranse i 2005."
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken sang regnes som Liverpools uoffisielle hymne?",
+        "choices": [
+          "Blue Moon",
+          "You'll Never Walk Alone",
+          "Glory Glory",
+          "Forever Blowing Bubbles"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken hovedfarge har Liverpools hjemmedrakt?",
+        "choices": [
+          "Blå",
+          "Grønn",
+          "Rød",
+          "Gul"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Når ble Liverpool FC stiftet?",
+        "choices": [
+          "1878",
+          "1892",
+          "1901",
+          "1910"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var manager da Liverpool vant Premier League i 2019/20?",
+        "choices": [
+          "Rafael Benítez",
+          "Jürgen Klopp",
+          "Brendan Rodgers",
+          "Roy Hodgson"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva heter den berømte tribunen bak målet på Anfield?",
+        "choices": [
+          "Stretford End",
+          "Holte End",
+          "The Kop",
+          "Shed End"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket trofé vant Liverpool i Madrid i 2019?",
+        "choices": [
+          "Europa League",
+          "FA-cupen",
+          "Champions League",
+          "Liga-cupen"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken tittel sikret Liverpool i sesongen 2019/20?",
+        "choices": [
+          "FA-cupen",
+          "Premier League",
+          "Europa League",
+          "Community Shield"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem scoret åpningsmålet i Champions League-finalen 2019 mot Tottenham?",
+        "choices": [
+          "Sadio Mané",
+          "Mohamed Salah",
+          "Roberto Firmino",
+          "Divock Origi"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket draktnummer er ikonisk for Steven Gerrard?",
+        "choices": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem er Liverpools toppscorer gjennom tidene?",
+        "choices": [
+          "Robbie Fowler",
+          "Steven Gerrard",
+          "Ian Rush",
+          "Kenny Dalglish"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket symbol pryder Liverpools klubbmerke?",
+        "choices": [
+          "En løve",
+          "En liverbird",
+          "En drage",
+          "En seilbåt"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var Liverpools kaptein i 2023/24-sesongen?",
+        "choices": [
+          "Jordan Henderson",
+          "Virgil van Dijk",
+          "James Milner",
+          "Fabinho"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket land representerer Mohamed Salah på landslaget?",
+        "choices": [
+          "Marokko",
+          "Egypt",
+          "Algerie",
+          "Tunisia"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket draktnummer bruker Mohamed Salah i Liverpool?",
+        "choices": [
+          "7",
+          "9",
+          "10",
+          "11"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Fra hvilket land kommer Virgil van Dijk?",
+        "choices": [
+          "Belgia",
+          "Nederland",
+          "Tyskland",
+          "Danmark"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket land kommer målvakten Alisson Becker fra?",
+        "choices": [
+          "Brasil",
+          "Spania",
+          "Italia",
+          "Portugal"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken posisjon spiller Trent Alexander-Arnold oftest?",
+        "choices": [
+          "Midtstopper",
+          "Høyreback",
+          "Venstreving",
+          "Spiss"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken draktleverandør har Liverpool i 2023/24?",
+        "choices": [
+          "Adidas",
+          "New Balance",
+          "Nike",
+          "Puma"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket land kommer manageren Jürgen Klopp fra?",
+        "choices": [
+          "Nederland",
+          "Tyskland",
+          "Sverige",
+          "Østerrike"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem løftet Champions League-trofeet for Liverpool i 2019?",
+        "choices": [
+          "Virgil van Dijk",
+          "Jordan Henderson",
+          "James Milner",
+          "Trent Alexander-Arnold"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket land kommer tidligere stjernespiss Sadio Mané fra?",
+        "choices": [
+          "Ghana",
+          "Elfenbenskysten",
+          "Senegal",
+          "Nigeria"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Liverpools manager i Champions League-finalen 2005?",
+        "choices": [
+          "Rafael Benítez",
+          "Gerard Houllier",
+          "Roy Evans",
+          "Kenny Dalglish"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "I hvilken by ligger Anfield?",
+        "choices": [
+          "Manchester",
+          "Liverpool",
+          "London",
+          "Leeds"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilke bokstaver brukes ofte som klubbforkortelse for Liverpool?",
+        "choices": [
+          "MUFC",
+          "LFC",
+          "CFC",
+          "AFC"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken elv er byen Liverpool knyttet til som havneby?",
+        "choices": [
+          "Thames",
+          "Mersey",
+          "Tyne",
+          "Severn"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag slo Liverpool i Champions League-finalen 2019?",
+        "choices": [
+          "Tottenham Hotspur",
+          "Real Madrid",
+          "Barcelona",
+          "Juventus"
+        ],
+        "answerIndex": 0
+      }
+    ],
+    "medium": [
+      {
+        "q": "Hvem utlignet til 3-3 i Champions League-finalen i Istanbul 2005?",
+        "choices": [
+          "Steven Gerrard",
+          "Xabi Alonso",
+          "Luis García",
+          "Dietmar Hamann"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var Liverpools kaptein i Champions League-finalen 2005?",
+        "choices": [
+          "Jamie Carragher",
+          "Sami Hyypiä",
+          "Steven Gerrard",
+          "John Arne Riise"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket lag slo Liverpool for å sikre klubbens første Europacup-tittel i 1977?",
+        "choices": [
+          "Real Madrid",
+          "Borussia Mönchengladbach",
+          "Club Brugge",
+          "Inter"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilken sesong ga Bill Shankly Liverpool sin første ligatittel?",
+        "choices": [
+          "1959/60",
+          "1961/62",
+          "1963/64",
+          "1966/67"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var spillende manager da Liverpool vant ligaen i 1987/88?",
+        "choices": [
+          "Graeme Souness",
+          "Ronnie Moran",
+          "Kenny Dalglish",
+          "Joe Fagan"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var motstander i FA Cup-finalen 2006 som endte 3-3 før straffekonkurranse?",
+        "choices": [
+          "Chelsea",
+          "Arsenal",
+          "West Ham United",
+          "Manchester United"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år vant Liverpool UEFA Cup etter 5-4 mot Deportivo Alavés?",
+        "choices": [
+          "1998",
+          "2001",
+          "2003",
+          "2005"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var Liverpools toppscorer i Premier League 2013/14?",
+        "choices": [
+          "Steven Gerrard",
+          "Daniel Sturridge",
+          "Luis Suárez",
+          "Raheem Sterling"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken Liverpool-spiller vant Ballon d'Or i 2001?",
+        "choices": [
+          "Michael Owen",
+          "Steven Gerrard",
+          "Robbie Fowler",
+          "Fernando Torres"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken målvakt reddet to straffer i straffesparkkonkurransen i Istanbul 2005?",
+        "choices": [
+          "Chris Kirkland",
+          "Pepe Reina",
+          "Jerzy Dudek",
+          "David James"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år ble den utvidede Main Stand på Anfield åpnet?",
+        "choices": [
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var manager da Liverpool vant Champions League i 2005?",
+        "choices": [
+          "Gerard Houllier",
+          "Rafael Benítez",
+          "Brendan Rodgers",
+          "Roy Hodgson"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag slo Liverpool i Champions League-finalen 2018?",
+        "choices": [
+          "Barcelona",
+          "Real Madrid",
+          "Bayern München",
+          "AC Milan"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket land kommer klubblegenden Ian Rush fra?",
+        "choices": [
+          "Irland",
+          "Skottland",
+          "Wales",
+          "England"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken manager vant tre Europacup-titler med Liverpool?",
+        "choices": [
+          "Bob Paisley",
+          "Joe Fagan",
+          "Bill Shankly",
+          "Kenny Dalglish"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Fra hvilken klubb ble Virgil van Dijk hentet i januar 2018?",
+        "choices": [
+          "Celtic",
+          "Southampton",
+          "Ajax",
+          "Groningen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år flyttet Liverpool fra Melwood til AXA Training Centre i Kirkby?",
+        "choices": [
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem tok det berømte raske hjørnesparket mot Barcelona i 2019?",
+        "choices": [
+          "James Milner",
+          "Andy Robertson",
+          "Trent Alexander-Arnold",
+          "Jordan Henderson"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem scoret Liverpools første mål i 4-0-seieren over Barcelona i 2019?",
+        "choices": [
+          "Divock Origi",
+          "Georginio Wijnaldum",
+          "Sadio Mané",
+          "Mohamed Salah"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem møtte Liverpool i UEFA Super Cup-finalen 2019 som endte med straffeseier?",
+        "choices": [
+          "Sevilla",
+          "Chelsea",
+          "Atlético Madrid",
+          "Porto"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem var Liverpools manager før Jürgen Klopp tok over i 2015?",
+        "choices": [
+          "Rafael Benítez",
+          "Gerard Houllier",
+          "Brendan Rodgers",
+          "Roy Evans"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Fra hvilken klubb kom Mohamed Salah da han signerte for Liverpool i 2017?",
+        "choices": [
+          "Chelsea",
+          "Fiorentina",
+          "AS Roma",
+          "Basel"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem voktet målet for Liverpool i Champions League-finalen 2019?",
+        "choices": [
+          "Loris Karius",
+          "Alisson Becker",
+          "Pepe Reina",
+          "Brad Jones"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år vant Liverpool sin foreløpig siste FA Cup under Jürgen Klopp?",
+        "choices": [
+          "2020",
+          "2021",
+          "2022",
+          "2023"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem ble kåret til PFA Young Player of the Year i 2019/20 for Liverpool?",
+        "choices": [
+          "Trent Alexander-Arnold",
+          "Joe Gomez",
+          "Curtis Jones",
+          "Harvey Elliott"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket år ble The Kop omgjort til en helsittende tribune?",
+        "choices": [
+          "1992",
+          "1993",
+          "1994",
+          "1995"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem scoret 2-0-målet i Champions League-finalen 2019 mot Tottenham?",
+        "choices": [
+          "Sadio Mané",
+          "Roberto Firmino",
+          "Divock Origi",
+          "Georginio Wijnaldum"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Liverpools manager ved starten av Premier League-æraen i 1992/93?",
+        "choices": [
+          "Graeme Souness",
+          "Roy Evans",
+          "Gerard Houllier",
+          "Kenny Dalglish"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Fra hvilken klubb ble venstreback Andy Robertson kjøpt i 2017?",
+        "choices": [
+          "Dundee United",
+          "Hull City",
+          "Celtic",
+          "Queens Park"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvor mange poeng tok Liverpool i Premier League-sesongen 2019/20?",
+        "choices": [
+          "97",
+          "98",
+          "99",
+          "100"
+        ],
+        "answerIndex": 2
+      }
+    ],
+    "hard": [
+      {
+        "q": "Hvor mange europacup/Champions League-titler har Liverpool per 2024?",
+        "choices": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år vant Liverpool sin første FA Cup-tittel?",
+        "choices": [
+          "1950",
+          "1965",
+          "1971",
+          "1974"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem scoret seiersmålet i Europacupfinalen 1978 mot Club Brugge?",
+        "choices": [
+          "Graeme Souness",
+          "Kenny Dalglish",
+          "Terry McDermott",
+          "David Johnson"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket lag brukte Anfield som hjemmebane før Liverpool FC ble stiftet?",
+        "choices": [
+          "Everton",
+          "Tranmere Rovers",
+          "Bolton Wanderers",
+          "Preston North End"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem var Liverpools manager da klubben rykket opp til toppdivisjonen i 1961/62?",
+        "choices": [
+          "Phil Taylor",
+          "Bill Shankly",
+          "George Kay",
+          "Don Welsh"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvor mange ligatitler hadde Liverpool før Premier League-triumfen i 2019/20?",
+        "choices": [
+          "16",
+          "17",
+          "18",
+          "19"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem scoret Liverpools to mål i Europacupfinalen 1984 mot Roma?",
+        "choices": [
+          "Graeme Souness",
+          "Ian Rush",
+          "Phil Neal",
+          "Alan Kennedy"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvilket år fant Hillsborough-tragedien sted?",
+        "choices": [
+          "1987",
+          "1988",
+          "1989",
+          "1990"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Liverpools manager under Heysel-finalen i 1985?",
+        "choices": [
+          "Bob Paisley",
+          "Joe Fagan",
+          "Kenny Dalglish",
+          "Roy Evans"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvor mange ligacuper (EFL Cup) har Liverpool vunnet per 2024?",
+        "choices": [
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvem var Liverpools første manager etter andre verdenskrig?",
+        "choices": [
+          "George Kay",
+          "Don Welsh",
+          "Phil Taylor",
+          "Bill Shankly"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilken spiller satte inn Liverpools avgjørende straffespark i Europacupfinalen 1984?",
+        "choices": [
+          "Ian Rush",
+          "Graeme Souness",
+          "Alan Kennedy",
+          "Steve Nicol"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år ble Liverpool første engelske klubb som vant europacupen to år på rad?",
+        "choices": [
+          "1978",
+          "1979",
+          "1980",
+          "1981"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvem ble Liverpools første £1 million-signering i 1979?",
+        "choices": [
+          "Kenny Dalglish",
+          "Ian Rush",
+          "Graeme Souness",
+          "Alan Hansen"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilken motstander slo Liverpool i semifinalen før Champions League-tittelen i 2005?",
+        "choices": [
+          "Juventus",
+          "Chelsea",
+          "PSV",
+          "Bayer Leverkusen"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hva het den legendariske fysioterapeuten som var del av Boot Room-staben?",
+        "choices": [
+          "Ronnie Moran",
+          "Bob Paisley",
+          "Joe Fagan",
+          "Reuben Bennett"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvilken spiller har flest kamper for Liverpool gjennom tidene?",
+        "choices": [
+          "Jamie Carragher",
+          "Ian Callaghan",
+          "Steven Gerrard",
+          "Phil Neal"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvilket år ble Shankly Gates avduket utenfor Anfield?",
+        "choices": [
+          "1980",
+          "1982",
+          "1984",
+          "1986"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem ble Liverpools første kaptein til å løfte Europacupen?",
+        "choices": [
+          "Tommy Smith",
+          "Phil Thompson",
+          "Emlyn Hughes",
+          "Graeme Souness"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvor mange mål scoret Ian Rush for Liverpool i offisielle kamper?",
+        "choices": [
+          "285",
+          "304",
+          "316",
+          "346"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvilket år ble Liverpools Boot Room bygget om til presserom?",
+        "choices": [
+          "1990",
+          "1991",
+          "1992",
+          "1993"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Liverpools manager da klubben vant sin første ligatittel i 1900/01?",
+        "choices": [
+          "Tom Watson",
+          "Bill McPherson",
+          "George Kay",
+          "Matt McQueen"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "q": "Hvilket lag slo Liverpool i FA Cup-finalen 1950?",
+        "choices": [
+          "Arsenal",
+          "Newcastle United",
+          "Aston Villa",
+          "Burnley"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvem scoret det siste målet i 7-0-seieren mot Spartak Moskva i Champions League 2017/18?",
+        "choices": [
+          "Philippe Coutinho",
+          "Roberto Firmino",
+          "Sadio Mané",
+          "Mohamed Salah"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvilket år ble Liverpools nåværende klubbmerke med de evige flammene introdusert?",
+        "choices": [
+          "1990",
+          "1992",
+          "1993",
+          "1999"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket draktnummer bar Jamie Carragher i mesteparten av karrieren?",
+        "choices": [
+          "4",
+          "5",
+          "6",
+          "23"
+        ],
+        "answerIndex": 3
+      },
+      {
+        "q": "Hvem var Liverpools motstander da klubben sikret sin første ligacup i 1981?",
+        "choices": [
+          "Tottenham",
+          "West Ham",
+          "Nottingham Forest",
+          "Everton"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvilket år vant Liverpool klubb-VM (FIFA Club World Cup) for første gang?",
+        "choices": [
+          "2001",
+          "2005",
+          "2019",
+          "2020"
+        ],
+        "answerIndex": 2
+      },
+      {
+        "q": "Hvem var Liverpools første manager i Football League-sesongen 1893/94?",
+        "choices": [
+          "Tom Watson",
+          "William E. Barclay",
+          "John McKenna",
+          "George Patterson"
+        ],
+        "answerIndex": 1
+      },
+      {
+        "q": "Hvor mange ligakamper på rad gikk Liverpool ubeseiret i 1987/88-sesongen før første tap?",
+        "choices": [
+          "22",
+          "23",
+          "29",
+          "31"
+        ],
+        "answerIndex": 2
       }
     ]
   },
