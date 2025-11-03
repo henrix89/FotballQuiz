@@ -344,17 +344,18 @@ export default function App() {
   const activeDifficulty = DIFFICULTY_OPTIONS.find(opt => opt.value === difficulty)
   const activeMode = QUIZ_MODE_OPTIONS.find(opt => opt.value === quizMode)
   const answeredCount = answers.filter(answer => typeof answer === 'number').length
+  const answerLocked = typeof answers[step] === 'number'
   const progress = total
     ? Math.min(
         100,
         Math.round(
-          ((showResults ? total : step + (typeof answers[step] === 'number' ? 1 : 0)) / total) * 100,
+          ((showResults ? total : step + (answerLocked ? 1 : 0)) / total) * 100,
         ),
       )
     : 0
 
   function pickAnswer(idx: number) {
-    if (!current) return
+    if (!current || answerLocked) return
     const next = [...answers]
     next[step] = idx
     setAnswers(next)
@@ -759,22 +760,31 @@ export default function App() {
                             <RadioGroup
                               value={answers[step]?.toString() ?? ''}
                               onValueChange={val => pickAnswer(parseInt(val))}
+                              disabled={answerLocked}
                               className="grid gap-3"
                             >
                               {current?.choices.map((choice, idx) => (
                                 <motion.label
                                   key={idx}
                                   htmlFor={`answer-${step}-${idx}`}
-                                  whileHover={{ scale: 1.01, y: -1 }}
-                                  whileTap={{ scale: 0.99 }}
-                                  className={`group relative flex cursor-pointer items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition-all duration-300 backdrop-blur ${
+                                  whileHover={answerLocked ? undefined : { scale: 1.01, y: -1 }}
+                                  whileTap={answerLocked ? undefined : { scale: 0.99 }}
+                                  className={`group relative flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition-all duration-300 backdrop-blur ${
                                     answers[step] === idx
-                                      ? 'border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_10px_35px_rgba(16,185,129,0.35)]'
-                                      : 'hover:bg-white/10'
+                                      ? 'cursor-default border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_10px_35px_rgba(16,185,129,0.35)]'
+                                      : answerLocked
+                                        ? 'cursor-not-allowed opacity-60'
+                                        : 'cursor-pointer hover:bg-white/10'
                                   }`}
-                                  onClick={() => pickAnswer(idx)}
+                                  onClick={() => {
+                                    if (!answerLocked) pickAnswer(idx)
+                                  }}
                                 >
-                                  <RadioGroupItem value={idx.toString()} id={`answer-${step}-${idx}`} />
+                                  <RadioGroupItem
+                                    value={idx.toString()}
+                                    id={`answer-${step}-${idx}`}
+                                    disabled={answerLocked}
+                                  />
                                   <span>{choice}</span>
                                 </motion.label>
                               ))}
