@@ -13,6 +13,8 @@ import {
   Shield,
   Activity,
   Target,
+  Smartphone,
+  X,
 } from 'lucide-react'
 
 type Difficulty = 'easy' | 'medium' | 'hard'
@@ -240,6 +242,8 @@ export default function App() {
   const [step, setStep] = useState<number>(0)
   const [showResults, setShowResults] = useState(false)
   const [seed, setSeed] = useState(0)
+  const [quizOpen, setQuizOpen] = useState(false)
+  const [mobilePreview, setMobilePreview] = useState(false)
 
   const loadQuestionBank = useCallback(async () => {
     try {
@@ -377,8 +381,16 @@ export default function App() {
     ? `Ingen spørsmål for ${pickedClub.name} på denne vanskelighetsgraden ennå. Test en annen grad eller prøv blandet modus.`
     : 'Ingen klubber har spørsmål for denne vanskelighetsgraden i demoen. Bytt vanskelighetsgrad eller utvid spørsmålsbanken.'
 
+  const containerClass = mobilePreview
+    ? 'relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col px-4 py-6'
+    : 'relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10 lg:px-8'
+
   return (
-    <div className="relative flex min-h-dvh w-full flex-col overflow-hidden bg-slate-950 text-slate-100">
+    <div
+      className={`relative flex min-h-dvh w-full flex-col overflow-hidden bg-slate-950 text-slate-100 ${
+        mobilePreview ? 'items-center' : ''
+      }`}
+    >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/95 to-slate-950" />
         <div className="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(circle_at_top,_rgba(15,23,42,0.75),_transparent_70%)]" />
@@ -398,7 +410,7 @@ export default function App() {
           transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
         />
       </div>
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+      <div className={containerClass}>
         <motion.header
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -426,6 +438,13 @@ export default function App() {
             <div className="text-xs uppercase tracking-wide text-slate-400">{selectedLeague?.name ?? 'Ukjent liga'}</div>
             <Button variant="secondary" onClick={resetQuiz} className="backdrop-blur">
               Start på nytt
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => setMobilePreview(prev => !prev)}
+              className="border-white/20 bg-white/5 text-slate-100 hover:bg-white/10"
+            >
+              <Smartphone className="mr-2 h-4 w-4" /> {mobilePreview ? 'Desktopvisning' : 'Mobilvisning'}
             </Button>
           </div>
         </motion.header>
@@ -688,10 +707,17 @@ export default function App() {
                     <CircleHelp className="h-5 w-5 text-emerald-300" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
                   </CardTitle>
                   <p className="text-sm text-slate-400">
-                    Spørsmålene hentes fra demo-banken <code>Qbase.json</code>. Velg modus og vanskelighetsgrad i kortet over før du starter.
+                    Åpne quiz-modulen for å spille i fullskjermsvisning slik du kjenner det fra Kahoot. Velg modus og vanskelighetsgrad i kortet over før du starter.
                   </p>
                 </CardHeader>
                 <CardContent className="flex min-h-0 flex-1 flex-col space-y-6 pt-6">
+                  <div className="rounded-3xl border border-white/5 bg-white/5 p-5 text-sm text-slate-300 backdrop-blur">
+                    <p className="font-semibold text-slate-100">Slik fungerer modulen</p>
+                    <p className="mt-2 text-slate-400">
+                      Når du trykker på «Åpne quiz-modul» vises spørsmålene i en egen overliggende skjerm. Der kan du låse svar, se resultater og starte på nytt uten at resten av siden påvirkes.
+                    </p>
+                  </div>
+
                   {loadingQuestions ? (
                     <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
                       <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
@@ -713,131 +739,32 @@ export default function App() {
                       <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
                     </div>
                   ) : (
-                    <div className="space-y-6">
-                      <div className="space-y-3">
-                        <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-300">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
-                              <Activity className="h-3.5 w-3.5" /> Spørsmål {Math.min(step + 1, total)} av {total}
-                            </span>
-                            {activeDifficulty && (
-                              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
-                                {activeDifficulty.label}
-                              </span>
-                            )}
-                            {quizMode === 'mixed' && current?.clubName && (
-                              <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
-                                {current.clubName}
-                              </span>
-                            )}
-                          </div>
-                          <span className="text-xs uppercase tracking-widest text-slate-400">
-                            Treffsikkerhet: {score}/{total}
-                          </span>
-                        </div>
-                        <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
-                          <motion.div
-                            initial={false}
-                            animate={{ width: `${progress}%` }}
-                            transition={{ duration: 0.5, ease: 'easeOut' }}
-                            className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_16px_rgba(56,189,248,0.5)]"
-                          />
-                        </div>
-                      </div>
-
-                      <AnimatePresence mode="wait">
-                        {!showResults ? (
-                          <motion.div
-                            key={current?.q ?? step}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -16 }}
-                            transition={{ duration: 0.35, ease: 'easeOut' }}
-                            className="space-y-6"
-                          >
-                            <div className="text-lg font-semibold leading-relaxed text-slate-100">{current?.q}</div>
-
-                            <RadioGroup
-                              value={answers[step]?.toString() ?? ''}
-                              onValueChange={val => pickAnswer(parseInt(val))}
-                              disabled={answerLocked}
-                              className="grid gap-3"
-                            >
-                              {current?.choices.map((choice, idx) => (
-                                <motion.label
-                                  key={idx}
-                                  htmlFor={`answer-${step}-${idx}`}
-                                  whileHover={answerLocked ? undefined : { scale: 1.01, y: -1 }}
-                                  whileTap={answerLocked ? undefined : { scale: 0.99 }}
-                                  className={`group relative flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition-all duration-300 backdrop-blur ${
-                                    answers[step] === idx
-                                      ? 'cursor-default border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_10px_35px_rgba(16,185,129,0.35)]'
-                                      : answerLocked
-                                        ? 'cursor-not-allowed opacity-60'
-                                        : 'cursor-pointer hover:bg-white/10'
-                                  }`}
-                                  onClick={() => {
-                                    if (!answerLocked) pickAnswer(idx)
-                                  }}
-                                >
-                                  <RadioGroupItem
-                                    value={idx.toString()}
-                                    id={`answer-${step}-${idx}`}
-                                    disabled={answerLocked}
-                                  />
-                                  <span>{choice}</span>
-                                </motion.label>
-                              ))}
-                            </RadioGroup>
-
-                            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-                              <Button onClick={nextStep} disabled={typeof answers[step] !== 'number'} className="min-w-36">
-                                {step < total - 1 ? 'Neste' : 'Se resultater'}
-                              </Button>
-                              <Button variant="ghost" onClick={resetQuiz} className="text-slate-300 hover:text-white">
-                                Bytt spørsmål
-                              </Button>
-                            </div>
-
-                            {typeof answers[step] === 'number' && current && (
-                              <motion.div
-                                initial={{ opacity: 0, y: -6 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur"
-                              >
-                                {answers[step] === current.answerIndex ? (
-                                  <div className="flex items-center gap-2 text-emerald-300">
-                                    <CheckCircle2 className="h-4 w-4" /> Riktig!
-                                  </div>
-                                ) : (
-                                  <div className="text-slate-200">Svar låst. Du kan gå videre.</div>
-                                )}
-                                {answers[step] !== undefined && current.explanation && (
-                                  <div className="mt-2 text-slate-400">Forklaring: {current.explanation}</div>
-                                )}
-                              </motion.div>
-                            )}
-                          </motion.div>
-                        ) : (
-                          <motion.div
-                            key="results"
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
-                            transition={{ duration: 0.35 }}
-                          >
-                            <Results
-                              score={score}
-                              total={total}
-                              difficultyLabel={activeDifficulty?.label}
-                              modeLabel={activeMode?.label}
-                              onRetry={resetQuiz}
-                            />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                    <div className="rounded-3xl border border-emerald-400/30 bg-emerald-400/10 p-6 text-sm text-emerald-100 backdrop-blur">
+                      <p className="font-semibold text-emerald-200">Klar for quiz!</p>
+                      <p className="mt-2 text-emerald-100/80">
+                        Du er klar til å åpne modulen. Ta med deltakerne på storskjerm eller i mobilvisning.
+                      </p>
                     </div>
                   )}
+
+                  <div className="flex flex-wrap items-center gap-3">
+                    <Button
+                      onClick={() => {
+                        resetQuiz()
+                        setQuizOpen(true)
+                      }}
+                      disabled={loadingQuestions || !!questionError || !hasQuestions}
+                    >
+                      Åpne quiz-modul
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      onClick={resetQuiz}
+                      className="text-slate-300 hover:text-white"
+                    >
+                      Tilfeldige spørsmål
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -848,6 +775,206 @@ export default function App() {
           MVP-demo. Spørsmålene hentes fra lokal <code>Qbase.json</code> mens neste iterasjon planlegges.
         </footer>
       </div>
+      <AnimatePresence>
+        {quizOpen && (
+          <motion.div
+            className="fixed inset-0 z-40 flex items-center justify-center bg-slate-950/90 backdrop-blur"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              className={`relative flex h-[min(90vh,48rem)] w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-950/90 shadow-[0_30px_80px_rgba(15,23,42,0.65)] ${
+                mobilePreview ? 'max-w-sm' : 'max-w-4xl'
+              }`}
+            >
+              <div className="flex items-center justify-between border-b border-white/5 px-6 py-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-emerald-200/70">Quiz-modul</p>
+                  <h2 className="mt-1 text-xl font-semibold text-white">
+                    {quizMode === 'mixed' ? 'Blandet klubbquiz' : `Quiz: ${pickedClub.name}`}
+                  </h2>
+                </div>
+                <Button variant="ghost" onClick={() => setQuizOpen(false)} className="text-slate-300 hover:text-white">
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+              <div className="flex-1 overflow-y-auto px-6 py-6">
+                {loadingQuestions ? (
+                  <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
+                    <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
+                    <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
+                  </div>
+                ) : questionError ? (
+                  <div className="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 text-center text-sm text-rose-100 backdrop-blur">
+                    <p className="font-semibold">Kunne ikke laste spørsmål.</p>
+                    <p className="mt-2 opacity-90">{questionError}</p>
+                    <div className="mt-4 flex justify-center">
+                      <Button variant="secondary" onClick={loadQuestionBank}>
+                        Prøv igjen
+                      </Button>
+                    </div>
+                  </div>
+                ) : !hasQuestions ? (
+                  <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
+                    <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
+                    <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
+                  </div>
+                ) : (
+                  <div className="space-y-6">
+                    <div className="space-y-3">
+                      <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-300">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                            <Activity className="h-3.5 w-3.5" /> Spørsmål {Math.min(step + 1, total)} av {total}
+                          </span>
+                          {activeDifficulty && (
+                            <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                              {activeDifficulty.label}
+                            </span>
+                          )}
+                          {quizMode === 'mixed' && current?.clubName && (
+                            <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-100">
+                              {current.clubName}
+                            </span>
+                          )}
+                        </div>
+                        <span className="text-xs uppercase tracking-widest text-slate-400">
+                          Treffsikkerhet: {score}/{total}
+                        </span>
+                      </div>
+                      <div className="h-2 w-full overflow-hidden rounded-full bg-white/10">
+                        <motion.div
+                          initial={false}
+                          animate={{ width: `${progress}%` }}
+                          transition={{ duration: 0.5, ease: 'easeOut' }}
+                          className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_16px_rgba(56,189,248,0.5)]"
+                        />
+                      </div>
+                    </div>
+
+                    <AnimatePresence mode="wait">
+                      {!showResults ? (
+                        <motion.div
+                          key={`question-${step}`}
+                          initial={{ opacity: 0, y: 12 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -12 }}
+                          transition={{ duration: 0.35 }}
+                          className="space-y-4"
+                        >
+                          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/70 to-slate-950/90 p-6 shadow-inner">
+                            <h3 className="text-lg font-semibold text-white">{current?.q}</h3>
+                            <p className="mt-2 text-sm text-slate-300">
+                              Velg alternativet du mener er riktig. Svar låses når du klikker.
+                            </p>
+                          </div>
+
+                          <RadioGroup
+                            value={answers[step] !== undefined ? answers[step].toString() : undefined}
+                            onValueChange={val => {
+                              const parsed = Number(val)
+                              if (!Number.isNaN(parsed)) {
+                                pickAnswer(parsed)
+                              }
+                            }}
+                            className="grid gap-3"
+                          >
+                            {current?.choices.map((choice, idx) => (
+                              <motion.label
+                                key={idx}
+                                htmlFor={`answer-${step}-${idx}`}
+                                whileHover={answerLocked ? undefined : { scale: 1.01, y: -1 }}
+                                whileTap={answerLocked ? undefined : { scale: 0.99 }}
+                                className={`group relative flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left transition-all duration-300 backdrop-blur ${
+                                  answers[step] === idx
+                                    ? 'cursor-default border-emerald-300/70 bg-emerald-400/10 text-white shadow-[0_10px_35px_rgba(16,185,129,0.35)]'
+                                    : answerLocked
+                                      ? 'cursor-not-allowed opacity-60'
+                                      : 'cursor-pointer hover:bg-white/10'
+                                }`}
+                                onClick={() => {
+                                  if (!answerLocked) pickAnswer(idx)
+                                }}
+                              >
+                                <RadioGroupItem
+                                  value={idx.toString()}
+                                  id={`answer-${step}-${idx}`}
+                                  disabled={answerLocked}
+                                />
+                                <span>{choice}</span>
+                              </motion.label>
+                            ))}
+                          </RadioGroup>
+
+                          <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                            <Button onClick={nextStep} disabled={typeof answers[step] !== 'number'} className="min-w-36">
+                              {step < total - 1 ? 'Neste' : 'Se resultater'}
+                            </Button>
+                            <div className="flex items-center gap-2">
+                              <Button variant="ghost" onClick={resetQuiz} className="text-slate-300 hover:text-white">
+                                Bytt spørsmål
+                              </Button>
+                              <Button variant="ghost" onClick={() => setQuizOpen(false)} className="text-slate-300 hover:text-white">
+                                Avslutt modul
+                              </Button>
+                            </div>
+                          </div>
+
+                          {typeof answers[step] === 'number' && current && (
+                            <motion.div
+                              initial={{ opacity: 0, y: -6 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur"
+                            >
+                              {answers[step] === current.answerIndex ? (
+                                <div className="flex items-center gap-2 text-emerald-300">
+                                  <CheckCircle2 className="h-4 w-4" /> Riktig!
+                                </div>
+                              ) : (
+                                <div className="text-slate-200">Svar låst. Du kan gå videre.</div>
+                              )}
+                              {answers[step] !== undefined && current.explanation && (
+                                <div className="mt-2 text-slate-400">Forklaring: {current.explanation}</div>
+                              )}
+                            </motion.div>
+                          )}
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key="results"
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.95 }}
+                          transition={{ duration: 0.35 }}
+                          className="space-y-4"
+                        >
+                          <Results
+                            score={score}
+                            total={total}
+                            difficultyLabel={activeDifficulty?.label}
+                            modeLabel={activeMode?.label}
+                            onRetry={resetQuiz}
+                          />
+                          <div className="flex justify-center">
+                            <Button variant="ghost" onClick={() => setQuizOpen(false)} className="text-slate-300 hover:text-white">
+                              Lukk modulen
+                            </Button>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
