@@ -89,8 +89,14 @@ const CLUBS: Club[] = [
   { id: 'wolves', name: 'Wolverhampton Wanderers', colors: 'from-amber-500 to-stone-900', leagueId: 'premierleague' },
   { id: 'barca', name: 'FC Barcelona', colors: 'from-fuchsia-600 to-indigo-700', leagueId: 'champions' },
   { id: 'real', name: 'Real Madrid', colors: 'from-zinc-200 to-zinc-500 text-slate-900', leagueId: 'champions' },
+  { id: 'bayern', name: 'FC Bayern München', colors: 'from-red-600 to-rose-900', leagueId: 'champions' },
+  { id: 'liverpool', name: 'Liverpool FC', colors: 'from-red-600 to-red-800', leagueId: 'champions' },
+  { id: 'manutd', name: 'Manchester United', colors: 'from-rose-600 to-rose-800', leagueId: 'champions' },
+  { id: 'chelsea', name: 'Chelsea FC', colors: 'from-blue-600 to-indigo-800', leagueId: 'champions' },
+  { id: 'inter', name: 'Inter Milan', colors: 'from-blue-700 to-black', leagueId: 'champions' },
   { id: 'juve', name: 'Juventus', colors: 'from-slate-100 to-slate-500 text-slate-900', leagueId: 'champions' },
   { id: 'milan', name: 'AC Milan', colors: 'from-red-700 to-black', leagueId: 'champions' },
+  { id: 'ajax', name: 'AFC Ajax', colors: 'from-rose-200 to-red-600 text-slate-900', leagueId: 'champions' },
   { id: 'bodoglimt', name: 'FK Bodø/Glimt', colors: 'from-yellow-300 to-amber-600 text-slate-900', leagueId: 'eliteserien' },
   { id: 'brann', name: 'SK Brann', colors: 'from-red-600 to-red-900', leagueId: 'eliteserien' },
   { id: 'fredrikstad', name: 'Fredrikstad FK', colors: 'from-red-600 to-slate-100 text-slate-900', leagueId: 'eliteserien' },
@@ -131,10 +137,16 @@ const CLUB_HISTORIES: Record<string, string> = {
     'FC Barcelona står for ‘més que un club’ og har formet moderne fotball via La Masia og en tydelig posisjonsbasert stil. Pep Guardiola‑årene med Messi, Xavi og Iniesta er legendariske.',
   real:
     'Real Madrid har flest europeiske titler (CL/EC) og en lang liste av stjerner fra Di Stéfano til moderne galácticos. Santiago Bernabéu er et av fotballens templer.',
+  bayern:
+    'FC Bayern München har dominert tysk fotball i Bundesliga-æraen og vunnet flere Champions League-troféer. Klubben er kjent for sin profesjonelle drift, sterke akademi og Allianz Arena.',
   juve:
     'Juventus dominerte italiensk fotball i flere perioder og er kjent for sin defensive disiplin, sterke vinnerkultur og ikoniske svarte‑og‑hvite striper.',
   milan:
     'AC Milan har en rik europeisk merittliste, storhetstider under Sacchi og Capello, og har preget italiensk fotball med sterk defensiv struktur og offensive ikoner.',
+  inter:
+    'Inter Milan, grunnlagt i 1908, har vunnet flere Serie A- og Champions League-troféer. Klubben forbindes med catenaccio-æraen, men også moderne offensive profiler på San Siro.',
+  ajax:
+    'AFC Ajax er symbolet på nederlandsk totalfotball med Johan Cruyff som ikon. Klubben har et berømt akademi, talentutvikling og europacuptitler fra 1970- og 1990-tallet.',
 }
 
 const QUIZ_MODE_OPTIONS: { value: QuizMode; label: string; description: string }[] = [
