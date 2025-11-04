@@ -15,7 +15,9 @@ import {
   Target,
   Smartphone,
   X,
+  Goal,
 } from 'lucide-react'
+import PenaltyShootout from './components/PenaltyShootout'
 
 type Difficulty = 'easy' | 'medium' | 'hard'
 type QuizMode = 'single' | 'mixed'
@@ -726,6 +728,12 @@ export default function App() {
                 >
                   <CircleHelp className="mr-2 h-4 w-4" /> Quiz
                 </TabsTrigger>
+                <TabsTrigger
+                  value="penalties"
+                  className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
+                >
+                  <Goal className="mr-2 h-4 w-4" /> Straffekonk
+                </TabsTrigger>
               </TabsList>
 
               <TabsContent value="history" className="flex-1 min-h-0">
@@ -813,6 +821,23 @@ export default function App() {
                       >
                         Tilfeldige spørsmål
                       </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              <TabsContent value="penalties" className="flex-1 min-h-0">
+                <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+                  <CardHeader className="border-b border-white/5">
+                    <CardTitle className="flex items-center gap-2 text-slate-100">
+                      <Goal className="h-5 w-5 text-emerald-300" /> Straffekonk
+                    </CardTitle>
+                    <p className="text-sm text-slate-400">
+                      En lynrask straffesparkkonkurranse med uendelig modus. Jag høye rekorder og del resultatet med laget.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="flex min-h-0 flex-1 flex-col overflow-hidden pt-5">
+                    <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+                      <PenaltyShootout />
                     </div>
                   </CardContent>
                 </Card>
