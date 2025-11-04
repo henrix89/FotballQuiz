@@ -394,8 +394,8 @@ export default function App() {
     : 'Ingen klubber har spørsmål for denne vanskelighetsgraden i demoen. Bytt vanskelighetsgrad eller utvid spørsmålsbanken.'
 
   const containerClass = mobilePreview
-    ? 'relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col px-4 py-6'
-    : 'relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-4 py-8 sm:px-6 sm:py-10 lg:px-8'
+    ? 'relative z-10 mx-auto flex w-full max-w-sm flex-1 flex-col gap-6 px-4 py-6'
+    : 'relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 lg:py-6'
 
   return (
     <div
@@ -427,7 +427,7 @@ export default function App() {
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="mb-8 flex flex-wrap items-center justify-between gap-6 sm:mb-10"
+          className="mb-6 flex flex-wrap items-center justify-between gap-6 sm:mb-8"
         >
           <div className="flex items-center gap-4">
             <motion.div
@@ -465,14 +465,14 @@ export default function App() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="grid flex-1 content-start gap-6 lg:min-h-0 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch"
+          className="grid flex-1 content-start gap-6 lg:min-h-0 lg:grid-cols-[1.05fr_0.85fr_1.2fr]"
         >
           <motion.div
             key={pickedClub.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900/60 shadow-[0_30px_80px_rgba(15,23,42,0.55)] backdrop-blur"
+            className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-[0_20px_60px_rgba(15,23,42,0.5)] backdrop-blur"
           >
             <motion.div
               key={`${pickedClub.id}-${clubTheme.gradient}`}
@@ -482,8 +482,8 @@ export default function App() {
               className={`absolute inset-0 opacity-80 ${clubTheme.gradient}`}
             />
             <div className="absolute inset-0 bg-gradient-to-br from-slate-950/70 via-slate-950/40 to-transparent" />
-            <div className="relative flex h-full min-h-0 flex-col justify-between gap-10 p-8 sm:p-12">
-              <div className="space-y-6 text-white">
+            <div className="relative flex h-full flex-col gap-8 p-6 sm:p-8">
+              <div className="space-y-4 text-white">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-white/80 backdrop-blur">
                   <Shield className="h-3.5 w-3.5" /> Favorittklubb
                 </div>
@@ -492,13 +492,12 @@ export default function App() {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45 }}
-                  className="text-4xl font-black tracking-tight sm:text-5xl"
+                  className="text-3xl font-black tracking-tight sm:text-4xl"
                 >
                   {pickedClub.name}
                 </motion.h2>
                 <p className="max-w-xl text-sm text-white/80">
-                  {selectedLeague?.description ??
-                    'Velg liga og klubb for å starte. Når spørsmålsbanken er klar kan du hoppe direkte inn i quizen.'}
+                  {selectedLeague?.description ?? 'Velg liga, klubb og quizoppsett for å komme i gang på få sekunder.'}
                 </p>
                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wider text-white/80">
                   {activeMode && (
@@ -506,46 +505,50 @@ export default function App() {
                   )}
                   {activeDifficulty && (
                     <span className="rounded-full bg-black/30 px-3 py-1 backdrop-blur">
-                      Vanskelighetsgrad: {activeDifficulty.label}
+                      Vanskelighet: {activeDifficulty.label}
                     </span>
                   )}
                   <span className="rounded-full bg-black/30 px-3 py-1 backdrop-blur">Besvart: {answeredCount}</span>
                 </div>
               </div>
-              <div className="space-y-6">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                    <div className="text-xs uppercase tracking-wide text-white/70">Spørsmål besvart</div>
-                    <div className="mt-2 text-2xl font-bold text-white">
-                      {answeredCount} <span className="text-sm text-white/70">av {total || '–'}</span>
-                    </div>
-                    <div className="mt-1 text-xs text-white/60">Poeng: {score}/{total || '–'}</div>
+              <div className="grid gap-4 text-white">
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur">
+                    <div className="text-xs uppercase tracking-wide text-white/70">Totalt antall</div>
+                    <div className="mt-1 text-2xl font-bold text-white">{total || '–'}</div>
                   </div>
-                  <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
-                    <div className="flex items-center justify-between text-xs uppercase tracking-wide text-white/70">
-                      <span>Fremdrift</span>
-                      <span>{progress}%</span>
-                    </div>
-                    <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
-                      <motion.div
-                        initial={false}
-                        animate={{ width: `${progress}%` }}
-                        transition={{ duration: 0.6, ease: 'easeOut' }}
-                        className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_18px_rgba(56,189,248,0.5)]"
-                      />
-                    </div>
-                    <p className="mt-2 text-xs text-white/60">
-                      {showResults
-                        ? 'Resultatet er klart – se detaljene under.'
-                        : 'Svar på spørsmålene for å se din personlige score.'}
-                    </p>
+                  <div className="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur">
+                    <div className="text-xs uppercase tracking-wide text-white/70">Riktige svar</div>
+                    <div className="mt-1 text-2xl font-bold text-white">{score}</div>
                   </div>
+                </div>
+                <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+                  <div className="flex items-center justify-between text-xs uppercase tracking-wide text-white/70">
+                    <span>Fremdrift</span>
+                    <span>{progress}%</span>
+                  </div>
+                  <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
+                    <motion.div
+                      initial={false}
+                      animate={{ width: `${progress}%` }}
+                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                      className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-emerald-500 shadow-[0_0_16px_rgba(56,189,248,0.5)]"
+                    />
+                  </div>
+                  <p className="mt-2 text-xs text-white/60">
+                    {showResults ? 'Resultatet er klart – se rapportkortet til høyre.' : 'Svar på spørsmålene for å låse resultatene.'}
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          <div className="grid h-full min-h-0 content-start gap-4 sm:grid-cols-2 lg:grid-cols-1">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
+            className="grid h-full min-h-0 content-start gap-4 sm:grid-cols-2 lg:grid-cols-1"
+          >
             <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
@@ -553,10 +556,10 @@ export default function App() {
                   Live status
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 pt-4">
+              <CardContent className="space-y-3 pt-4">
                 <div className="grid grid-cols-2 gap-3 text-sm text-slate-300">
                   <div className="rounded-2xl border border-white/5 bg-white/5 p-3 text-center backdrop-blur">
-                    <div className="text-xs uppercase tracking-wide text-slate-400">Totalt</div>
+                    <div className="text-xs uppercase tracking-wide text-slate-400">Spørsmål</div>
                     <div className="mt-1 text-lg font-semibold text-white">{total || '–'}</div>
                   </div>
                   <div className="rounded-2xl border border-white/5 bg-white/5 p-3 text-center backdrop-blur">
@@ -564,8 +567,8 @@ export default function App() {
                     <div className="mt-1 text-lg font-semibold text-white">{score}</div>
                   </div>
                 </div>
-                <div className="rounded-2xl border border-white/5 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur">
-                  Hold oversikt over poengsummen din mens du spiller. Resultatkortet under viser full rapport når du er ferdig.
+                <div className="rounded-2xl border border-white/5 bg-white/5 p-4 text-xs text-slate-300 backdrop-blur">
+                  Hold oversikt over poengsummen mens du spiller. Resultatvisningen summerer alt når runden er ferdig.
                 </div>
               </CardContent>
             </Card>
@@ -645,142 +648,144 @@ export default function App() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-4">
-                <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-                  {clubsInLeague.map(c => (
-                    <motion.button
-                      key={c.id}
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => {
-                        if (pickedClub.id !== c.id) {
-                          setClubId(c.id)
-                        }
-                      }}
-                      className={`rounded-2xl bg-gradient-to-br p-3 text-left text-white shadow-lg transition ${
-                        pickedClub.id === c.id ? 'outline outline-2 outline-white/80' : 'opacity-90 hover:opacity-100'
-                      } ${c.colors}`}
-                    >
-                      <div className="text-sm font-semibold drop-shadow">{c.name}</div>
-                    </motion.button>
-                  ))}
+                <div className="max-h-[20rem] overflow-y-auto pr-1">
+                  <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-4">
+                    {clubsInLeague.map(c => (
+                      <motion.button
+                        key={c.id}
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => {
+                          if (pickedClub.id !== c.id) {
+                            setClubId(c.id)
+                          }
+                        }}
+                        className={`rounded-2xl bg-gradient-to-br p-2.5 text-left text-white shadow-lg transition ${
+                          pickedClub.id === c.id ? 'outline outline-2 outline-white/80' : 'opacity-90 hover:opacity-100'
+                        } ${c.colors}`}
+                      >
+                        <div className="text-xs font-semibold drop-shadow sm:text-sm">{c.name}</div>
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
-        </motion.section>
+          </motion.div>
 
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          className="mt-8 flex flex-col gap-6 sm:mt-10 lg:mt-12 lg:flex-1 lg:min-h-0"
-        >
-          <Tabs defaultValue="history" className="flex w-full flex-col gap-6 lg:flex-1 lg:min-h-0">
-            <TabsList className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-950/70 p-1 shadow-[0_15px_45px_rgba(15,23,42,0.45)] backdrop-blur">
-              <TabsTrigger
-                value="history"
-                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
-              >
-                <History className="mr-2 h-4 w-4" /> Historie
-              </TabsTrigger>
-              <TabsTrigger
-                value="quiz"
-                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
-              >
-                <CircleHelp className="mr-2 h-4 w-4" /> Quiz
-              </TabsTrigger>
-            </TabsList>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+            className="flex h-full min-h-0 flex-col gap-6"
+          >
+            <Tabs defaultValue="history" className="flex h-full flex-col gap-4">
+              <TabsList className="inline-flex items-center justify-start gap-2 rounded-full border border-white/10 bg-slate-950/70 p-1 shadow-[0_15px_45px_rgba(15,23,42,0.45)] backdrop-blur">
+                <TabsTrigger
+                  value="history"
+                  className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
+                >
+                  <History className="mr-2 h-4 w-4" /> Historie
+                </TabsTrigger>
+                <TabsTrigger
+                  value="quiz"
+                  className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition data-[state=active]:bg-white data-[state=active]:text-slate-900 data-[state=active]:shadow-lg"
+                >
+                  <CircleHelp className="mr-2 h-4 w-4" /> Quiz
+                </TabsTrigger>
+              </TabsList>
 
-            <TabsContent value="history" className="lg:flex-1 lg:min-h-0">
-              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
-                <CardHeader className="border-b border-white/5">
-                  <CardTitle className="flex items-center gap-2 text-xl font-semibold text-slate-100">
-                    {pickedClub.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 pt-4">
-                  <div className={`rounded-2xl bg-gradient-to-br p-5 text-white shadow-lg ${pickedClub.colors}`}>
-                    <p className="leading-relaxed">
-                      {CLUB_HISTORIES[(pickedClub as any).id] ||
-                        'Denne klubben har ikke fått en detaljert beskrivelse i demoen ennå. Velg en annen klubb eller fyll på med egne fakta senere.'}
-                    </p>
-                  </div>
-                  <p className="text-xs text-slate-400">
-                    Demo-innhold. Legg til ekte kilder, statistikk og visuelt materiale i en senere iterasjon.
-                  </p>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="quiz" className="lg:flex-1 lg:min-h-0">
-              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
-                <CardHeader className="border-b border-white/5">
-                  <CardTitle className="flex items-center gap-2 text-slate-100">
-                    <CircleHelp className="h-5 w-5 text-emerald-300" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
-                  </CardTitle>
-                  <p className="text-sm text-slate-400">
-                    Åpne quiz-modulen for å spille i fullskjermsvisning slik du kjenner det fra Kahoot. Velg modus og vanskelighetsgrad i kortet over før du starter.
-                  </p>
-                </CardHeader>
-                <CardContent className="flex min-h-0 flex-1 flex-col space-y-6 pt-6">
-                  <div className="rounded-3xl border border-white/5 bg-white/5 p-5 text-sm text-slate-300 backdrop-blur">
-                    <p className="font-semibold text-slate-100">Slik fungerer modulen</p>
-                    <p className="mt-2 text-slate-400">
-                      Når du trykker på «Åpne quiz-modul» vises spørsmålene i en egen overliggende skjerm. Der kan du låse svar, se resultater og starte på nytt uten at resten av siden påvirkes.
-                    </p>
-                  </div>
-
-                  {loadingQuestions ? (
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
-                      <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
-                      <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
-                    </div>
-                  ) : questionError ? (
-                    <div className="rounded-3xl border border-rose-500/40 bg-rose-500/10 p-6 text-center text-sm text-rose-100 backdrop-blur">
-                      <p className="font-semibold">Kunne ikke laste spørsmål.</p>
-                      <p className="mt-2 opacity-90">{questionError}</p>
-                      <div className="mt-4 flex justify-center">
-                        <Button variant="secondary" onClick={loadQuestionBank}>
-                          Prøv igjen
-                        </Button>
-                      </div>
-                    </div>
-                  ) : !hasQuestions ? (
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center text-sm text-slate-300 backdrop-blur">
-                      <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
-                      <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
-                    </div>
-                  ) : (
-                    <div className="rounded-3xl border border-emerald-400/30 bg-emerald-400/10 p-6 text-sm text-emerald-100 backdrop-blur">
-                      <p className="font-semibold text-emerald-200">Klar for quiz!</p>
-                      <p className="mt-2 text-emerald-100/80">
-                        Du er klar til å åpne modulen. Ta med deltakerne på storskjerm eller i mobilvisning.
+              <TabsContent value="history" className="flex-1 min-h-0">
+                <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+                  <CardHeader className="border-b border-white/5">
+                    <CardTitle className="flex items-center gap-2 text-xl font-semibold text-slate-100">
+                      {pickedClub.name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 pt-4">
+                    <div className={`rounded-2xl bg-gradient-to-br p-5 text-white shadow-lg ${pickedClub.colors}`}>
+                      <p className="leading-relaxed">
+                        {CLUB_HISTORIES[(pickedClub as any).id] ||
+                          'Denne klubben har ikke fått en detaljert beskrivelse i demoen ennå. Velg en annen klubb eller fyll på med egne fakta senere.'}
                       </p>
                     </div>
-                  )}
+                    <p className="text-xs text-slate-400">
+                      Demo-innhold. Legg til ekte kilder, statistikk og visuelt materiale i en senere iterasjon.
+                    </p>
+                  </CardContent>
+                </Card>
+              </TabsContent>
 
-                  <div className="flex flex-wrap items-center gap-3">
-                    <Button
-                      onClick={() => {
-                        resetQuiz()
-                        setQuizOpen(true)
-                      }}
-                      disabled={loadingQuestions || !!questionError || !hasQuestions}
-                    >
-                      Åpne quiz-modul
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      onClick={resetQuiz}
-                      className="text-slate-300 hover:text-white"
-                    >
-                      Tilfeldige spørsmål
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
+              <TabsContent value="quiz" className="flex-1 min-h-0">
+                <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+                  <CardHeader className="border-b border-white/5">
+                    <CardTitle className="flex items-center gap-2 text-slate-100">
+                      <CircleHelp className="h-5 w-5 text-emerald-300" /> Quiz om {quizMode === 'mixed' ? 'flere klubber' : pickedClub.name}
+                    </CardTitle>
+                    <p className="text-sm text-slate-400">
+                      Åpne quiz-modulen for å spille i fullskjermsvisning slik du kjenner det fra Kahoot. Velg modus og vanskelighetsgrad i kortet ved siden av før du starter.
+                    </p>
+                  </CardHeader>
+                  <CardContent className="flex min-h-0 flex-1 flex-col space-y-5 pt-5">
+                    <div className="rounded-2xl border border-white/5 bg-white/5 p-4 text-sm text-slate-300 backdrop-blur">
+                      <p className="font-semibold text-slate-100">Slik fungerer modulen</p>
+                      <p className="mt-2 text-slate-400">
+                        Når du trykker på «Åpne quiz-modul» vises spørsmålene i en egen overliggende skjerm. Der kan du låse svar, se resultater og starte på nytt uten at resten av siden påvirkes.
+                      </p>
+                    </div>
+
+                    {loadingQuestions ? (
+                      <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center text-sm text-slate-300 backdrop-blur">
+                        <p className="font-semibold text-slate-100">Laster inn spørsmålsbanken…</p>
+                        <p className="mt-2 text-slate-400">Spørsmålene hentes fra den lokale Qbase.json-filen.</p>
+                      </div>
+                    ) : questionError ? (
+                      <div className="rounded-2xl border border-rose-500/40 bg-rose-500/10 p-5 text-center text-sm text-rose-100 backdrop-blur">
+                        <p className="font-semibold">Kunne ikke laste spørsmål.</p>
+                        <p className="mt-2 opacity-90">{questionError}</p>
+                        <div className="mt-4 flex justify-center">
+                          <Button variant="secondary" onClick={loadQuestionBank}>
+                            Prøv igjen
+                          </Button>
+                        </div>
+                      </div>
+                    ) : !hasQuestions ? (
+                      <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center text-sm text-slate-300 backdrop-blur">
+                        <p className="font-semibold text-slate-100">Ingen spørsmål tilgjengelig enda.</p>
+                        <p className="mt-2 text-slate-400">{missingQuestionsMessage}</p>
+                      </div>
+                    ) : (
+                      <div className="rounded-2xl border border-emerald-400/30 bg-emerald-400/10 p-5 text-sm text-emerald-100 backdrop-blur">
+                        <p className="font-semibold text-emerald-200">Klar for quiz!</p>
+                        <p className="mt-2 text-emerald-100/80">
+                          Du er klar til å åpne modulen. Ta med deltakerne på storskjerm eller i mobilvisning.
+                        </p>
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap items-center gap-3">
+                      <Button
+                        onClick={() => {
+                          resetQuiz()
+                          setQuizOpen(true)
+                        }}
+                        disabled={loadingQuestions || !!questionError || !hasQuestions}
+                      >
+                        Åpne quiz-modul
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        onClick={resetQuiz}
+                        className="text-slate-300 hover:text-white"
+                      >
+                        Tilfeldige spørsmål
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </motion.div>
         </motion.section>
 
         <footer className="mt-8 text-xs text-slate-500 sm:mt-10 lg:mt-12">
