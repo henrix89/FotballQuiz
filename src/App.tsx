@@ -465,14 +465,14 @@ export default function App() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="grid flex-1 content-start gap-6 lg:min-h-0 lg:grid-cols-[1.05fr_0.85fr_1.2fr]"
+          className="flex flex-1 flex-col gap-6 lg:min-h-0 lg:flex-row"
         >
           <motion.div
             key={pickedClub.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-[0_20px_60px_rgba(15,23,42,0.5)] backdrop-blur"
+            className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-[0_20px_60px_rgba(15,23,42,0.5)] backdrop-blur lg:max-w-xl lg:flex-[0.95] xl:max-w-none xl:flex-[1.05]"
           >
             <motion.div
               key={`${pickedClub.id}-${clubTheme.gradient}`}
@@ -543,13 +543,14 @@ export default function App() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
-            className="grid h-full min-h-0 content-start gap-4 sm:grid-cols-2 lg:grid-cols-1"
-          >
-            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+          <div className="flex flex-1 flex-col gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.05 }}
+              className="grid min-h-0 gap-4 md:grid-cols-2"
+            >
+              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Activity className="h-5 w-5 text-emerald-300" />
@@ -571,9 +572,9 @@ export default function App() {
                   Hold oversikt over poengsummen mens du spiller. Resultatvisningen summerer alt når runden er ferdig.
                 </div>
               </CardContent>
-            </Card>
+              </Card>
 
-            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
+              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Target className="h-5 w-5 text-sky-300" />
@@ -638,9 +639,9 @@ export default function App() {
                   </RadioGroup>
                 </div>
               </CardContent>
-            </Card>
+              </Card>
 
-            <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur sm:col-span-2 lg:col-span-1">
+              <Card className="flex h-full flex-col overflow-hidden border-white/10 bg-slate-950/70 shadow-2xl backdrop-blur md:col-span-2">
               <CardHeader className="border-b border-white/5">
                 <CardTitle className="flex items-center gap-2 text-slate-100">
                   <Sparkles className="h-5 w-5 text-fuchsia-300" />
@@ -649,7 +650,7 @@ export default function App() {
               </CardHeader>
               <CardContent className="pt-4">
                 <div className="max-h-[20rem] overflow-y-auto pr-1">
-                  <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-4">
+                  <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
                     {clubsInLeague.map(c => (
                       <motion.button
                         key={c.id}
@@ -670,16 +671,16 @@ export default function App() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          </motion.div>
+              </Card>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-            className="flex h-full min-h-0 flex-col gap-6"
-          >
-            <Tabs defaultValue="history" className="flex h-full flex-col gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+              className="flex h-full min-h-0 flex-col gap-6"
+            >
+              <Tabs defaultValue="history" className="flex h-full flex-col gap-4">
               <TabsList className="inline-flex items-center justify-start gap-2 rounded-full border border-white/10 bg-slate-950/70 p-1 shadow-[0_15px_45px_rgba(15,23,42,0.45)] backdrop-blur">
                 <TabsTrigger
                   value="history"
@@ -785,7 +786,8 @@ export default function App() {
                 </Card>
               </TabsContent>
             </Tabs>
-          </motion.div>
+            </motion.div>
+          </div>
         </motion.section>
 
         <footer className="mt-8 text-xs text-slate-500 sm:mt-10 lg:mt-12">
